@@ -7,4 +7,5 @@
     <color name="blue">#ff2222aa</color>
     <color name="yellow">#ffcccc22</color>
     <color name="purple">#ffaa22aa</color>
+    <color name="bg_gray">#ff363e4b</color>
 </resources>

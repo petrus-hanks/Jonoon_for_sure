@@ -2,6 +2,7 @@
 <resources>
     <!-- From: file:/F:/source/jonoon/app/src/main/res/values/colors.xml -->
     <eat-comment/>
+    <color name="bg_gray">#ff363e4b</color>
     <color name="blue">#ff2222aa</color>
     <color name="green">#ff55aa55</color>
     <color name="purple">#ffaa22aa</color>
@@ -29,6 +30,7 @@
         <!-- Customize your theme here. -->
     </style>
     <style name="button_styele">
+        <item name="android:textSize">13dp</item>
         <item name="android:background">@drawable/navigation_btn_bg</item>
     </style>
 </resources>

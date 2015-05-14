@@ -6,11 +6,12 @@
     <include android:id="@+id/title_layout"
         layout = "@layout/title_layout"
              android:layout_width="match_parent"
-             android:layout_height="60dp"
+             android:layout_height="45dp"
         android:layout_alignParentTop="true"/>
 
     <FrameLayout android:id="@+id/fragment_container"
                  android:layout_below="@id/title_layout"
+                 android:background="@color/white"
                   android:gravity="center"
                   android:layout_width="match_parent"
                   android:layout_height="match_parent">

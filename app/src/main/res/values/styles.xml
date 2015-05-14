@@ -6,6 +6,7 @@
     </style>
 
     <style name="button_styele">
+        <item name="android:textSize">13dp</item>
         <item name="android:background">@drawable/navigation_btn_bg</item>
     </style>
 </resources>

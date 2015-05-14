@@ -103,13 +103,14 @@ containing a value of this type.
         public static final int spacing=0x7f010003;
     }
     public static final class color {
-        public static final int blue=0x7f040000;
-        public static final int green=0x7f040001;
-        public static final int purple=0x7f040002;
-        public static final int red=0x7f040003;
-        public static final int transparent=0x7f040004;
-        public static final int white=0x7f040005;
-        public static final int yellow=0x7f040006;
+        public static final int bg_gray=0x7f040000;
+        public static final int blue=0x7f040001;
+        public static final int green=0x7f040002;
+        public static final int purple=0x7f040003;
+        public static final int red=0x7f040004;
+        public static final int transparent=0x7f040005;
+        public static final int white=0x7f040006;
+        public static final int yellow=0x7f040007;
     }
     public static final class dimen {
         public static final int activity_horizontal_margin=0x7f050000;
@@ -120,16 +121,28 @@ containing a value of this type.
         public static final int ic_arrow_down=0x7f020001;
         public static final int ic_arrow_left=0x7f020002;
         public static final int ic_arrow_right=0x7f020003;
-        public static final int ic_launcher=0x7f020004;
-        public static final int intro_1=0x7f020005;
-        public static final int intro_2=0x7f020006;
-        public static final int intro_3=0x7f020007;
-        public static final int navigation_bg=0x7f020008;
-        public static final int navigation_btn_bg=0x7f020009;
-        public static final int slidingdrawer_handler=0x7f02000a;
-        public static final int slidingdrawer_tray_handle_normal=0x7f02000b;
-        public static final int slidingdrawer_tray_handle_pressed=0x7f02000c;
-        public static final int slidingdrawer_tray_handle_selected=0x7f02000d;
+        public static final int ic_campus_football=0x7f020004;
+        public static final int ic_club=0x7f020005;
+        public static final int ic_fixture=0x7f020006;
+        public static final int ic_home=0x7f020007;
+        public static final int ic_launcher=0x7f020008;
+        public static final int ic_live=0x7f020009;
+        public static final int ic_logo=0x7f02000a;
+        public static final int ic_mall=0x7f02000b;
+        public static final int ic_news=0x7f02000c;
+        public static final int ic_setting=0x7f02000d;
+        public static final int ic_team=0x7f02000e;
+        public static final int ic_tickets=0x7f02000f;
+        public static final int ic_we_community=0x7f020010;
+        public static final int intro_1=0x7f020011;
+        public static final int intro_2=0x7f020012;
+        public static final int intro_3=0x7f020013;
+        public static final int navigation_bg=0x7f020014;
+        public static final int navigation_btn_bg=0x7f020015;
+        public static final int slidingdrawer_handler=0x7f020016;
+        public static final int slidingdrawer_tray_handle_normal=0x7f020017;
+        public static final int slidingdrawer_tray_handle_pressed=0x7f020018;
+        public static final int slidingdrawer_tray_handle_selected=0x7f020019;
     }
     public static final class id {
         public static final int action_settings=0x7f09001b;
