@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<items version="2" >
+
+    <item
+        jar="D:\Program Files\Android-SDK\extras\android\m2repository\com\android\support\support-annotations\22.1.0\support-annotations-22.1.0.jar"
+        jumboMode="false"
+        revision="22.0.1"
+        sha1="281bc6c58ecb3644c23fbc5ee0452019f67b4d5d">
+        <dex dex="F:\source\jonoon\app\build\intermediates\pre-dexed\debug\support-annotations-22.1.0-1d7ab3f532d79c91181d65bd075c9f8008144e5e.jar" />
+    </item>
+    <item
+        jar="F:\source\jonoon\app\build\intermediates\exploded-aar\com.android.support\support-v4\22.1.0\libs\internal_impl-22.1.0.jar"
+        jumboMode="false"
+        revision="22.0.1"
+        sha1="025cb89f2896c63200ff4c2e6c467a95691d880a">
+        <dex dex="F:\source\jonoon\app\build\intermediates\pre-dexed\debug\internal_impl-22.1.0-995f6acd23af9ac2b71c93e7226e6492c895c3a3.jar" />
+    </item>
+    <item
+        jar="F:\source\jonoon\app\build\intermediates\exploded-aar\com.android.support\support-v4\22.1.0\classes.jar"
+        jumboMode="false"
+        revision="22.0.1"
+        sha1="eeebabdfd8203f6ab639ccea4ffa1f20e1adee3a">
+        <dex dex="F:\source\jonoon\app\build\intermediates\pre-dexed\debug\classes-257e3085f8e0cf1d7a53b2e02af701f17c2acdd5.jar" />
+    </item>
+
+</items>
