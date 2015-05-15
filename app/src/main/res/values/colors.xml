@@ -8,4 +8,6 @@
     <color name="yellow">#ffcccc22</color>
     <color name="purple">#ffaa22aa</color>
     <color name="bg_gray">#ff363e4b</color>
+
+    <color name="translucent">#55363e4b</color>
 </resources>

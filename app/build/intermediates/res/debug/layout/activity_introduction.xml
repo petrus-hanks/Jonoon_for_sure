@@ -6,13 +6,13 @@
                 tools:context="com.jonoon.clubapp.controller.activity.IntroductionActivity">
 
 
-    <com.jonoon.clubapp.view.custom_view.ViewFlow
+    <com.jonoon.clubapp.view.custom_view.viewflow.ViewFlow
         android:id="@+id/view_flow"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         app:sidebuffer="3" />
 
-    <com.jonoon.clubapp.view.custom_view.CircleFlowIndicator
+    <com.jonoon.clubapp.view.custom_view.viewflow.CircleFlowIndicator
         android:id="@+id/view_flow_indicator"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"

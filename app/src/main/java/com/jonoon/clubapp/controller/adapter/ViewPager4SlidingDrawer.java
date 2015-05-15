@@ -4,8 +4,8 @@ import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentPagerAdapter;
 
-import com.jonoon.clubapp.controller.fragement.NavigationOneFragment;
-import com.jonoon.clubapp.controller.fragement.NavigationTwoFragment;
+import com.jonoon.clubapp.controller.fragement.main_page.NavigationOneFragment;
+import com.jonoon.clubapp.controller.fragement.main_page.NavigationTwoFragment;
 import com.jonoon.clubapp.util.L;
 
 /**

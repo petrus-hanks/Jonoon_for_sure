@@ -3,11 +3,12 @@ package com.jonoon.clubapp.controller.activity;
 import android.app.Activity;
 import android.content.res.Configuration;
 import android.os.Bundle;
+import android.view.Window;
 
 import com.jonoon.clubapp.R;
 import com.jonoon.clubapp.controller.adapter.IntroductionAdapter;
-import com.jonoon.clubapp.view.custom_view.CircleFlowIndicator;
-import com.jonoon.clubapp.view.custom_view.ViewFlow;
+import com.jonoon.clubapp.view.custom_view.viewflow.CircleFlowIndicator;
+import com.jonoon.clubapp.view.custom_view.viewflow.ViewFlow;
 
 public class IntroductionActivity extends Activity {
 
@@ -18,6 +19,7 @@ public class IntroductionActivity extends Activity {
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        requestWindowFeature(Window.FEATURE_NO_TITLE);
         setContentView(R.layout.activity_introduction);
 
         viewFlow = (ViewFlow) findViewById(R.id.view_flow);

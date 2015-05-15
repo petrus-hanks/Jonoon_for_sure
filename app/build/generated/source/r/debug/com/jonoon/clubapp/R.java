@@ -8,6 +8,10 @@
 package com.jonoon.clubapp;
 
 public final class R {
+    public static final class anim {
+        public static final int pop_up_from_top=0x7f040000;
+        public static final int pop_up_to_up=0x7f040001;
+    }
     public static final class attr {
         /** <p>Must be a color value, in the form of "<code>#<i>rgb</i></code>", "<code>#<i>argb</i></code>",
 "<code>#<i>rrggbb</i></code>", or "<code>#<i>aarrggbb</i></code>".
@@ -103,18 +107,19 @@ containing a value of this type.
         public static final int spacing=0x7f010003;
     }
     public static final class color {
-        public static final int bg_gray=0x7f040000;
-        public static final int blue=0x7f040001;
-        public static final int green=0x7f040002;
-        public static final int purple=0x7f040003;
-        public static final int red=0x7f040004;
-        public static final int transparent=0x7f040005;
-        public static final int white=0x7f040006;
-        public static final int yellow=0x7f040007;
+        public static final int bg_gray=0x7f050000;
+        public static final int blue=0x7f050001;
+        public static final int green=0x7f050002;
+        public static final int purple=0x7f050003;
+        public static final int red=0x7f050004;
+        public static final int translucent=0x7f050005;
+        public static final int transparent=0x7f050006;
+        public static final int white=0x7f050007;
+        public static final int yellow=0x7f050008;
     }
     public static final class dimen {
-        public static final int activity_horizontal_margin=0x7f050000;
-        public static final int activity_vertical_margin=0x7f050001;
+        public static final int activity_horizontal_margin=0x7f060000;
+        public static final int activity_vertical_margin=0x7f060001;
     }
     public static final class drawable {
         public static final int handler=0x7f020000;
@@ -145,64 +150,81 @@ containing a value of this type.
         public static final int slidingdrawer_tray_handle_selected=0x7f020019;
     }
     public static final class id {
-        public static final int action_settings=0x7f09001b;
-        public static final int arrow_down=0x7f09000b;
-        public static final int bt_1=0x7f09000e;
-        public static final int bt_10=0x7f090017;
-        public static final int bt_2=0x7f09000f;
-        public static final int bt_3=0x7f090010;
-        public static final int bt_4=0x7f090011;
-        public static final int bt_5=0x7f090012;
-        public static final int bt_6=0x7f090013;
-        public static final int bt_7=0x7f090014;
-        public static final int bt_8=0x7f090015;
-        public static final int bt_9=0x7f090016;
-        public static final int bt_go_on=0x7f090003;
-        public static final int content=0x7f090009;
-        public static final int drawer=0x7f090008;
-        public static final int fill=0x7f090000;
-        public static final int fragment_container=0x7f090007;
-        public static final int handle=0x7f09000a;
-        public static final int image_view=0x7f090002;
-        public static final int logo=0x7f090019;
-        public static final int setting=0x7f09001a;
-        public static final int stroke=0x7f090001;
-        public static final int test_text=0x7f09000d;
-        public static final int title=0x7f090018;
-        public static final int title_layout=0x7f090006;
-        public static final int view_flow=0x7f090004;
-        public static final int view_flow_indicator=0x7f090005;
-        public static final int viewpager=0x7f09000c;
+        public static final int action_settings=0x7f0a0024;
+        public static final int arrow_down=0x7f0a0010;
+        public static final int bt_1=0x7f0a0014;
+        public static final int bt_10=0x7f0a001d;
+        public static final int bt_2=0x7f0a0015;
+        public static final int bt_3=0x7f0a0016;
+        public static final int bt_4=0x7f0a0017;
+        public static final int bt_5=0x7f0a0018;
+        public static final int bt_6=0x7f0a0019;
+        public static final int bt_7=0x7f0a001a;
+        public static final int bt_8=0x7f0a001b;
+        public static final int bt_9=0x7f0a001c;
+        public static final int bt_go_on=0x7f0a0009;
+        public static final int btn_menu=0x7f0a0021;
+        public static final int content=0x7f0a000e;
+        public static final int drawer=0x7f0a000d;
+        public static final int example_text_view=0x7f0a0007;
+        public static final int fill=0x7f0a0000;
+        public static final int fragment_container=0x7f0a000c;
+        public static final int handle=0x7f0a000f;
+        public static final int header=0x7f0a0006;
+        public static final int header_parent=0x7f0a0005;
+        public static final int header_text=0x7f0a0004;
+        public static final int ib_delete=0x7f0a001f;
+        public static final int image_view=0x7f0a0008;
+        public static final int listView=0x7f0a0002;
+        public static final int logo=0x7f0a0023;
+        public static final int section_list_view=0x7f0a0003;
+        public static final int setting=0x7f0a0022;
+        public static final int stroke=0x7f0a0001;
+        public static final int title=0x7f0a0020;
+        public static final int title_layout=0x7f0a0012;
+        public static final int tv_number=0x7f0a001e;
+        public static final int view_flow=0x7f0a000a;
+        public static final int view_flow_indicator=0x7f0a000b;
+        public static final int viewpager=0x7f0a0011;
+        public static final int webview=0x7f0a0013;
     }
     public static final class layout {
-        public static final int activity_intro=0x7f030000;
-        public static final int activity_introduction=0x7f030001;
-        public static final int activity_main=0x7f030002;
-        public static final int fragment_main_activity2=0x7f030003;
-        public static final int fragment_navigation_one=0x7f030004;
-        public static final int fragment_navigation_two=0x7f030005;
-        public static final int title_layout=0x7f030006;
+        public static final int activity_custom_title_listview_main=0x7f030000;
+        public static final int activity_custom_title_listview_section=0x7f030001;
+        public static final int activity_custom_title_listview_section_item=0x7f030002;
+        public static final int activity_intro=0x7f030003;
+        public static final int activity_introduction=0x7f030004;
+        public static final int activity_main=0x7f030005;
+        public static final int fragment_main_page=0x7f030006;
+        public static final int fragment_navigation_one=0x7f030007;
+        public static final int fragment_navigation_two=0x7f030008;
+        public static final int fragment_news=0x7f030009;
+        public static final int item_spinner_numbers=0x7f03000a;
+        public static final int title_2_layout=0x7f03000b;
+        public static final int title_layout=0x7f03000c;
     }
     public static final class menu {
-        public static final int main=0x7f080000;
+        public static final int main=0x7f090000;
     }
     public static final class string {
-        public static final int action_settings=0x7f060000;
-        public static final int app_name=0x7f060001;
-        public static final int hello_world=0x7f060002;
-        public static final int title_activity_introduction=0x7f060003;
-        public static final int title_activity_main=0x7f060004;
-        public static final int title_activity_main_activity2=0x7f060005;
+        public static final int action_settings=0x7f070000;
+        public static final int app_name=0x7f070001;
+        public static final int hello_blank_fragment=0x7f070002;
+        public static final int hello_world=0x7f070003;
+        public static final int title_activity_introduction=0x7f070004;
+        public static final int title_activity_main=0x7f070005;
+        public static final int title_activity_main_activity2=0x7f070006;
     }
     public static final class style {
         /**  API 11 theme customizations can go here. 
  API 14 theme customizations can go here. 
          */
-        public static final int AppBaseTheme=0x7f070002;
+        public static final int AppBaseTheme=0x7f080003;
         /**  Customize your theme here. 
          */
-        public static final int AppTheme=0x7f070000;
-        public static final int button_styele=0x7f070001;
+        public static final int AppTheme=0x7f080000;
+        public static final int PopupAnimation=0x7f080001;
+        public static final int button_styele=0x7f080002;
     }
     public static final class styleable {
         /** Attributes that can be used with a CircleFlowIndicator.

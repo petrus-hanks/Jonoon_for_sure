@@ -15,6 +15,7 @@ package com.jonoon.clubapp.controller.adapter;
  * limitations under the License.
  */
 
+import android.app.Activity;
 import android.content.Context;
 import android.content.Intent;
 import android.view.LayoutInflater;
@@ -30,13 +31,13 @@ import com.jonoon.clubapp.controller.activity.MainActivity;
 
 public class IntroductionAdapter extends BaseAdapter {
 
-    private Context con;
+    private Activity con;
 	private LayoutInflater mInflater;
 	private static final int[] ids = { R.drawable.intro_1,
             R.drawable.intro_2,
             R.drawable.intro_3};
 
-	public IntroductionAdapter(Context context) {
+	public IntroductionAdapter(Activity context) {
         con = context;
 		mInflater = (LayoutInflater) context.getSystemService(Context.LAYOUT_INFLATER_SERVICE);
 	}
@@ -70,6 +71,7 @@ public class IntroductionAdapter extends BaseAdapter {
                 public void onClick(View view) {
                     Intent go = new Intent(con.getApplicationContext(), MainActivity.class);
                     con.startActivity(go);
+                    con.finish();
                 }
             });
         }

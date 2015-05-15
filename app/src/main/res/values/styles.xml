@@ -9,4 +9,10 @@
         <item name="android:textSize">13dp</item>
         <item name="android:background">@drawable/navigation_btn_bg</item>
     </style>
+
+    <style name="PopupAnimation" parent="android:Animation"
+           mce_bogus="1">
+        <item name="android:windowEnterAnimation">@anim/pop_up_from_top</item>
+        <item name="android:windowExitAnimation">@anim/pop_up_to_up</item>
+    </style>
 </resources>

@@ -7,6 +7,7 @@
     <color name="green">#ff55aa55</color>
     <color name="purple">#ffaa22aa</color>
     <color name="red">#ffff2222</color>
+    <color name="translucent">#55363e4b</color>
     <color name="transparent">#00ffffff</color>
     <color name="white">#ffffffff</color>
     <color name="yellow">#ffcccc22</color>
@@ -20,6 +21,7 @@
     <eat-comment/>
     <string name="action_settings">Settings</string>
     <string name="app_name">app</string>
+    <string name="hello_blank_fragment">Hello blank fragment</string>
     <string name="hello_world">Hello world!</string>
     <string name="title_activity_introduction">IntroductionActivity</string>
     <string name="title_activity_main">MainActivity</string>
@@ -28,6 +30,10 @@
     <eat-comment/>
     <style name="AppTheme">
         <!-- Customize your theme here. -->
+    </style>
+    <style mce_bogus="1" name="PopupAnimation" parent="android:Animation">
+        <item name="android:windowEnterAnimation">@anim/pop_up_from_top</item>
+        <item name="android:windowExitAnimation">@anim/pop_up_to_up</item>
     </style>
     <style name="button_styele">
         <item name="android:textSize">13dp</item>
