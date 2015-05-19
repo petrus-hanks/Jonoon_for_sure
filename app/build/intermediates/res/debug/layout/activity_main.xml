@@ -12,7 +12,7 @@
 
     </FrameLayout>
 
-    <com.jonoon.clubapp.view.custom_view.slidingdrawer.WrappingSlidingDrawer
+    <com.jonoon.clubapp.view.slidingdrawer.WrappingSlidingDrawer
         android:layout_alignParentBottom="true"
         android:id="@+id/drawer"
         android:layout_width="match_parent"
@@ -53,6 +53,6 @@
                 android:layout_height="200dp"/>
 
         </LinearLayout>
-    </com.jonoon.clubapp.view.custom_view.slidingdrawer.WrappingSlidingDrawer>
+    </com.jonoon.clubapp.view.slidingdrawer.WrappingSlidingDrawer>
 
 </RelativeLayout><!-- From: file:/F:/source/jonoon/app/src/main/res/layout/activity_main.xml -->

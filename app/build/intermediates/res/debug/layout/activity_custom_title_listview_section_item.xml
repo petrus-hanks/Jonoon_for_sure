@@ -1,0 +1,152 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+	android:orientation="vertical" 
+	android:layout_width="match_parent"
+	android:layout_height="wrap_content"
+    android:background="@color/bg_fixture_item_a"
+	android:clickable="true" >
+
+    <include android:id="@+id/header"
+             layout="@layout/activity_custom_title_listview_section"/>
+
+
+    <LinearLayout
+		android:orientation="horizontal" 
+		android:layout_width="match_parent"
+		android:layout_height="125dp"
+        android:weightSum="3">
+		
+		<LinearLayout android:layout_weight="1"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:gravity="center">
+            <com.android.volley.toolbox.NetworkImageView
+                android:id="@+id/team1_logo"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:src="@drawable/ic_team1"/>
+            <TextView android:text="中能"
+                      android:gravity="center"
+                      android:textSize="14dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/team1_name"/>
+        </LinearLayout>
+
+        <LinearLayout android:layout_weight="1"
+                      android:layout_width="0dp"
+                      android:layout_height="match_parent"
+                      android:orientation="vertical"
+            android:weightSum="6">
+
+            <TextView  android:layout_weight="1"
+                android:id="@+id/game_name"
+                android:gravity="center"
+                android:textSize="12dp"
+                android:text="青岛德比"
+                android:layout_width="match_parent"
+                android:layout_height="0px"
+                android:src="@drawable/ic_launcher"
+                android:layout_gravity="center"/>
+
+            <TextView  android:layout_weight="1"
+                       android:id="@+id/arena"
+                       android:gravity="center"
+                       android:textSize="12dp"
+                       android:text="天泰体育场"
+                       android:layout_width="match_parent"
+                       android:layout_height="0px"
+                       android:src="@drawable/ic_launcher"
+                       android:layout_gravity="center"/>
+
+            <ImageView android:layout_weight="2"
+                       android:id="@+id/vs_logo"
+                       android:layout_width="match_parent"
+                       android:layout_height="0px"
+                       android:src="@drawable/ic_vs"
+                android:visibility="gone"/>
+
+            <LinearLayout android:id="@+id/score_layout"
+                android:layout_weight="2"
+                android:layout_width="match_parent"
+                android:layout_height="0px"
+                android:orientation="horizontal"
+                android:weightSum="3">
+
+                <TextView android:id="@+id/team1_score"
+                          android:layout_weight="1"
+                          android:layout_width="0px"
+                          android:layout_height="match_parent"
+                          android:textSize="23dp"
+                          android:textColor="@color/text_color_fixture_item_a"
+                          android:gravity="center"
+                    />
+
+                <TextView android:id="@+id/slash"
+                          android:layout_weight="1"
+                          android:layout_width="0px"
+                          android:layout_height="match_parent"
+                          android:textSize="23dp"
+                          android:textColor="@color/text_color_fixture_item_a"
+                          android:text="-"
+                          android:gravity="center"
+                    />
+
+                <TextView android:id="@+id/team2_score"
+                          android:layout_weight="1"
+                          android:layout_width="0px"
+                          android:layout_height="match_parent"
+                          android:textSize="23dp"
+                          android:textColor="@color/text_color_fixture_item_a"
+                          android:gravity="center"
+                    />
+            </LinearLayout>
+
+            <TextView  android:layout_weight="1"
+                       android:id="@+id/week"
+                       android:gravity="center"
+                       android:textSize="10dp"
+                       android:text="星期五"
+                       android:layout_width="match_parent"
+                       android:layout_height="0px"
+                       android:src="@drawable/ic_launcher"
+                       android:layout_gravity="center"/>
+
+            <TextView  android:layout_weight="1"
+                       android:id="@+id/time"
+                       android:gravity="center"
+                       android:textSize="10dp"
+                       android:text="2014年1月1日19:00:00"
+                       android:layout_width="match_parent"
+                       android:layout_height="0px"
+                       android:src="@drawable/ic_launcher"
+                       android:layout_gravity="center"/>
+        </LinearLayout>
+
+        <LinearLayout android:layout_weight="1"
+                      android:layout_width="0dp"
+                      android:layout_height="match_parent"
+                      android:orientation="vertical"
+                      android:gravity="center">
+            <com.android.volley.toolbox.NetworkImageView
+                       android:id="@+id/team2_logo"
+                       android:layout_width="match_parent"
+                       android:layout_height="wrap_content"
+                       android:src="@drawable/ic_team2"/>
+            <TextView android:text="中能"
+                      android:textSize="14dp"
+                android:gravity="center"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/team2_name"/>
+        </LinearLayout>
+		
+	</LinearLayout>
+
+    <View android:id="@+id/fixture_item_bottom"
+        android:layout_width="match_parent"
+        android:layout_height="14dp"
+        android:background="@drawable/bg_fixture_item_bottom_a"/>
+</LinearLayout>
+<!-- From: file:/F:/source/jonoon/app/src/main/res/layout/activity_custom_title_listview_section_item.xml -->

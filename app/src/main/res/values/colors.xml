@@ -10,4 +10,11 @@
     <color name="bg_gray">#ff363e4b</color>
 
     <color name="translucent">#55363e4b</color>
+
+    <color name="white_stroke">#ccffffff</color>
+    <color name="gray_solid">#66000000</color>
+    <color name="bg_fixture_item_a">#fffef7ef</color>
+    <color name="text_color_fixture_section">#ff757575</color>
+    <color name="text_color_fixture_item_a">#ff000000</color>
+    <color name="text_color_fixture_item_b">#ffd34d27</color>
 </resources>

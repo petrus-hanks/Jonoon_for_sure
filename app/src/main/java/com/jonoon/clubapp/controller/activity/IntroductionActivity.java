@@ -1,14 +1,16 @@
 package com.jonoon.clubapp.controller.activity;
 
 import android.app.Activity;
+import android.content.Intent;
 import android.content.res.Configuration;
 import android.os.Bundle;
 import android.view.Window;
 
+import com.jonoon.clubapp.MyApplication;
 import com.jonoon.clubapp.R;
 import com.jonoon.clubapp.controller.adapter.IntroductionAdapter;
-import com.jonoon.clubapp.view.custom_view.viewflow.CircleFlowIndicator;
-import com.jonoon.clubapp.view.custom_view.viewflow.ViewFlow;
+import com.jonoon.clubapp.view.viewflow.CircleFlowIndicator;
+import com.jonoon.clubapp.view.viewflow.ViewFlow;
 
 public class IntroductionActivity extends Activity {
 
@@ -19,9 +21,14 @@ public class IntroductionActivity extends Activity {
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        if(!((MyApplication)getApplication()).goToIntroduction){
+            Intent go = new Intent(getApplicationContext(), MainActivity.class);
+            startActivity(go);
+            finish();
+        }
+
         requestWindowFeature(Window.FEATURE_NO_TITLE);
         setContentView(R.layout.activity_introduction);
-
         viewFlow = (ViewFlow) findViewById(R.id.view_flow);
         viewFlow.setAdapter(new IntroductionAdapter(this), 0);
         CircleFlowIndicator indic = (CircleFlowIndicator) findViewById(R.id.view_flow_indicator);

@@ -24,6 +24,7 @@ import android.view.ViewGroup;
 import android.widget.BaseAdapter;
 import android.widget.Button;
 import android.widget.ImageView;
+import android.widget.TextView;
 
 import com.jonoon.clubapp.R;
 import com.jonoon.clubapp.controller.activity.MainActivity;
@@ -63,18 +64,16 @@ public class IntroductionAdapter extends BaseAdapter {
 			convertView = mInflater.inflate(R.layout.activity_intro, null);
 		}
 		((ImageView) convertView.findViewById(R.id.image_view)).setImageResource(ids[position]);
-        if(position == ids.length-1){
-            Button go = (Button) convertView.findViewById(R.id.bt_go_on);
-            go.setVisibility(View.VISIBLE);
-            go.setOnClickListener(new View.OnClickListener() {
-                @Override
-                public void onClick(View view) {
-                    Intent go = new Intent(con.getApplicationContext(), MainActivity.class);
-                    con.startActivity(go);
-                    con.finish();
-                }
-            });
-        }
+        TextView go = (TextView) convertView.findViewById(R.id.bt_go_on);
+        go.setVisibility(View.VISIBLE);
+        go.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent go = new Intent(con.getApplicationContext(), MainActivity.class);
+                con.startActivity(go);
+                con.finish();
+            }
+        });
 		return convertView;
 	}
 

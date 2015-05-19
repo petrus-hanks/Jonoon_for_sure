@@ -7,12 +7,16 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"/>
 
-    <Button android:id="@+id/bt_go_on"
+    <TextView android:id="@+id/bt_go_on"
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:background="@color/red"
+        android:layout_height="44dp"
+        android:background="@drawable/introduction_btn_bg"
         android:text="进入应用"
-        android:visibility="gone"
+        android:textColor="@color/white"
+        android:textSize="16dp"
+        android:paddingLeft="64dp"
+        android:paddingRight="64dp"
+        android:gravity="center"
         android:layout_alignParentBottom="true"
         android:layout_centerHorizontal="true"
         android:layout_marginBottom="30dp"/>

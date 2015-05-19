@@ -2,14 +2,20 @@
 <resources>
     <!-- From: file:/F:/source/jonoon/app/src/main/res/values/colors.xml -->
     <eat-comment/>
+    <color name="bg_fixture_item_a">#fffef7ef</color>
     <color name="bg_gray">#ff363e4b</color>
     <color name="blue">#ff2222aa</color>
+    <color name="gray_solid">#66000000</color>
     <color name="green">#ff55aa55</color>
     <color name="purple">#ffaa22aa</color>
     <color name="red">#ffff2222</color>
+    <color name="text_color_fixture_item_a">#ff000000</color>
+    <color name="text_color_fixture_item_b">#ffd34d27</color>
+    <color name="text_color_fixture_section">#ff757575</color>
     <color name="translucent">#55363e4b</color>
     <color name="transparent">#00ffffff</color>
     <color name="white">#ffffffff</color>
+    <color name="white_stroke">#ccffffff</color>
     <color name="yellow">#ffcccc22</color>
     <declare-styleable name="CircleFlowIndicator"><attr format="color" name="activeColor"/><attr format="color" name="inactiveColor"/><attr format="dimension" name="radius"/><attr format="dimension" name="spacing"/><attr format="boolean" name="centered"/><attr format="integer" name="fadeOut"/><attr name="inactiveType"><flag name="stroke" value="0"/><flag name="fill" value="1"/></attr><attr name="activeType"><flag name="stroke" value="0"/><flag name="fill" value="1"/></attr><attr format="boolean" name="snap"/></declare-styleable>
     <declare-styleable name="ViewFlow"><attr format="integer" name="sidebuffer"/></declare-styleable>
@@ -23,7 +29,7 @@
     <string name="app_name">app</string>
     <string name="hello_blank_fragment">Hello blank fragment</string>
     <string name="hello_world">Hello world!</string>
-    <string name="title_activity_introduction">IntroductionActivity</string>
+    <string name="title_activity_introduction">中能</string>
     <string name="title_activity_main">MainActivity</string>
     <string name="title_activity_main_activity2">MainActivity2Activity</string>
     <!-- From: file:/F:/source/jonoon/app/src/main/res/values/styles.xml -->
@@ -38,5 +44,13 @@
     <style name="button_styele">
         <item name="android:textSize">13dp</item>
         <item name="android:background">@drawable/navigation_btn_bg</item>
+    </style>
+    <style name="loading_dialog" parent="android:style/Theme.Dialog">
+        <item name="android:windowFrame">@null</item>
+        <item name="android:windowNoTitle">true</item>
+        <item name="android:windowIsFloating">true</item>
+        <item name="android:windowIsTranslucent">true</item>
+        <item name="android:windowContentOverlay">@null</item>
+        <item name="android:backgroundDimEnabled">false</item>
     </style>
 </resources>

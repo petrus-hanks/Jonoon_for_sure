@@ -20,15 +20,17 @@
             android:name="com.jonoon.clubapp.controller.activity.MainActivity"
             android:label="@string/title_activity_main"
             android:launchMode="singleTask" >
+        </activity>
+        <activity
+            android:name="com.jonoon.clubapp.controller.activity.IntroductionActivity"
+            android:label="@string/title_activity_introduction" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity
-            android:name="com.jonoon.clubapp.controller.activity.IntroductionActivity"
-            android:label="@string/title_activity_introduction" >
+        <activity android:name="com.jonoon.clubapp.view.titlelistview.TitleListViewMainActivity" >
         </activity>
     </application>
 

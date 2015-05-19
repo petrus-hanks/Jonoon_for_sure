@@ -7,8 +7,9 @@ import android.support.v4.view.ViewPager;
 import android.os.Bundle;
 import android.view.KeyEvent;
 import android.view.Window;
-import android.widget.FrameLayout;
 
+import com.android.volley.Response;
+import com.android.volley.VolleyError;
 import com.jonoon.clubapp.MyApplication;
 import com.jonoon.clubapp.R;
 import com.jonoon.clubapp.controller.adapter.ViewPager4SlidingDrawer;
@@ -16,8 +17,15 @@ import com.jonoon.clubapp.controller.fragement.main_page.MainPageFragment;
 import com.jonoon.clubapp.controller.fragement.main_page.NavigationOneFragment;
 import com.jonoon.clubapp.controller.fragement.main_page.NavigationTwoFragment;
 import com.jonoon.clubapp.controller.fragement.main_page.NewsFragment;
+import com.jonoon.clubapp.model.bean.Fixture;
+import com.jonoon.clubapp.model.bean.FixtureItem;
+import com.jonoon.clubapp.util.DateHelper;
 import com.jonoon.clubapp.util.L;
-import com.jonoon.clubapp.view.custom_view.slidingdrawer.WrappingSlidingDrawer;
+import com.jonoon.clubapp.util.net.GsonRequest;
+import com.jonoon.clubapp.util.net.VolleyHelper;
+import com.jonoon.clubapp.view.custom_view.WaitingDialog;
+import com.jonoon.clubapp.view.slidingdrawer.WrappingSlidingDrawer;
+import com.jonoon.clubapp.view.titlelistview.TitleListViewMainActivity;
 
 public class MainActivity extends FragmentActivity
         implements NavigationOneFragment.OnFragmentInteractionListener,
@@ -27,20 +35,15 @@ public class MainActivity extends FragmentActivity
     private ViewPager pager;
     private WrappingSlidingDrawer drawer;
     private int cur_page;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         requestWindowFeature(Window.FEATURE_NO_TITLE);
         setContentView(R.layout.activity_main);
-
-        if(((MyApplication)getApplication()).goToIntroduction){
-            Intent go = new Intent(getApplicationContext(), IntroductionActivity.class);
-            startActivity(go);
-            ((MyApplication)getApplication()).goToIntroduction = false;
-        }
-
         initView();
 
+        ((MyApplication)getApplication()).goToIntroduction = false;
     }
 
 
@@ -49,7 +52,7 @@ public class MainActivity extends FragmentActivity
         pager.setAdapter(new ViewPager4SlidingDrawer(getSupportFragmentManager()));
 
         getSupportFragmentManager().beginTransaction()
-                .replace(R.id.fragment_container, NewsFragment.newInstance("http://ig28.com/mothertea2", null)
+                .replace(R.id.fragment_container, NewsFragment.newInstance("http://www.baidu.com", null)
                 )
                 .commit();
 
@@ -110,6 +113,17 @@ public class MainActivity extends FragmentActivity
                             )
                             .commit();
                     break;
+                case 6:
+                    WaitingDialog waiting = new WaitingDialog(this);
+                    waiting.show();
+                    break;
+                case 7:
+                    Intent intent = new Intent(getApplicationContext(), TitleListViewMainActivity.class);
+                    startActivity(intent);
+                    break;
+                case 8:
+                    break;
+
             }
         }
         cur_page = page_num;
@@ -119,7 +133,7 @@ public class MainActivity extends FragmentActivity
     public boolean onKeyDown(int keyCode, KeyEvent event) {
 
         if(keyCode == KeyEvent.KEYCODE_BACK){
-            if(drawer.isOpened()){
+            if(drawer.isOpened() && !drawer.isMoving()){
                 drawer.animateOpen();
                 return true;
             }else {
@@ -135,4 +149,5 @@ public class MainActivity extends FragmentActivity
         }
         return super.onKeyDown(keyCode, event);
     }
+
 }

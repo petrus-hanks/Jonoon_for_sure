@@ -6,19 +6,23 @@
                 tools:context="com.jonoon.clubapp.controller.activity.IntroductionActivity">
 
 
-    <com.jonoon.clubapp.view.custom_view.viewflow.ViewFlow
+    <com.jonoon.clubapp.view.viewflow.ViewFlow
         android:id="@+id/view_flow"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         app:sidebuffer="3" />
 
-    <com.jonoon.clubapp.view.custom_view.viewflow.CircleFlowIndicator
+    <com.jonoon.clubapp.view.viewflow.CircleFlowIndicator
         android:id="@+id/view_flow_indicator"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignParentBottom="true"
         android:layout_centerHorizontal="true"
-        android:padding="10dip"
+        android:layout_marginBottom="94dp"
+        app:spacing="10dp"
+        app:radius="3dp"
+        app:activeColor="@color/bg_gray"
+        app:inactiveColor="@color/white_stroke"
         app:inactiveType="fill" />
 
 </RelativeLayout>

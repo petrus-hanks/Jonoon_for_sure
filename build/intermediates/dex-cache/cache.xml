@@ -2,11 +2,11 @@
 <items version="2" >
 
     <item
-        jar="F:\source\jonoon\app\build\intermediates\exploded-aar\com.android.support\support-v4\22.1.0\libs\internal_impl-22.1.0.jar"
+        jar="F:\source\jonoon\app\src\main\libs\httpcore-4.3.3.jar"
         jumboMode="false"
         revision="22.0.1"
-        sha1="025cb89f2896c63200ff4c2e6c467a95691d880a">
-        <dex dex="F:\source\jonoon\app\build\intermediates\pre-dexed\debug\internal_impl-22.1.0-995f6acd23af9ac2b71c93e7226e6492c895c3a3.jar" />
+        sha1="f91b7a4aadc5cf486df6e4634748d7dd7a73f06d">
+        <dex dex="F:\source\jonoon\app\build\intermediates\pre-dexed\debug\httpcore-4.3.3-960978449c9a7944f9bc97447af5f763ea75ee35.jar" />
     </item>
     <item
         jar="D:\Program Files\Android-SDK\extras\android\m2repository\com\android\support\support-annotations\22.1.0\support-annotations-22.1.0.jar"
@@ -16,11 +16,39 @@
         <dex dex="F:\source\jonoon\app\build\intermediates\pre-dexed\debug\support-annotations-22.1.0-1d7ab3f532d79c91181d65bd075c9f8008144e5e.jar" />
     </item>
     <item
+        jar="F:\source\jonoon\app\src\main\libs\volley.jar"
+        jumboMode="false"
+        revision="22.0.1"
+        sha1="9c75f22693bba16fe4d0f16da840b08f0ace5868">
+        <dex dex="F:\source\jonoon\app\build\intermediates\pre-dexed\debug\volley-73c2e3f9a912704c230f04b9788c3132ddf5d9dc.jar" />
+    </item>
+    <item
+        jar="F:\source\jonoon\app\src\main\libs\gson-2.3.jar"
+        jumboMode="false"
+        revision="22.0.1"
+        sha1="5fc52c41ef0239d1093a1eb7c3697036183677ce">
+        <dex dex="F:\source\jonoon\app\build\intermediates\pre-dexed\debug\gson-2.3-ac6773efc138430871dc07f973582f1b71203a6d.jar" />
+    </item>
+    <item
         jar="F:\source\jonoon\app\build\intermediates\exploded-aar\com.android.support\support-v4\22.1.0\classes.jar"
         jumboMode="false"
         revision="22.0.1"
         sha1="eeebabdfd8203f6ab639ccea4ffa1f20e1adee3a">
         <dex dex="F:\source\jonoon\app\build\intermediates\pre-dexed\debug\classes-257e3085f8e0cf1d7a53b2e02af701f17c2acdd5.jar" />
+    </item>
+    <item
+        jar="F:\source\jonoon\app\build\intermediates\exploded-aar\com.android.support\support-v4\22.1.0\libs\internal_impl-22.1.0.jar"
+        jumboMode="false"
+        revision="22.0.1"
+        sha1="025cb89f2896c63200ff4c2e6c467a95691d880a">
+        <dex dex="F:\source\jonoon\app\build\intermediates\pre-dexed\debug\internal_impl-22.1.0-995f6acd23af9ac2b71c93e7226e6492c895c3a3.jar" />
+    </item>
+    <item
+        jar="F:\source\jonoon\app\src\main\libs\httpmime-4.3.6.jar"
+        jumboMode="false"
+        revision="22.0.1"
+        sha1="66a39a5e37d5da40fdad6176fc24ef4316e74702">
+        <dex dex="F:\source\jonoon\app\build\intermediates\pre-dexed\debug\httpmime-4.3.6-8e642a7ea5a7b48437a2ce008483049d2220e312.jar" />
     </item>
 
 </items>
