@@ -65,7 +65,3 @@ category#android.intent.category.LAUNCHER
 ADDED from AndroidManifest.xml:29:17
 	android:name
 		ADDED from AndroidManifest.xml:29:27
-activity#com.jonoon.clubapp.view.titlelistview.TitleListViewMainActivity
-ADDED from AndroidManifest.xml:33:9
-	android:name
-		ADDED from AndroidManifest.xml:34:13

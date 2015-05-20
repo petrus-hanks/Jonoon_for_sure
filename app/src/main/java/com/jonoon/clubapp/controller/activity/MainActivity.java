@@ -13,6 +13,7 @@ import com.android.volley.VolleyError;
 import com.jonoon.clubapp.MyApplication;
 import com.jonoon.clubapp.R;
 import com.jonoon.clubapp.controller.adapter.ViewPager4SlidingDrawer;
+import com.jonoon.clubapp.controller.fragement.main_page.FixtureFragment;
 import com.jonoon.clubapp.controller.fragement.main_page.MainPageFragment;
 import com.jonoon.clubapp.controller.fragement.main_page.NavigationOneFragment;
 import com.jonoon.clubapp.controller.fragement.main_page.NavigationTwoFragment;
@@ -117,9 +118,10 @@ public class MainActivity extends FragmentActivity
                     WaitingDialog waiting = new WaitingDialog(this);
                     waiting.show();
                     break;
-                case 7:
-                    Intent intent = new Intent(getApplicationContext(), TitleListViewMainActivity.class);
-                    startActivity(intent);
+                case 7://赛程
+                    getSupportFragmentManager().beginTransaction()
+                            .replace(R.id.fragment_container, new FixtureFragment())
+                            .commit();
                     break;
                 case 8:
                     break;

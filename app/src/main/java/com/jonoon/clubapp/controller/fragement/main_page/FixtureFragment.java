@@ -10,9 +10,16 @@ import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.TextView;
 
+import com.android.volley.Response;
+import com.android.volley.VolleyError;
 import com.jonoon.clubapp.R;
+import com.jonoon.clubapp.controller.adapter.FixtureAdapter;
+import com.jonoon.clubapp.model.bean.Fixture;
+import com.jonoon.clubapp.model.variable.ServerUrl;
 import com.jonoon.clubapp.util.L;
-import com.jonoon.clubapp.view.custom_view.H5WebView;
+import com.jonoon.clubapp.util.net.GsonRequest;
+import com.jonoon.clubapp.util.net.VolleyHelper;
+import com.jonoon.clubapp.view.custom_view.WaitingDialog;
 import com.jonoon.clubapp.view.titlelistview.PinnedHeaderListView;
 
 /**
@@ -25,6 +32,8 @@ import com.jonoon.clubapp.view.titlelistview.PinnedHeaderListView;
 public class FixtureFragment extends Fragment {
 
     private final String TAG = this.getClass().getSimpleName();
+    private FixtureAdapter adapter;
+    private PinnedHeaderListView listView;
 
     private static final String URL = "mUrl";
     private static final String ARG_PARAM2 = "param2";
@@ -32,24 +41,25 @@ public class FixtureFragment extends Fragment {
     private String mUrl;
     private String mParam2;
 
-
-    /**
-     * Use this factory method to create a new instance of
-     * this fragment using the provided parameters.
-     *
-     * @param param1 Parameter 1.
-     * @param param2 Parameter 2.
-     *
-     * @return A new instance of fragment MainPageFragment.
-     */
-    public static FixtureFragment newInstance(String param1, String param2) {
-        FixtureFragment fragment = new FixtureFragment();
-        Bundle args = new Bundle();
-        args.putString(URL, param1);
-        args.putString(ARG_PARAM2, param2);
-        fragment.setArguments(args);
-        return fragment;
-    }
+    private WaitingDialog mWaitingDialog;
+//
+//    /**
+//     * Use this factory method to create a new instance of
+//     * this fragment using the provided parameters.
+//     *
+//     * @param param1 Parameter 1.
+//     * @param param2 Parameter 2.
+//     *
+//     * @return A new instance of fragment MainPageFragment.
+//     */
+//    public static FixtureFragment newInstance(String param1, String param2) {
+//        FixtureFragment fragment = new FixtureFragment();
+//        Bundle args = new Bundle();
+//        args.putString(URL, param1);
+//        args.putString(ARG_PARAM2, param2);
+//        fragment.setArguments(args);
+//        return fragment;
+//    }
 
     public FixtureFragment() {
         // Required empty public constructor
@@ -67,15 +77,51 @@ public class FixtureFragment extends Fragment {
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
+
         LinearLayout frame = (LinearLayout) inflater.inflate(R.layout.fragment_fixture, container, false);
         TextView title = (TextView) frame.findViewById(R.id.title);
         title.setText("赛 程");
         ImageView right_icon = (ImageView) frame.findViewById(R.id.setting);
         right_icon.setImageResource(R.drawable.ic_user_center);
-        PinnedHeaderListView list = (PinnedHeaderListView) frame.findViewById(R.id.section_list_view);
+
+        listView = (PinnedHeaderListView) frame.findViewById(R.id.section_list_view);
+        adapter = new FixtureAdapter(getActivity());
+        listView = (PinnedHeaderListView) frame.findViewById(R.id.section_list_view);
+        listView.setAdapter(adapter);
+        listView.setOnScrollListener(adapter);
+        listView.setPinnedHeaderView(inflater.inflate(
+                R.layout.activity_custom_title_listview_section, listView, false));
+
+        getData();
 
         return frame;
     }
+
+
+    private void getData(){
+        mWaitingDialog = new WaitingDialog(getActivity());
+        mWaitingDialog.show();
+        GsonRequest<Fixture> jsObjRequest = new GsonRequest<Fixture>(ServerUrl.getGET_FIXTURE_LIST(),
+                Fixture.class, null, new Response.Listener<Fixture>() {
+            @Override
+            public void onResponse(Fixture fixture) {
+                L.e(TAG, fixture.toString());
+                adapter.setData(fixture);
+                mWaitingDialog.cancel();
+            }
+        },new Response.ErrorListener() {
+            @Override
+            public void onErrorResponse(VolleyError volleyError) {
+                L.e(TAG, volleyError.toString());
+                mWaitingDialog.cancel();
+            }
+        });
+
+        jsObjRequest.setTag(TAG);
+        // Access the RequestQueue through your singleton class.
+        VolleyHelper.getInstance(getActivity()).addToRequestQueue(jsObjRequest);
+    }
+
 
     @Override
     public void onAttach(Activity activity) {
@@ -93,6 +139,7 @@ public class FixtureFragment extends Fragment {
     public void onPause() {
         super.onPause();
         L.e(TAG, "onPause");
+        mWaitingDialog.cancel();
     }
 
     @Override
