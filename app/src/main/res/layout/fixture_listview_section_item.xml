@@ -7,7 +7,7 @@
 	android:clickable="true" >
 
     <include android:id="@+id/header"
-             layout="@layout/activity_custom_title_listview_section"/>
+             layout="@layout/fixture_listview_section"/>
 
 
     <LinearLayout

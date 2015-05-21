@@ -6,7 +6,10 @@ import android.support.v4.app.FragmentActivity;
 import android.support.v4.view.ViewPager;
 import android.os.Bundle;
 import android.view.KeyEvent;
+import android.view.View;
 import android.view.Window;
+import android.widget.ImageView;
+import android.widget.SlidingDrawer;
 
 import com.android.volley.Response;
 import com.android.volley.VolleyError;
@@ -18,6 +21,7 @@ import com.jonoon.clubapp.controller.fragement.main_page.MainPageFragment;
 import com.jonoon.clubapp.controller.fragement.main_page.NavigationOneFragment;
 import com.jonoon.clubapp.controller.fragement.main_page.NavigationTwoFragment;
 import com.jonoon.clubapp.controller.fragement.main_page.NewsFragment;
+import com.jonoon.clubapp.controller.fragement.main_page.SquadFragment;
 import com.jonoon.clubapp.model.bean.Fixture;
 import com.jonoon.clubapp.model.bean.FixtureItem;
 import com.jonoon.clubapp.util.DateHelper;
@@ -26,7 +30,6 @@ import com.jonoon.clubapp.util.net.GsonRequest;
 import com.jonoon.clubapp.util.net.VolleyHelper;
 import com.jonoon.clubapp.view.custom_view.WaitingDialog;
 import com.jonoon.clubapp.view.slidingdrawer.WrappingSlidingDrawer;
-import com.jonoon.clubapp.view.titlelistview.TitleListViewMainActivity;
 
 public class MainActivity extends FragmentActivity
         implements NavigationOneFragment.OnFragmentInteractionListener,
@@ -37,6 +40,8 @@ public class MainActivity extends FragmentActivity
     private WrappingSlidingDrawer drawer;
     private int cur_page;
 
+    private ImageView mHandler;
+    private ImageView mArrowDown;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -58,7 +63,44 @@ public class MainActivity extends FragmentActivity
                 .commit();
 
         drawer = (WrappingSlidingDrawer) findViewById(R.id.drawer);
+        mHandler = (ImageView) drawer.findViewById(R.id.handle_icon);
 
+        mArrowDown = (ImageView) drawer.findViewById(R.id.arrow_down);
+
+        drawer.setOnDrawerOpenListener(new SlidingDrawer.OnDrawerOpenListener() {
+            @Override
+            public void onDrawerOpened() {
+                mHandler.setImageResource(R.drawable.handler);
+                mArrowDown.setVisibility(View.VISIBLE);
+            }
+        });
+        drawer.setOnDrawerScrollListener(new SlidingDrawer.OnDrawerScrollListener() {
+            @Override
+            public void onScrollStarted() {
+                mHandler.setImageResource(R.drawable.handler_close);
+                mArrowDown.setVisibility(View.INVISIBLE);
+            }
+
+            @Override
+            public void onScrollEnded() {
+                if(drawer.isOpened()){
+                    mHandler.setImageResource(R.drawable.handler);
+                    mArrowDown.setVisibility(View.VISIBLE);
+                }else {
+                    mHandler.setImageResource(R.drawable.handler_close);
+                    mArrowDown.setVisibility(View.INVISIBLE);
+                }
+
+            }
+        });
+        drawer.setOnDrawerCloseListener(new SlidingDrawer.OnDrawerCloseListener() {
+
+            @Override
+            public void onDrawerClosed() {
+                mHandler.setImageResource(R.drawable.handler_close);
+                mArrowDown.setVisibility(View.INVISIBLE);
+            }
+        });
     }
 
     @Override
@@ -124,6 +166,9 @@ public class MainActivity extends FragmentActivity
                             .commit();
                     break;
                 case 8:
+                    getSupportFragmentManager().beginTransaction()
+                            .replace(R.id.fragment_container, new SquadFragment())
+                            .commit();
                     break;
 
             }

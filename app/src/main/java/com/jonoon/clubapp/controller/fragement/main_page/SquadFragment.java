@@ -2,7 +2,6 @@ package com.jonoon.clubapp.controller.fragement.main_page;
 
 import android.app.Activity;
 import android.os.Bundle;
-import android.support.v4.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -13,25 +12,24 @@ import android.widget.TextView;
 import com.android.volley.Response;
 import com.android.volley.VolleyError;
 import com.jonoon.clubapp.R;
-import com.jonoon.clubapp.controller.adapter.FixtureAdapter;
-import com.jonoon.clubapp.model.bean.Fixture;
+import com.jonoon.clubapp.controller.adapter.SquadAdapter;
+import com.jonoon.clubapp.model.bean.Squad;
 import com.jonoon.clubapp.model.constants.ServerUrl;
 import com.jonoon.clubapp.util.L;
 import com.jonoon.clubapp.util.net.GsonRequest;
 import com.jonoon.clubapp.util.net.VolleyHelper;
 import com.jonoon.clubapp.view.custom_view.WaitingDialog;
-import com.jonoon.clubapp.view.titlelistview.PinnedHeaderListView;
+import com.jonoon.clubapp.view.titlelistview.PinnedHeaderExpandableListView;
 
 /**
  * A simple {@link android.support.v4.app.Fragment} subclass.
  * Activities that contain this fragment must implement the
- * {
  */
-public class FixtureFragment extends Fragment {
+public class SquadFragment extends android.support.v4.app.Fragment {
 
     private final String TAG = this.getClass().getSimpleName();
-    private FixtureAdapter adapter;
-    private PinnedHeaderListView listView;
+    private SquadAdapter adapter;
+    private PinnedHeaderExpandableListView listView;
 
     private static final String URL = "mUrl";
     private static final String ARG_PARAM2 = "param2";
@@ -40,26 +38,8 @@ public class FixtureFragment extends Fragment {
     private String mParam2;
 
     private WaitingDialog mWaitingDialog;
-//
-//    /**
-//     * Use this factory method to create a new instance of
-//     * this fragment using the provided parameters.
-//     *
-//     * @param param1 Parameter 1.
-//     * @param param2 Parameter 2.
-//     *
-//     * @return A new instance of fragment MainPageFragment.
-//     */
-//    public static FixtureFragment newInstance(String param1, String param2) {
-//        FixtureFragment fragment = new FixtureFragment();
-//        Bundle args = new Bundle();
-//        args.putString(URL, param1);
-//        args.putString(ARG_PARAM2, param2);
-//        fragment.setArguments(args);
-//        return fragment;
-//    }
 
-    public FixtureFragment() {
+    public SquadFragment() {
         // Required empty public constructor
     }
 
@@ -76,18 +56,18 @@ public class FixtureFragment extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
 
-        LinearLayout frame = (LinearLayout) inflater.inflate(R.layout.fragment_fixture, container, false);
+        LinearLayout frame = (LinearLayout) inflater.inflate(R.layout.fragment_squad, container, false);
         TextView title = (TextView) frame.findViewById(R.id.title);
-        title.setText("赛 程");
+        title.setText("足球队");
         ImageView right_icon = (ImageView) frame.findViewById(R.id.setting);
         right_icon.setImageResource(R.drawable.ic_user_center);
 
-        adapter = new FixtureAdapter(getActivity());
-        listView = (PinnedHeaderListView) frame.findViewById(R.id.section_list_view);
+        adapter = new SquadAdapter(getActivity());
+        listView = (PinnedHeaderExpandableListView) frame.findViewById(R.id.section_list_view);
         listView.setAdapter(adapter);
         listView.setOnScrollListener(adapter);
         listView.setPinnedHeaderView(inflater.inflate(
-                R.layout.fixture_listview_section, listView, false));
+                R.layout.squad_listview_group_section, listView, false));
 
         getData();
 
@@ -98,12 +78,12 @@ public class FixtureFragment extends Fragment {
     private void getData(){
         mWaitingDialog = new WaitingDialog(getActivity());
         mWaitingDialog.show();
-        GsonRequest<Fixture> jsObjRequest = new GsonRequest<Fixture>(ServerUrl.getFIXTURE_LIST(),
-                Fixture.class, null, new Response.Listener<Fixture>() {
+        GsonRequest<Squad> jsObjRequest = new GsonRequest<Squad>(ServerUrl.getSQUAD_LIST(),
+                Squad.class, null, new Response.Listener<Squad>() {
             @Override
-            public void onResponse(Fixture fixture) {
-                L.e(TAG, fixture.toString());
-                adapter.setData(fixture);
+            public void onResponse(Squad squad) {
+                L.e(TAG, squad.toString());
+                adapter.setData(squad);
                 mWaitingDialog.cancel();
             }
         },new Response.ErrorListener() {

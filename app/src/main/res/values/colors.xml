@@ -17,4 +17,6 @@
     <color name="text_color_fixture_section">#ff757575</color>
     <color name="text_color_fixture_item_a">#ff000000</color>
     <color name="text_color_fixture_item_b">#ffd34d27</color>
+
+    <color name="divider_color">#ff606771</color>
 </resources>
