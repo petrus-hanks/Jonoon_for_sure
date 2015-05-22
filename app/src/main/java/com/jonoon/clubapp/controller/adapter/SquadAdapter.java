@@ -59,26 +59,28 @@ public class SquadAdapter extends AnimatedExpandableListView.AnimatedExpandableL
         if(data !=null && data.size() > 0){
 
             String groupName = new String();
+            for(int j=0;j<30;j++){
+                for(SquadItem i : data){
 
-            for(SquadItem i : data){
+                    if(StringHelper.isEmpty(i.getGroup())){
+                        //如果分组列表为空，则跳过，不记录
+                        continue;
+                    }
 
-                if(StringHelper.isEmpty(i.getGroup())){
-                    //如果分组列表为空，则跳过，不记录
-                    continue;
-                }
-
-                if(groupName.equals(i.getGroup())){
-                    //组名相同，则从group list取出group，item添加到group对象的children里
-                    ret.get(ret.size()-1).getChildren().add(i);
-                }else {
-                    groupName = i.getGroup();
-                    //组名不同，新建group，向group中添加item，并添加group至group list
-                    SquadGroupData groupData = new SquadGroupData();
-                    groupData.setGroupName(i.getGroup());
-                    groupData.getChildren().add(i);
-                    ret.add(groupData);
+                    if(groupName.equals(i.getGroup())){
+                        //组名相同，则从group list取出group，item添加到group对象的children里
+                        ret.get(ret.size()-1).getChildren().add(i);
+                    }else {
+                        groupName = i.getGroup();
+                        //组名不同，新建group，向group中添加item，并添加group至group list
+                        SquadGroupData groupData = new SquadGroupData();
+                        groupData.setGroupName(i.getGroup());
+                        groupData.getChildren().add(i);
+                        ret.add(groupData);
+                    }
                 }
             }
+
         }
         return ret;
     }
@@ -118,13 +120,38 @@ public class SquadAdapter extends AnimatedExpandableListView.AnimatedExpandableL
 
         convertView = inflater.inflate(R.layout.squad_listview_group_section, null);
         TextView group_title = (TextView) convertView.findViewById(R.id.group_title);
-        group_title.setText("groupPosition = "+groupPosition);
+        SquadGroupData data = mData.get(groupPosition);
+        group_title.setText(data.getGroupName());
+        ImageView group_indicator = (ImageView) convertView.findViewById(R.id.expand_indicator);
+        if(isExpanded){
+            group_indicator.setImageResource(R.drawable.ic_group_expanded_state);
+        }else {
+            group_indicator.setImageResource(R.drawable.ic_group_collapse_state);
+        }
         return convertView;
     }
 
     @Override
     public View getRealChildView(int groupPosition, int childPosition, boolean isLastChild, View convertView, ViewGroup parent) {
-        convertView = inflater.inflate(R.layout.squad_listview_group_item, null);
+
+        ViewHolder vh;
+        if(convertView == null){
+            convertView = inflater.inflate(R.layout.squad_listview_group_item, null);
+            vh = new ViewHolder();
+            vh.player_avast = (NetworkImageView) convertView.findViewById(R.id.player_avast);
+            vh.player_number = (TextView) convertView.findViewById(R.id.player_number);
+            vh.player_position = (TextView) convertView.findViewById(R.id.player_position);
+            vh.player_name = (TextView) convertView.findViewById(R.id.player_name);
+            convertView.setTag(vh);
+        }else {
+            vh = (ViewHolder) convertView.getTag();
+        }
+        SquadItem data = mData.get(groupPosition).getChildren().get(childPosition);
+        vh.player_avast.setImageUrl(data.getAvatar(),imageLoader);
+        vh.player_number.setText(data.getNo());
+        vh.player_position.setText(data.getPosition());
+        vh.player_name.setText(data.getName());
+
         return convertView;
     }
 
@@ -152,13 +179,22 @@ public class SquadAdapter extends AnimatedExpandableListView.AnimatedExpandableL
 
     /*header is group title ,so group_position is needed*/
     @Override
-    public void configurePinnedHeader(View header, int group_position) {
+    public void configurePinnedHeader(View header, int group_position, boolean isExpanded) {
+
+        SquadGroupData data = mData.get(group_position);
         TextView group_title = (TextView) header.findViewById(R.id.group_title);
-        group_title.setText("groupPosition = "+group_position);
+        group_title.setText(data.getGroupName());
+        if(isExpanded){
+            ((ImageView)header.findViewById(R.id.expand_indicator)).setImageResource(R.drawable.ic_group_expanded_state);
+        }else {
+            ((ImageView)header.findViewById(R.id.expand_indicator)).setImageResource(R.drawable.ic_group_collapse_state);
+        }
+
     }
 
 
-	@Override
+
+    @Override
 	public void onScroll(AbsListView view, int firstVisibleItem,
 			int visibleItemCount, int totalItemCount) {
 		if (view instanceof AnimatedExpandableListView) {

@@ -613,8 +613,6 @@ public class AnimatedExpandableListView extends ExpandableListView {
         }
     }
 
-
-
 //for pinned
 
     public interface PinnedHeaderAdapter {
@@ -623,8 +621,7 @@ public class AnimatedExpandableListView extends ExpandableListView {
         public static final int PINNED_HEADER_VISIBLE = 1;
         public static final int PINNED_HEADER_PUSHED_UP = 2;
 
-        void configurePinnedHeader(View header, int group_position);
-
+        void configurePinnedHeader(View header, int group_position, boolean isExpanded);
     }
 
     private static final int MAX_ALPHA = 255;
@@ -645,6 +642,9 @@ public class AnimatedExpandableListView extends ExpandableListView {
         }
     }
 
+    public View getPinnedHeaderView(){
+        return mHeaderView;
+    }
 
     @Override
     protected void onMeasure(int widthMeasureSpec, int heightMeasureSpec) {
@@ -696,7 +696,7 @@ public class AnimatedExpandableListView extends ExpandableListView {
 
             case PinnedHeaderAdapter.PINNED_HEADER_VISIBLE: {
                 mHeaderView.layout(0, 0, mHeaderViewWidth, mHeaderViewHeight);
-                ((PinnedHeaderAdapter)getExpandableListAdapter()).configurePinnedHeader(mHeaderView, group_position);
+                ((PinnedHeaderAdapter)getExpandableListAdapter()).configurePinnedHeader(mHeaderView, group_position, isGroupExpanded(group_position));
                 mHeaderViewVisible = true;
                 break;
             }
@@ -714,7 +714,7 @@ public class AnimatedExpandableListView extends ExpandableListView {
                 } else {
                     y = 0;
                 }
-                ((PinnedHeaderAdapter)getExpandableListAdapter()).configurePinnedHeader(mHeaderView, group_position);
+                ((PinnedHeaderAdapter)getExpandableListAdapter()).configurePinnedHeader(mHeaderView, group_position, isGroupExpanded(group_position));
                 if (mHeaderView.getTop() != y) {
                     mHeaderView.layout(0, y, mHeaderViewWidth, mHeaderViewHeight
                             + y);

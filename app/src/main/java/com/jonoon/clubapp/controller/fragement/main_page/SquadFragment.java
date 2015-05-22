@@ -77,13 +77,11 @@ public class SquadFragment extends android.support.v4.app.Fragment {
 
                 int groupPosition = listView.getPackedPositionGroup(
                         listView.getExpandableListPosition(listView.getFirstVisiblePosition()));
-
-                L.e(TAG,"header click! /n listView.getFirstVisiblePosition() = "+listView.getFirstVisiblePosition()
-                        +" groupPosition = "+groupPosition);
-
                 if (listView.isGroupExpanded(groupPosition)) {
+                    ((ImageView)listView.getPinnedHeaderView().findViewById(R.id.expand_indicator)).setImageResource(R.drawable.ic_group_collapse_state);
                     listView.collapseGroupWithAnimation(groupPosition);
                 } else {
+                    ((ImageView)listView.getPinnedHeaderView().findViewById(R.id.expand_indicator)).setImageResource(R.drawable.ic_group_expanded_state);
                     listView.expandGroupWithAnimation(groupPosition);
                 }
             }
@@ -105,6 +103,7 @@ public class SquadFragment extends android.support.v4.app.Fragment {
             }
 
         });
+
         listView.setOnChildClickListener(new ExpandableListView.OnChildClickListener() {
             @Override
             public boolean onChildClick(ExpandableListView parent, View v, int groupPosition, int childPosition, long id) {
@@ -113,6 +112,38 @@ public class SquadFragment extends android.support.v4.app.Fragment {
                 return false;
             }
         });
+
+        listView.setOnGroupExpandListener(new ExpandableListView.OnGroupExpandListener() {
+            @Override
+            public void onGroupExpand(int groupPosition) {
+                int firstGroupPosition = listView.getPackedPositionGroup(
+                        listView.getExpandableListPosition(listView.getFirstVisiblePosition()));
+                if(firstGroupPosition == groupPosition){
+                    if(listView.isGroupExpanded(groupPosition)){
+                        ((ImageView)listView.getPinnedHeaderView().findViewById(R.id.expand_indicator)).setImageResource(R.drawable.ic_group_expanded_state);
+                    }else {
+                        ((ImageView)listView.getPinnedHeaderView().findViewById(R.id.expand_indicator)).setImageResource(R.drawable.ic_group_collapse_state);
+                    }
+                }
+            }
+        });
+
+        listView.setOnGroupCollapseListener(new ExpandableListView.OnGroupCollapseListener() {
+            @Override
+            public void onGroupCollapse(int groupPosition) {
+                int firstGroupPosition = listView.getPackedPositionGroup(
+                        listView.getExpandableListPosition(listView.getFirstVisiblePosition()));
+                if(firstGroupPosition == groupPosition){
+                    if(listView.isGroupExpanded(groupPosition)){
+                        ((ImageView)listView.getPinnedHeaderView().findViewById(R.id.expand_indicator)).setImageResource(R.drawable.ic_group_expanded_state);
+                    }else {
+
+                        ((ImageView)listView.getPinnedHeaderView().findViewById(R.id.expand_indicator)).setImageResource(R.drawable.ic_group_collapse_state);
+                    }
+                }
+            }
+        });
+
         getData();
 
         return frame;
