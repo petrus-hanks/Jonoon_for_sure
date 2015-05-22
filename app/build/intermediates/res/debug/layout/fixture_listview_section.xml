@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+	android:layout_width="match_parent"
+	android:layout_height="50dp"
+	android:background="@drawable/bg_fixture_section"
+    android:paddingBottom="6dp">
+	
+	<TextView 
+		android:id="@+id/header_text"
+		android:layout_width="match_parent"
+		android:layout_height="match_parent"
+        android:gravity="center"
+		android:text="section"
+		android:textSize="14dp"
+		android:textStyle="bold"
+		android:textColor="@color/text_color_fixture_section"
+		android:layout_centerHorizontal="true"
+        android:layout_alignParentBottom="true"/>
+</RelativeLayout>
+<!-- From: file:/F:/source/jonoon/app/src/main/res/layout/fixture_listview_section.xml -->

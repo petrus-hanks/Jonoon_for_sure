@@ -6,7 +6,6 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.AbsListView;
 import android.widget.AbsListView.OnScrollListener;
-import android.widget.BaseExpandableListAdapter;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.RelativeLayout;
@@ -20,13 +19,14 @@ import com.jonoon.clubapp.model.bean.SquadItem;
 import com.jonoon.clubapp.model.variable.SquadGroupData;
 import com.jonoon.clubapp.util.StringHelper;
 import com.jonoon.clubapp.util.net.VolleyHelper;
-import com.jonoon.clubapp.view.titlelistview.PinnedHeaderExpandableListView;
+import com.jonoon.clubapp.view.titlelistview.AnimatedExpandableListView;
 
 import java.util.ArrayList;
 import java.util.Collections;
 
 
-public class SquadAdapter extends BaseExpandableListAdapter implements PinnedHeaderExpandableListView.PinnedHeaderAdapter,
+public class SquadAdapter extends AnimatedExpandableListView.AnimatedExpandableListAdapter
+        implements AnimatedExpandableListView.PinnedHeaderAdapter,
 		OnScrollListener{
 
     private Activity activity;
@@ -89,11 +89,6 @@ public class SquadAdapter extends BaseExpandableListAdapter implements PinnedHea
     }
 
     @Override
-    public int getChildrenCount(int groupPosition) {
-        return mData.get(groupPosition).getChildren().size();
-    }
-
-    @Override
     public Object getGroup(int groupPosition) {
         return mData.get(groupPosition);
     }
@@ -122,60 +117,52 @@ public class SquadAdapter extends BaseExpandableListAdapter implements PinnedHea
     public View getGroupView(int groupPosition, boolean isExpanded, View convertView, ViewGroup parent) {
 
         convertView = inflater.inflate(R.layout.squad_listview_group_section, null);
+        TextView group_title = (TextView) convertView.findViewById(R.id.group_title);
+        group_title.setText("groupPosition = "+groupPosition);
         return convertView;
     }
 
     @Override
-    public View getChildView(int groupPosition, int childPosition, boolean isLastChild, View convertView, ViewGroup parent) {
+    public View getRealChildView(int groupPosition, int childPosition, boolean isLastChild, View convertView, ViewGroup parent) {
         convertView = inflater.inflate(R.layout.squad_listview_group_item, null);
         return convertView;
     }
 
     @Override
+    public int getRealChildrenCount(int groupPosition) {
+        return mData.get(groupPosition).getChildren().size();
+    }
+
+    @Override
     public boolean isChildSelectable(int groupPosition, int childPosition) {
-        return false;
+        return true;
     }
 
     class ViewHolder{
-        public RelativeLayout header;
-        public TextView header_text;
+        public ImageView group_indicator;
+        public TextView group_title;
 
-        public TextView league;
-        public TextView addr;
+        public NetworkImageView player_avast;
+        public TextView player_number;
 
-        public ImageView vs;
-
-        public LinearLayout score_layout;
-        public TextView team1score;
-        public TextView slash;
+        public TextView player_position;
+        public TextView player_name;
 
     }
 
-	@Override
-	public int getPinnedHeaderState(int position) {
-
-        return PINNED_HEADER_PUSHED_UP;
-	}
-
+    /*header is group title ,so group_position is needed*/
     @Override
-    public void configurePinnedHeader(View header, int position) {
-
-
-//		if (lastItem != position) {
-//			notifyDataSetChanged();
-//		}
-//		((TextView) header.findViewById(R.id.header_text)).setText(
-//                data.get(position).getMonthOfEnglishName() + " " +data.get(position).getYear());
-        lastItem = position;
+    public void configurePinnedHeader(View header, int group_position) {
+        TextView group_title = (TextView) header.findViewById(R.id.group_title);
+        group_title.setText("groupPosition = "+group_position);
     }
-    private int lastItem;
 
 
 	@Override
 	public void onScroll(AbsListView view, int firstVisibleItem,
 			int visibleItemCount, int totalItemCount) {
-		if (view instanceof PinnedHeaderExpandableListView) {
-			((PinnedHeaderExpandableListView) view).configureHeaderView(firstVisibleItem);
+		if (view instanceof AnimatedExpandableListView) {
+			((AnimatedExpandableListView) view).configureHeaderView(firstVisibleItem);
 		}
 	}
 

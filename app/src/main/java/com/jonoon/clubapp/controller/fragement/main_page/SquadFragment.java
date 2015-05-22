@@ -5,6 +5,7 @@ import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.ExpandableListView;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.TextView;
@@ -19,7 +20,7 @@ import com.jonoon.clubapp.util.L;
 import com.jonoon.clubapp.util.net.GsonRequest;
 import com.jonoon.clubapp.util.net.VolleyHelper;
 import com.jonoon.clubapp.view.custom_view.WaitingDialog;
-import com.jonoon.clubapp.view.titlelistview.PinnedHeaderExpandableListView;
+import com.jonoon.clubapp.view.titlelistview.AnimatedExpandableListView;
 
 /**
  * A simple {@link android.support.v4.app.Fragment} subclass.
@@ -29,7 +30,7 @@ public class SquadFragment extends android.support.v4.app.Fragment {
 
     private final String TAG = this.getClass().getSimpleName();
     private SquadAdapter adapter;
-    private PinnedHeaderExpandableListView listView;
+    private AnimatedExpandableListView listView;
 
     private static final String URL = "mUrl";
     private static final String ARG_PARAM2 = "param2";
@@ -63,12 +64,55 @@ public class SquadFragment extends android.support.v4.app.Fragment {
         right_icon.setImageResource(R.drawable.ic_user_center);
 
         adapter = new SquadAdapter(getActivity());
-        listView = (PinnedHeaderExpandableListView) frame.findViewById(R.id.section_list_view);
+        listView = (AnimatedExpandableListView) frame.findViewById(R.id.section_list_view);
         listView.setAdapter(adapter);
         listView.setOnScrollListener(adapter);
-        listView.setPinnedHeaderView(inflater.inflate(
-                R.layout.squad_listview_group_section, listView, false));
+        View header = inflater.inflate(R.layout.squad_listview_group_section, listView, false);
+        listView.setPinnedHeaderView(header,new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                // We call collapseGroupWithAnimation(int) and
+                // expandGroupWithAnimation(int) to animate group
+                // expansion/collapse.
 
+                int groupPosition = listView.getPackedPositionGroup(
+                        listView.getExpandableListPosition(listView.getFirstVisiblePosition()));
+
+                L.e(TAG,"header click! /n listView.getFirstVisiblePosition() = "+listView.getFirstVisiblePosition()
+                        +" groupPosition = "+groupPosition);
+
+                if (listView.isGroupExpanded(groupPosition)) {
+                    listView.collapseGroupWithAnimation(groupPosition);
+                } else {
+                    listView.expandGroupWithAnimation(groupPosition);
+                }
+            }
+        });
+        listView.setOnGroupClickListener(new ExpandableListView.OnGroupClickListener() {
+
+            @Override
+            public boolean onGroupClick(ExpandableListView parent, View v, int groupPosition, long id) {
+                // We call collapseGroupWithAnimation(int) and
+                // expandGroupWithAnimation(int) to animate group
+                // expansion/collapse.
+                L.e(TAG,"setOnGroupClickListener click! groupPosition = "+groupPosition);
+                if (listView.isGroupExpanded(groupPosition)) {
+                    listView.collapseGroupWithAnimation(groupPosition);
+                } else {
+                    listView.expandGroupWithAnimation(groupPosition);
+                }
+                return true;
+            }
+
+        });
+        listView.setOnChildClickListener(new ExpandableListView.OnChildClickListener() {
+            @Override
+            public boolean onChildClick(ExpandableListView parent, View v, int groupPosition, int childPosition, long id) {
+
+                L.e(TAG,"setOnChildClickListener");
+                return false;
+            }
+        });
         getData();
 
         return frame;
@@ -82,7 +126,6 @@ public class SquadFragment extends android.support.v4.app.Fragment {
                 Squad.class, null, new Response.Listener<Squad>() {
             @Override
             public void onResponse(Squad squad) {
-                L.e(TAG, squad.toString());
                 adapter.setData(squad);
                 mWaitingDialog.cancel();
             }

@@ -19,11 +19,13 @@
         <activity
             android:name=".controller.activity.MainActivity"
             android:label="@string/title_activity_main"
-            android:launchMode="singleTask">
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait">
         </activity>
         <activity
             android:name=".controller.activity.IntroductionActivity"
-            android:label="@string/title_activity_introduction" >
+            android:label="@string/title_activity_introduction"
+            android:screenOrientation="portrait">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
                 <category android:name="android.intent.category.LAUNCHER" />

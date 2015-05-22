@@ -1,6 +1,5 @@
 package com.jonoon.clubapp.controller.activity;
 
-import android.content.Intent;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentActivity;
 import android.support.v4.view.ViewPager;
@@ -11,8 +10,6 @@ import android.view.Window;
 import android.widget.ImageView;
 import android.widget.SlidingDrawer;
 
-import com.android.volley.Response;
-import com.android.volley.VolleyError;
 import com.jonoon.clubapp.MyApplication;
 import com.jonoon.clubapp.R;
 import com.jonoon.clubapp.controller.adapter.ViewPager4SlidingDrawer;
@@ -22,12 +19,7 @@ import com.jonoon.clubapp.controller.fragement.main_page.NavigationOneFragment;
 import com.jonoon.clubapp.controller.fragement.main_page.NavigationTwoFragment;
 import com.jonoon.clubapp.controller.fragement.main_page.NewsFragment;
 import com.jonoon.clubapp.controller.fragement.main_page.SquadFragment;
-import com.jonoon.clubapp.model.bean.Fixture;
-import com.jonoon.clubapp.model.bean.FixtureItem;
-import com.jonoon.clubapp.util.DateHelper;
 import com.jonoon.clubapp.util.L;
-import com.jonoon.clubapp.util.net.GsonRequest;
-import com.jonoon.clubapp.util.net.VolleyHelper;
 import com.jonoon.clubapp.view.custom_view.WaitingDialog;
 import com.jonoon.clubapp.view.slidingdrawer.WrappingSlidingDrawer;
 
