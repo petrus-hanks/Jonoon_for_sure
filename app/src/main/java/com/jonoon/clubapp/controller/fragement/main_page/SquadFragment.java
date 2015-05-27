@@ -1,6 +1,7 @@
 package com.jonoon.clubapp.controller.fragement.main_page;
 
 import android.app.Activity;
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -13,6 +14,7 @@ import android.widget.TextView;
 import com.android.volley.Response;
 import com.android.volley.VolleyError;
 import com.jonoon.clubapp.R;
+import com.jonoon.clubapp.controller.activity.WebViewActivity;
 import com.jonoon.clubapp.controller.adapter.SquadAdapter;
 import com.jonoon.clubapp.model.bean.Squad;
 import com.jonoon.clubapp.model.constants.ServerUrl;
@@ -67,7 +69,7 @@ public class SquadFragment extends android.support.v4.app.Fragment {
         listView = (AnimatedExpandableListView) frame.findViewById(R.id.section_list_view);
         listView.setAdapter(adapter);
         listView.setOnScrollListener(adapter);
-        View header = inflater.inflate(R.layout.squad_listview_group_section, listView, false);
+        View header = inflater.inflate(R.layout.squad_listview_group_section_pinned, listView, false);
         listView.setPinnedHeaderView(header,new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -109,6 +111,14 @@ public class SquadFragment extends android.support.v4.app.Fragment {
             public boolean onChildClick(ExpandableListView parent, View v, int groupPosition, int childPosition, long id) {
 
                 L.e(TAG,"setOnChildClickListener");
+                Intent intent = new Intent(getActivity().getApplicationContext(), WebViewActivity.class);
+                try{
+                    intent.putExtra(WebViewActivity.URL, ServerUrl.getSquadItem()
+                            +"?id="+adapter.getData().get(groupPosition).getChildren().get(childPosition).getId());
+                }catch (Exception e){
+                    e.printStackTrace();
+                }
+                startActivity(intent);
                 return false;
             }
         });

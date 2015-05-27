@@ -66,8 +66,7 @@ public class MainPageFragment extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         LinearLayout frame = (LinearLayout) inflater.inflate(R.layout.fragment_main_page, container, false);
-        TextView title = (TextView) frame.findViewById(R.id.title);
-        title.setText("标题");
+
         wv = (H5WebView) frame.findViewById(R.id.webview);
         wv.loadUrl(mUrl);
 

@@ -19,6 +19,7 @@ import com.jonoon.clubapp.controller.fragement.main_page.NavigationOneFragment;
 import com.jonoon.clubapp.controller.fragement.main_page.NavigationTwoFragment;
 import com.jonoon.clubapp.controller.fragement.main_page.NewsFragment;
 import com.jonoon.clubapp.controller.fragement.main_page.SquadFragment;
+import com.jonoon.clubapp.model.constants.ServerUrl;
 import com.jonoon.clubapp.util.L;
 import com.jonoon.clubapp.view.custom_view.WaitingDialog;
 import com.jonoon.clubapp.view.slidingdrawer.WrappingSlidingDrawer;
@@ -50,7 +51,7 @@ public class MainActivity extends FragmentActivity
         pager.setAdapter(new ViewPager4SlidingDrawer(getSupportFragmentManager()));
 
         getSupportFragmentManager().beginTransaction()
-                .replace(R.id.fragment_container, NewsFragment.newInstance("http://www.baidu.com", null)
+                .replace(R.id.fragment_container, MainPageFragment.newInstance(ServerUrl.getNews(), null)
                 )
                 .commit();
 
@@ -118,51 +119,58 @@ public class MainActivity extends FragmentActivity
 
         if(page_num != cur_page){
             switch (page_num){
-                case 1:
+                case 1://首页
                     getSupportFragmentManager().beginTransaction()
-                            .replace(R.id.fragment_container, MainPageFragment.newInstance("http://ig28.com/ftcar", null)
+                            .replace(R.id.fragment_container, MainPageFragment.newInstance(ServerUrl.getNews(), null)
                              )
                             .commit();
                     break;
-                case 2:
+                case 2://足球队
                     getSupportFragmentManager().beginTransaction()
-                            .replace(R.id.fragment_container, NewsFragment.newInstance("http://www.baidu.com", null)
+                            .replace(R.id.fragment_container, new SquadFragment())
+                            .commit();
+                    break;
+                case 3://俱乐部
+                    getSupportFragmentManager().beginTransaction()
+                            .replace(R.id.fragment_container, MainPageFragment.newInstance(ServerUrl.getClub(), null)
                             )
                             .commit();
                     break;
-                case 3:
-                    getSupportFragmentManager().beginTransaction()
-                            .replace(R.id.fragment_container, MainPageFragment.newInstance("http://ig28.com/mothertea2", null)
-                            )
-                            .commit();
-                    break;
-                case 4:
+                case 4://校园足球
                     getSupportFragmentManager().beginTransaction()
                             .replace(R.id.fragment_container, MainPageFragment.newInstance("http://www.microsoft.com", null)
                             )
                             .commit();
                     break;
-                case 5:
+                case 5://微社区
                     getSupportFragmentManager().beginTransaction()
                             .replace(R.id.fragment_container, MainPageFragment.newInstance("http://wximg.qq.com/tmt/_events/20150514-promo-vivo/dist/html/index.html", null)
                             )
                             .commit();
                     break;
-                case 6:
-                    WaitingDialog waiting = new WaitingDialog(this);
-                    waiting.show();
+                case 6://新闻
+                    getSupportFragmentManager().beginTransaction()
+                            .replace(R.id.fragment_container, MainPageFragment.newInstance(ServerUrl.getNews(), null)
+                            )
+                            .commit();
                     break;
                 case 7://赛程
                     getSupportFragmentManager().beginTransaction()
                             .replace(R.id.fragment_container, new FixtureFragment())
                             .commit();
                     break;
-                case 8:
+                case 8://商城
                     getSupportFragmentManager().beginTransaction()
-                            .replace(R.id.fragment_container, new SquadFragment())
+                            .replace(R.id.fragment_container, MainPageFragment.newInstance(ServerUrl.getMall(), null)
+                            )
                             .commit();
                     break;
 
+                case 9://直播
+                    break;
+
+                case 10://订票
+                    break;
             }
         }
         cur_page = page_num;

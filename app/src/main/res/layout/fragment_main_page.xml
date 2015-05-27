@@ -5,9 +5,6 @@
              android:layout_height="match_parent"
              tools:context="com.jonoon.clubapp.controller.fragement.main_page.MainPageFragment">
 
-    <include android:id="@+id/title_layout"
-             layout = "@layout/title_layout"/>
-
     <com.jonoon.clubapp.view.custom_view.H5WebView
         android:id="@+id/webview"
         android:layout_width="match_parent"

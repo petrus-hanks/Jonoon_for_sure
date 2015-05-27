@@ -70,7 +70,7 @@
 
         </LinearLayout>
         
-        <View android:background="@color/bg_gray"
+        <View android:background="@drawable/squad_item_bottom"
             android:layout_width="match_parent"
             android:layout_height="6dp"/>
         

@@ -50,6 +50,9 @@ public class SquadAdapter extends AnimatedExpandableListView.AnimatedExpandableL
         notifyDataSetChanged();
     }
 
+    public ArrayList<SquadGroupData> getData(){
+        return mData;
+    }
 
     /*对数据重新分组处理*/
     private ArrayList<SquadGroupData> GroupingData(ArrayList<SquadItem> data){
@@ -59,25 +62,23 @@ public class SquadAdapter extends AnimatedExpandableListView.AnimatedExpandableL
         if(data !=null && data.size() > 0){
 
             String groupName = new String();
-            for(int j=0;j<30;j++){
-                for(SquadItem i : data){
+            for(SquadItem i : data){
 
-                    if(StringHelper.isEmpty(i.getGroup())){
-                        //如果分组列表为空，则跳过，不记录
-                        continue;
-                    }
+                if(StringHelper.isEmpty(i.getGroup())){
+                    //如果分组列表为空，则跳过，不记录
+                    continue;
+                }
 
-                    if(groupName.equals(i.getGroup())){
-                        //组名相同，则从group list取出group，item添加到group对象的children里
-                        ret.get(ret.size()-1).getChildren().add(i);
-                    }else {
-                        groupName = i.getGroup();
-                        //组名不同，新建group，向group中添加item，并添加group至group list
-                        SquadGroupData groupData = new SquadGroupData();
-                        groupData.setGroupName(i.getGroup());
-                        groupData.getChildren().add(i);
-                        ret.add(groupData);
-                    }
+                if(groupName.equals(i.getGroup())){
+                    //组名相同，则从group list取出group，item添加到group对象的children里
+                    ret.get(ret.size()-1).getChildren().add(i);
+                }else {
+                    groupName = i.getGroup();
+                    //组名不同，新建group，向group中添加item，并添加group至group list
+                    SquadGroupData groupData = new SquadGroupData();
+                    groupData.setGroupName(i.getGroup());
+                    groupData.getChildren().add(i);
+                    ret.add(groupData);
                 }
             }
 
