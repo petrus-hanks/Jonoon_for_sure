@@ -1,5 +1,6 @@
 package com.jonoon.clubapp.view.custom_view;
 
+import android.app.Activity;
 import android.content.Context;
 import android.graphics.Bitmap;
 import android.util.AttributeSet;
@@ -7,6 +8,8 @@ import android.view.View;
 import android.webkit.WebSettings;
 import android.webkit.WebView;
 import android.webkit.WebViewClient;
+
+import com.jonoon.clubapp.controller.MyJavaScriptCallback;
 
 /**
  * @Description:
@@ -26,18 +29,17 @@ public class H5WebView extends WebView {
         waiting = new WaitingDialog(mContext);
         // Configure the webview
         WebSettings s = getSettings();
+        s.setCacheMode(WebSettings.LOAD_NO_CACHE);
+        s.setSupportZoom(false);
         s.setBuiltInZoomControls(false);
         s.setLayoutAlgorithm(WebSettings.LayoutAlgorithm.NARROW_COLUMNS);
         s.setUseWideViewPort(true);
-
         s.setLoadWithOverviewMode(true);
         s.setJavaScriptEnabled(true);
 
-        setWebViewClient(mWebViewClient);
-
         setScrollBarStyle(View.SCROLLBARS_INSIDE_OVERLAY);
-
         setLayerType(View.LAYER_TYPE_SOFTWARE, null);
+        setWebViewClient(mWebViewClient);
 
     }
 

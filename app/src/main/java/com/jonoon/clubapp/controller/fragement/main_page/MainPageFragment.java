@@ -68,6 +68,7 @@ public class MainPageFragment extends Fragment {
         LinearLayout frame = (LinearLayout) inflater.inflate(R.layout.fragment_main_page, container, false);
 
         wv = (H5WebView) frame.findViewById(R.id.webview);
+
         wv.loadUrl(mUrl);
 
         return frame;

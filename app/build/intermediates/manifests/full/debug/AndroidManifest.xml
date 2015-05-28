@@ -9,6 +9,10 @@
         android:targetSdkVersion="20" />
 
     <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission
+        android:name="android.permission.WRITE_EXTERNAL_STORAGE"
+        android:maxSdkVersion="18" />
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
 
     <application
         android:name="com.jonoon.clubapp.MyApplication"
@@ -19,16 +23,23 @@
         <activity
             android:name="com.jonoon.clubapp.controller.activity.MainActivity"
             android:label="@string/title_activity_main"
-            android:launchMode="singleTask" >
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait" >
         </activity>
         <activity
             android:name="com.jonoon.clubapp.controller.activity.IntroductionActivity"
-            android:label="@string/title_activity_introduction" >
+            android:label="@string/title_activity_introduction"
+            android:screenOrientation="portrait" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
+        </activity>
+        <activity
+            android:name="com.jonoon.clubapp.controller.activity.WebViewActivity"
+            android:label="@string/title_activity_web_view"
+            android:screenOrientation="portrait" >
         </activity>
     </application>
 

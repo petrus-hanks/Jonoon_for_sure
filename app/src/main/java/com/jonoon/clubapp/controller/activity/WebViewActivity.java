@@ -2,19 +2,11 @@ package com.jonoon.clubapp.controller.activity;
 
 import android.app.Activity;
 import android.os.Bundle;
-import android.support.v4.app.Fragment;
 import android.view.KeyEvent;
-import android.view.LayoutInflater;
-import android.view.Menu;
-import android.view.MenuItem;
-import android.view.View;
-import android.view.ViewGroup;
 import android.view.Window;
-import android.widget.LinearLayout;
-import android.widget.TextView;
 
 import com.jonoon.clubapp.R;
-import com.jonoon.clubapp.controller.fragement.main_page.MainPageFragment;
+import com.jonoon.clubapp.controller.MyJavaScriptCallback;
 import com.jonoon.clubapp.util.L;
 import com.jonoon.clubapp.view.custom_view.H5WebView;
 
@@ -31,7 +23,11 @@ public class WebViewActivity extends Activity {
         requestWindowFeature(Window.FEATURE_NO_TITLE);
         setContentView(R.layout.activity_web_view);
         wv = (H5WebView) findViewById(R.id.webview);
+
+        wv.addJavascriptInterface(new MyJavaScriptCallback(this), MyJavaScriptCallback.INTERFACE_NAME);
+
         String mUrl = getIntent().getStringExtra(URL);
+        L.e(TAG,"url = "+mUrl);
         wv.loadUrl(mUrl);
     }
 

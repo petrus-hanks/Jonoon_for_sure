@@ -4,10 +4,9 @@
               android:layout_width="match_parent"
               android:layout_height="200dp">
 
-    <NetworkImageView android:id="@+id/player_avast"
+    <com.android.volley.toolbox.NetworkImageView android:id="@+id/player_avast"
         android:layout_width="match_parent"
         android:layout_height="200dp"
-        android:src="@drawable/intro_2"
         android:scaleType="centerCrop"/>
 
     <TextView android:id="@+id/player_number"
@@ -71,7 +70,7 @@
 
         </LinearLayout>
         
-        <View android:background="@color/bg_gray"
+        <View android:background="@drawable/squad_item_bottom"
             android:layout_width="match_parent"
             android:layout_height="6dp"/>
         

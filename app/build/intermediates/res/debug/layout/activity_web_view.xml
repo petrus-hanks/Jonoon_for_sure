@@ -1,0 +1,13 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                xmlns:tools="http://schemas.android.com/tools"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                tools:context="com.jonoon.clubapp.controller.activity.WebViewActivity">
+
+    <com.jonoon.clubapp.view.custom_view.H5WebView
+        android:id="@+id/webview"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"/>
+
+</RelativeLayout>
+<!-- From: file:/F:/source/jonoon/app/src/main/res/layout/activity_web_view.xml -->

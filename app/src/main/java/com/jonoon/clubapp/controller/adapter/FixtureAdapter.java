@@ -4,6 +4,7 @@ import java.util.ArrayList;
 import java.util.Collections;
 
 import android.app.Activity;
+import android.content.Intent;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -18,8 +19,11 @@ import android.widget.TextView;
 import com.android.volley.toolbox.ImageLoader;
 import com.android.volley.toolbox.NetworkImageView;
 import com.jonoon.clubapp.R;
+import com.jonoon.clubapp.controller.activity.WebViewActivity;
 import com.jonoon.clubapp.model.bean.Fixture;
 import com.jonoon.clubapp.model.bean.FixtureItem;
+import com.jonoon.clubapp.model.constants.ServerUrl;
+import com.jonoon.clubapp.util.L;
 import com.jonoon.clubapp.util.net.VolleyHelper;
 import com.jonoon.clubapp.view.titlelistview.PinnedHeaderListView;
 
@@ -27,6 +31,7 @@ import com.jonoon.clubapp.view.titlelistview.PinnedHeaderListView;
 public class FixtureAdapter extends BaseAdapter implements PinnedHeaderListView.PinnedHeaderAdapter,
 		OnScrollListener {
 
+    private final String TAG = this.getClass().getSimpleName();
     private Activity activity;
 	private LayoutInflater inflater;
 
@@ -58,7 +63,7 @@ public class FixtureAdapter extends BaseAdapter implements PinnedHeaderListView.
 
 	@Override
 	public Object getItem(int position) {
-		return null;
+		return data.get(position);
 	}
 
 	@Override
@@ -96,9 +101,9 @@ public class FixtureAdapter extends BaseAdapter implements PinnedHeaderListView.
             mViewHolder.team2logo = (NetworkImageView) convertView.findViewById(R.id.team2_logo);
             mViewHolder.fixture_item_bottom = convertView.findViewById(R.id.fixture_item_bottom);
 
-            convertView.setTag(mViewHolder);
+            convertView.setTag(R.id.view_holder, mViewHolder);
         }else {
-            mViewHolder = (ViewHolder) convertView.getTag();
+            mViewHolder = (ViewHolder) convertView.getTag(R.id.view_holder);
         }
 
 
@@ -165,6 +170,24 @@ public class FixtureAdapter extends BaseAdapter implements PinnedHeaderListView.
             mViewHolder.header.setVisibility(View.VISIBLE);
         }
 
+        convertView.setTag(R.id.position, position);
+        convertView.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                L.e(TAG,"clicked");
+                FixtureItem i = (FixtureItem) getItem((int)v.getTag(R.id.position));
+
+                L.e(TAG, "setOnItemClickListener " + i.getId());
+                Intent intent = new Intent(activity.getApplicationContext(), WebViewActivity.class);
+                try{
+                    intent.putExtra(WebViewActivity.URL, ServerUrl.getFixtureItem()
+                            +"?id="+i.getId());
+                }catch (Exception e){
+                    e.printStackTrace();
+                }
+                activity.startActivity(intent);
+            }
+        });
 		return convertView;
 	}
 

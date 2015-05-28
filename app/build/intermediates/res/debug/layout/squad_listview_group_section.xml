@@ -2,7 +2,8 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
               android:orientation="vertical"
               android:layout_width="match_parent"
-              android:layout_height="28dp"
+              android:layout_height="29dp"
+              android:paddingBottom="1dp"
               android:background="@color/text_color_fixture_item_b"
               android:gravity="top">
     <RelativeLayout

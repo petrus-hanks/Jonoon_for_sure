@@ -1,11 +1,13 @@
 package com.jonoon.clubapp.controller.fragement.main_page;
 
 import android.app.Activity;
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.AdapterView;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.TextView;
@@ -13,8 +15,10 @@ import android.widget.TextView;
 import com.android.volley.Response;
 import com.android.volley.VolleyError;
 import com.jonoon.clubapp.R;
+import com.jonoon.clubapp.controller.activity.WebViewActivity;
 import com.jonoon.clubapp.controller.adapter.FixtureAdapter;
 import com.jonoon.clubapp.model.bean.Fixture;
+import com.jonoon.clubapp.model.bean.FixtureItem;
 import com.jonoon.clubapp.model.constants.ServerUrl;
 import com.jonoon.clubapp.util.L;
 import com.jonoon.clubapp.util.net.GsonRequest;
@@ -81,7 +85,18 @@ public class FixtureFragment extends Fragment {
         title.setText("赛 程");
         ImageView right_icon = (ImageView) frame.findViewById(R.id.setting);
         right_icon.setImageResource(R.drawable.ic_user_center);
-
+        right_icon.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(getActivity().getApplicationContext(), WebViewActivity.class);
+                try{
+                    intent.putExtra(WebViewActivity.URL, ServerUrl.getUserCenter());
+                }catch (Exception e){
+                    e.printStackTrace();
+                }
+                startActivity(intent);
+            }
+        });
         adapter = new FixtureAdapter(getActivity());
         listView = (PinnedHeaderListView) frame.findViewById(R.id.section_list_view);
         listView.setAdapter(adapter);

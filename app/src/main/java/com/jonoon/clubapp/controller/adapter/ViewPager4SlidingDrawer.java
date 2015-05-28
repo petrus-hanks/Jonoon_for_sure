@@ -31,15 +31,15 @@ public class ViewPager4SlidingDrawer extends FragmentPagerAdapter {
             case 0:
                 fragment = new NavigationOneFragment();
                 break;
-            case 1:
-                fragment = new NavigationTwoFragment();
-                break;
+//            case 1:
+//                fragment = new NavigationTwoFragment();
+//                break;
         }
         return fragment;
     }
 
     @Override
     public int getCount() {
-        return 2;
+        return 1;
     }
 }

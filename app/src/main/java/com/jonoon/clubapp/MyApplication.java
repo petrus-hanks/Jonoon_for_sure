@@ -12,6 +12,7 @@ public class MyApplication extends Application {
     private static String mCacheDir;
 
     public boolean goToIntroduction = true;
+    public boolean showDrawer = true;
 
     @Override
     public void onCreate() {

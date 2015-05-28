@@ -9,6 +9,7 @@ import android.view.View;
 import android.view.Window;
 import android.widget.ImageView;
 import android.widget.SlidingDrawer;
+import android.widget.Toast;
 
 import com.jonoon.clubapp.MyApplication;
 import com.jonoon.clubapp.R;
@@ -17,11 +18,9 @@ import com.jonoon.clubapp.controller.fragement.main_page.FixtureFragment;
 import com.jonoon.clubapp.controller.fragement.main_page.MainPageFragment;
 import com.jonoon.clubapp.controller.fragement.main_page.NavigationOneFragment;
 import com.jonoon.clubapp.controller.fragement.main_page.NavigationTwoFragment;
-import com.jonoon.clubapp.controller.fragement.main_page.NewsFragment;
 import com.jonoon.clubapp.controller.fragement.main_page.SquadFragment;
 import com.jonoon.clubapp.model.constants.ServerUrl;
 import com.jonoon.clubapp.util.L;
-import com.jonoon.clubapp.view.custom_view.WaitingDialog;
 import com.jonoon.clubapp.view.slidingdrawer.WrappingSlidingDrawer;
 
 public class MainActivity extends FragmentActivity
@@ -43,6 +42,7 @@ public class MainActivity extends FragmentActivity
         initView();
 
         ((MyApplication)getApplication()).goToIntroduction = false;
+
     }
 
 
@@ -51,13 +51,12 @@ public class MainActivity extends FragmentActivity
         pager.setAdapter(new ViewPager4SlidingDrawer(getSupportFragmentManager()));
 
         getSupportFragmentManager().beginTransaction()
-                .replace(R.id.fragment_container, MainPageFragment.newInstance(ServerUrl.getNews(), null)
+                .replace(R.id.fragment_container, MainPageFragment.newInstance(ServerUrl.getNewsList(), null)
                 )
                 .commit();
 
         drawer = (WrappingSlidingDrawer) findViewById(R.id.drawer);
         mHandler = (ImageView) drawer.findViewById(R.id.handle_icon);
-
         mArrowDown = (ImageView) drawer.findViewById(R.id.arrow_down);
 
         drawer.setOnDrawerOpenListener(new SlidingDrawer.OnDrawerOpenListener() {
@@ -112,6 +111,10 @@ public class MainActivity extends FragmentActivity
     protected void onResume() {
         L.e(TAG,"onResume");
         super.onResume();
+        if(((MyApplication)getApplication()).showDrawer){
+            drawer.open();
+            ((MyApplication)getApplication()).showDrawer = false;
+        }
     }
 
     @Override
@@ -121,7 +124,7 @@ public class MainActivity extends FragmentActivity
             switch (page_num){
                 case 1://首页
                     getSupportFragmentManager().beginTransaction()
-                            .replace(R.id.fragment_container, MainPageFragment.newInstance(ServerUrl.getNews(), null)
+                            .replace(R.id.fragment_container, MainPageFragment.newInstance(ServerUrl.getIndex(), null)
                              )
                             .commit();
                     break;
@@ -138,19 +141,19 @@ public class MainActivity extends FragmentActivity
                     break;
                 case 4://校园足球
                     getSupportFragmentManager().beginTransaction()
-                            .replace(R.id.fragment_container, MainPageFragment.newInstance("http://www.microsoft.com", null)
+                            .replace(R.id.fragment_container, MainPageFragment.newInstance(ServerUrl.getCampusFootball(), null)
                             )
                             .commit();
                     break;
                 case 5://微社区
                     getSupportFragmentManager().beginTransaction()
-                            .replace(R.id.fragment_container, MainPageFragment.newInstance("http://wximg.qq.com/tmt/_events/20150514-promo-vivo/dist/html/index.html", null)
+                            .replace(R.id.fragment_container, MainPageFragment.newInstance(ServerUrl.getBBS(), null)
                             )
                             .commit();
                     break;
                 case 6://新闻
                     getSupportFragmentManager().beginTransaction()
-                            .replace(R.id.fragment_container, MainPageFragment.newInstance(ServerUrl.getNews(), null)
+                            .replace(R.id.fragment_container, MainPageFragment.newInstance(ServerUrl.getNewsList(), null)
                             )
                             .commit();
                     break;
@@ -167,6 +170,10 @@ public class MainActivity extends FragmentActivity
                     break;
 
                 case 9://直播
+                    getSupportFragmentManager().beginTransaction()
+                            .replace(R.id.fragment_container, MainPageFragment.newInstance("http://www.microsoft.com/", null)
+                            )
+                            .commit();
                     break;
 
                 case 10://订票
@@ -176,6 +183,7 @@ public class MainActivity extends FragmentActivity
         cur_page = page_num;
     }
 
+    private long exitTime = 0;
     @Override
     public boolean onKeyDown(int keyCode, KeyEvent event) {
 
@@ -193,6 +201,12 @@ public class MainActivity extends FragmentActivity
                     }
                 }
             }
+            if((System.currentTimeMillis()-exitTime) > 2000){
+                Toast.makeText(this,"再按一次返回桌面",Toast.LENGTH_SHORT).show();
+                exitTime = System.currentTimeMillis();
+                return true;
+            }
+
         }
         return super.onKeyDown(keyCode, event);
     }

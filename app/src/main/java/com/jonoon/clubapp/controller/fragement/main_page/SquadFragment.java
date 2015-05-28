@@ -64,7 +64,18 @@ public class SquadFragment extends android.support.v4.app.Fragment {
         title.setText("足球队");
         ImageView right_icon = (ImageView) frame.findViewById(R.id.setting);
         right_icon.setImageResource(R.drawable.ic_user_center);
-
+        right_icon.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(getActivity().getApplicationContext(), WebViewActivity.class);
+                try{
+                    intent.putExtra(WebViewActivity.URL, ServerUrl.getUserCenter());
+                }catch (Exception e){
+                    e.printStackTrace();
+                }
+                startActivity(intent);
+            }
+        });
         adapter = new SquadAdapter(getActivity());
         listView = (AnimatedExpandableListView) frame.findViewById(R.id.section_list_view);
         listView.setAdapter(adapter);
