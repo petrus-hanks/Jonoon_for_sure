@@ -51,7 +51,7 @@ public class MainActivity extends FragmentActivity
         pager.setAdapter(new ViewPager4SlidingDrawer(getSupportFragmentManager()));
 
         getSupportFragmentManager().beginTransaction()
-                .replace(R.id.fragment_container, MainPageFragment.newInstance(ServerUrl.getNewsList(), null)
+                .replace(R.id.fragment_container, MainPageFragment.newInstance(ServerUrl.getIndex(), null)
                 )
                 .commit();
 

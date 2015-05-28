@@ -2,6 +2,13 @@
 <items version="2" >
 
     <item
+        jar="F:\source\jonoon\app\src\main\libs\nineoldandroids-2.4.0.jar"
+        jumboMode="false"
+        revision="22.0.1"
+        sha1="59f19e43354d32de831379c23ce03bb259a4c2b7">
+        <dex dex="F:\source\jonoon\app\build\intermediates\pre-dexed\debug\nineoldandroids-2.4.0-ef5bd30accdbc773f3119a0638511219df62eb8e.jar" />
+    </item>
+    <item
         jar="F:\source\jonoon\app\src\main\libs\httpcore-4.3.3.jar"
         jumboMode="false"
         revision="22.0.1"
@@ -28,6 +35,13 @@
         revision="22.0.1"
         sha1="5fc52c41ef0239d1093a1eb7c3697036183677ce">
         <dex dex="F:\source\jonoon\app\build\intermediates\pre-dexed\debug\gson-2.3-ac6773efc138430871dc07f973582f1b71203a6d.jar" />
+    </item>
+    <item
+        jar="F:\source\jonoon\app\src\main\libs\stickylistheaders_lib.jar"
+        jumboMode="false"
+        revision="22.0.1"
+        sha1="33ad2d9e9065ee528d81cb8de94eaab220022bfc">
+        <dex dex="F:\source\jonoon\app\build\intermediates\pre-dexed\debug\stickylistheaders_lib-2f8c3a92ab42b6a9cfa50de995f6b8d76afd2731.jar" />
     </item>
     <item
         jar="F:\source\jonoon\app\build\intermediates\exploded-aar\com.android.support\support-v4\22.1.0\classes.jar"
