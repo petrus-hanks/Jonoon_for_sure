@@ -1,5 +1,8 @@
 package com.jonoon.clubapp.controller.activity;
 
+import android.content.Intent;
+import android.content.pm.ActivityInfo;
+import android.content.res.Configuration;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentActivity;
 import android.support.v4.view.ViewPager;
@@ -7,6 +10,8 @@ import android.os.Bundle;
 import android.view.KeyEvent;
 import android.view.View;
 import android.view.Window;
+import android.view.WindowManager;
+import android.widget.FrameLayout;
 import android.widget.ImageView;
 import android.widget.SlidingDrawer;
 import android.widget.Toast;
@@ -34,6 +39,7 @@ public class MainActivity extends FragmentActivity
 
     private ImageView mHandler;
     private ImageView mArrowDown;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -42,7 +48,7 @@ public class MainActivity extends FragmentActivity
         initView();
 
         ((MyApplication)getApplication()).goToIntroduction = false;
-
+        setRequestedOrientation(ActivityInfo.SCREEN_ORIENTATION_PORTRAIT);
     }
 
 
@@ -127,53 +133,66 @@ public class MainActivity extends FragmentActivity
                             .replace(R.id.fragment_container, MainPageFragment.newInstance(ServerUrl.getIndex(), null)
                              )
                             .commit();
+                    setRequestedOrientation(ActivityInfo.SCREEN_ORIENTATION_PORTRAIT);
                     break;
                 case 2://足球队
                     getSupportFragmentManager().beginTransaction()
                             .replace(R.id.fragment_container, new SquadFragment())
                             .commit();
+                    setRequestedOrientation(ActivityInfo.SCREEN_ORIENTATION_PORTRAIT);
                     break;
                 case 3://俱乐部
                     getSupportFragmentManager().beginTransaction()
                             .replace(R.id.fragment_container, MainPageFragment.newInstance(ServerUrl.getClub(), null)
                             )
                             .commit();
+                    setRequestedOrientation(ActivityInfo.SCREEN_ORIENTATION_PORTRAIT);
                     break;
                 case 4://校园足球
                     getSupportFragmentManager().beginTransaction()
                             .replace(R.id.fragment_container, MainPageFragment.newInstance(ServerUrl.getCampusFootball(), null)
                             )
                             .commit();
+                    setRequestedOrientation(ActivityInfo.SCREEN_ORIENTATION_PORTRAIT);
                     break;
                 case 5://微社区
                     getSupportFragmentManager().beginTransaction()
                             .replace(R.id.fragment_container, MainPageFragment.newInstance(ServerUrl.getBBS(), null)
                             )
                             .commit();
+                    setRequestedOrientation(ActivityInfo.SCREEN_ORIENTATION_PORTRAIT);
                     break;
                 case 6://新闻
                     getSupportFragmentManager().beginTransaction()
                             .replace(R.id.fragment_container, MainPageFragment.newInstance(ServerUrl.getNewsList(), null)
                             )
                             .commit();
+                    setRequestedOrientation(ActivityInfo.SCREEN_ORIENTATION_PORTRAIT);
                     break;
                 case 7://赛程
                     getSupportFragmentManager().beginTransaction()
                             .replace(R.id.fragment_container, new FixtureFragment())
                             .commit();
+                    setRequestedOrientation(ActivityInfo.SCREEN_ORIENTATION_PORTRAIT);
                     break;
                 case 8://商城
                     getSupportFragmentManager().beginTransaction()
                             .replace(R.id.fragment_container, MainPageFragment.newInstance(ServerUrl.getMall(), null)
                             )
                             .commit();
+                    setRequestedOrientation(ActivityInfo.SCREEN_ORIENTATION_PORTRAIT);
                     break;
 
                 case 9://直播
                     getSupportFragmentManager().beginTransaction()
-                            .replace(R.id.fragment_container, MainPageFragment.newInstance("http://www.microsoft.com/", null)
+                            .replace(R.id.fragment_container, MainPageFragment.newInstance("http://jonoon.ig28.com/app/leaguerank.html", null)
                             )
                             .commit();
+//                    Intent intent = new Intent(getApplicationContext(),WebViewWithLandscapeActivity.class);
+//                    intent.putExtra(WebViewWithLandscapeActivity.URL,"http://jonoon.ig28.com/app/leaguerank.html");
+//                    startActivity(intent);
+
+                    setRequestedOrientation(ActivityInfo.SCREEN_ORIENTATION_SENSOR);
                     break;
 
                 case 10://订票
@@ -183,13 +202,35 @@ public class MainActivity extends FragmentActivity
         cur_page = page_num;
     }
 
+    @Override
+    public void onConfigurationChanged(Configuration newConfig) {
+
+        if(newConfig.orientation == Configuration.ORIENTATION_LANDSCAPE){
+
+            WindowManager.LayoutParams params = getWindow().getAttributes();
+            params.flags |= WindowManager.LayoutParams.FLAG_FULLSCREEN;
+            getWindow().setAttributes(params);
+            getWindow().addFlags(WindowManager.LayoutParams.FLAG_LAYOUT_NO_LIMITS);
+            if(drawer.isOpened() && !drawer.isMoving()){
+                drawer.close();
+            }
+        }else {
+            WindowManager.LayoutParams params = getWindow().getAttributes();
+            params.flags &= (~WindowManager.LayoutParams.FLAG_FULLSCREEN);
+            getWindow().setAttributes(params);
+            getWindow().clearFlags(WindowManager.LayoutParams.FLAG_LAYOUT_NO_LIMITS);
+
+        }
+        super.onConfigurationChanged(newConfig);
+    }
+
     private long exitTime = 0;
     @Override
     public boolean onKeyDown(int keyCode, KeyEvent event) {
 
         if(keyCode == KeyEvent.KEYCODE_BACK){
             if(drawer.isOpened() && !drawer.isMoving()){
-                drawer.animateOpen();
+                drawer.animateClose();
                 return true;
             }else {
                 Fragment fg = getSupportFragmentManager().findFragmentById(R.id.fragment_container);
