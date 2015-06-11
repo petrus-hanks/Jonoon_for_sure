@@ -6,11 +6,12 @@ import android.view.KeyEvent;
 import android.view.Window;
 
 import com.jonoon.clubapp.R;
+import com.jonoon.clubapp.controller.BaseActivityWithJavaScriptInterface;
 import com.jonoon.clubapp.controller.MyJavaScriptCallback;
 import com.jonoon.clubapp.util.L;
 import com.jonoon.clubapp.view.custom_view.H5WebView;
 
-public class WebViewActivity extends Activity {
+public class WebViewActivity extends BaseActivityWithJavaScriptInterface {
 
     public static final String URL = "url_key";
     private final String TAG = this.getClass().getSimpleName();

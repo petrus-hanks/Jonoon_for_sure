@@ -18,6 +18,8 @@ import android.widget.Toast;
 
 import com.jonoon.clubapp.MyApplication;
 import com.jonoon.clubapp.R;
+import com.jonoon.clubapp.controller.BaseActivityWithJavaScriptInterface;
+import com.jonoon.clubapp.controller.MyJavaScriptCallback;
 import com.jonoon.clubapp.controller.adapter.ViewPager4SlidingDrawer;
 import com.jonoon.clubapp.controller.fragement.main_page.FixtureFragment;
 import com.jonoon.clubapp.controller.fragement.main_page.MainPageFragment;
@@ -28,7 +30,7 @@ import com.jonoon.clubapp.model.constants.ServerUrl;
 import com.jonoon.clubapp.util.L;
 import com.jonoon.clubapp.view.slidingdrawer.WrappingSlidingDrawer;
 
-public class MainActivity extends FragmentActivity
+public class MainActivity extends BaseActivityWithJavaScriptInterface
         implements NavigationOneFragment.OnFragmentInteractionListener,
         NavigationTwoFragment.OnFragmentInteractionListener{
 
@@ -124,6 +126,13 @@ public class MainActivity extends FragmentActivity
     }
 
     @Override
+    protected void onNewIntent(Intent intent) {
+        super.onNewIntent(intent);
+        int index = intent.getIntExtra(MyJavaScriptCallback.GO_TO_MODULE, 0);
+        onFragmentInteraction(index);
+    }
+
+    @Override
     public void onFragmentInteraction(int page_num) {
 
         if(page_num != cur_page){
@@ -183,19 +192,26 @@ public class MainActivity extends FragmentActivity
                     setRequestedOrientation(ActivityInfo.SCREEN_ORIENTATION_PORTRAIT);
                     break;
 
-                case 9://直播
+                case 9://排行榜
                     getSupportFragmentManager().beginTransaction()
-                            .replace(R.id.fragment_container, MainPageFragment.newInstance("http://jonoon.ig28.com/app/leaguerank.html", null)
+                            .replace(R.id.fragment_container, MainPageFragment.newInstance(ServerUrl.getRank(), null)
                             )
                             .commit();
-//                    Intent intent = new Intent(getApplicationContext(),WebViewWithLandscapeActivity.class);
-//                    intent.putExtra(WebViewWithLandscapeActivity.URL,"http://jonoon.ig28.com/app/leaguerank.html");
-//                    startActivity(intent);
 
                     setRequestedOrientation(ActivityInfo.SCREEN_ORIENTATION_SENSOR);
                     break;
 
                 case 10://订票
+
+                    Intent pickPictureIntent = new Intent(Intent.ACTION_PICK);
+                    pickPictureIntent.setType("image/*");
+                    startActivityForResult(pickPictureIntent,  BaseActivityWithJavaScriptInterface.REQUEST_IMAGE_URI);
+
+                    getSupportFragmentManager().beginTransaction()
+                            .replace(R.id.fragment_container, MainPageFragment.newInstance("http://jonoon.ig28.com/uploadtest.html", null)
+                            )
+                            .commit();
+                    setRequestedOrientation(ActivityInfo.SCREEN_ORIENTATION_PORTRAIT);
                     break;
             }
         }

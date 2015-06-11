@@ -1,6 +1,7 @@
 package com.jonoon.clubapp.controller.fragement.main_page;
 
 import android.app.Activity;
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
 import android.view.LayoutInflater;
@@ -10,6 +11,8 @@ import android.widget.LinearLayout;
 import android.widget.TextView;
 
 import com.jonoon.clubapp.R;
+import com.jonoon.clubapp.controller.BaseActivityWithJavaScriptInterface;
+import com.jonoon.clubapp.controller.UploadImage;
 import com.jonoon.clubapp.util.L;
 import com.jonoon.clubapp.view.custom_view.H5WebView;
 

@@ -10,8 +10,11 @@
 
     <uses-permission android:name="android.permission.INTERNET" />
     <uses-permission
-        android:name="android.permission.WRITE_EXTERNAL_STORAGE"
-        android:maxSdkVersion="18" />
+    android:name="android.permission.WRITE_EXTERNAL_STORAGE"
+    android:maxSdkVersion="18" />
+    <uses-permission
+        android:name="android.permission.READ_EXTERNAL_STORAGE"/>
+
     <uses-permission android:name="android.permission.READ_PHONE_STATE" />
 
     <android:uses-permission
@@ -26,9 +29,9 @@
         android:theme="@style/AppTheme" >
         <activity
             android:name=".controller.activity.MainActivity"
+            android:configChanges="orientation|keyboardHidden|screenSize|layoutDirection"
             android:label="@string/title_activity_main"
-            android:launchMode="singleTask"
-            android:configChanges="orientation|keyboardHidden|screenSize|layoutDirection" >
+            android:launchMode="singleTask" >
         </activity>
         <activity
             android:name=".controller.activity.IntroductionActivity"
@@ -47,8 +50,12 @@
         </activity>
         <activity
             android:name=".controller.activity.WebViewWithLandscapeActivity"
-            android:label="@string/title_activity_web_view_with_landscape"
-            android:configChanges="orientation|keyboardHidden|screenSize|layoutDirection">
+            android:configChanges="orientation|keyboardHidden|screenSize|layoutDirection"
+            android:label="@string/title_activity_web_view_with_landscape" >
+        </activity>
+        <activity
+            android:name=".controller.BaseActivityWithJavaScriptInterface"
+            android:label="@string/title_activity_base_activity_with_java_script_interface" >
         </activity>
     </application>
 

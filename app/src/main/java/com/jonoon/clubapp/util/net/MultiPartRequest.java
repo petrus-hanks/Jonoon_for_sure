@@ -7,8 +7,12 @@ import com.android.volley.Request;
 import com.android.volley.Response;
 import com.android.volley.VolleyLog;
 import com.android.volley.toolbox.HttpHeaderParser;
+import com.jonoon.clubapp.util.L;
 
+import org.apache.http.HttpEntity;
+import org.apache.http.entity.mime.HttpMultipartMode;
 import org.apache.http.entity.mime.MultipartEntity;
+import org.apache.http.entity.mime.MultipartEntityBuilder;
 import org.apache.http.entity.mime.content.FileBody;
 import org.apache.http.entity.mime.content.StringBody;
 import org.json.JSONException;
@@ -26,7 +30,8 @@ public class MultiPartRequest extends Request<JSONObject> {
 
     private final String TAG = this.getClass().getSimpleName();
 
-    private MultipartEntity entity = new MultipartEntity();
+    MultipartEntityBuilder entity = MultipartEntityBuilder.create();
+    HttpEntity httpentity;
 
     private static final String FILE_PART_NAME = "file";
     private static final String STRING_PART_NAME = "imageID";
@@ -39,6 +44,7 @@ public class MultiPartRequest extends Request<JSONObject> {
     {
         super(Method.POST, url, errorListener);
 
+        entity.setMode(HttpMultipartMode.BROWSER_COMPATIBLE);
         setRetryPolicy(new CustomerRetryPolicy());
         mListener = listener;
         mFilePart = file;
@@ -49,32 +55,32 @@ public class MultiPartRequest extends Request<JSONObject> {
     private void buildMultiPartEntity()
     {
         entity.addPart(FILE_PART_NAME, new FileBody(mFilePart));
-        try
-        {
-            entity.addPart(STRING_PART_NAME, new StringBody(mStringPart));
-        }
-        catch (UnsupportedEncodingException e)
-        {
-            VolleyLog.e("UnsupportedEncodingException");
-        }
+//        try
+//        {
+//            entity.addPart(STRING_PART_NAME, new StringBody(mStringPart));
+//        }
+//        catch (UnsupportedEncodingException e)
+//        {
+//            VolleyLog.e("UnsupportedEncodingException");
+//        }
     }
 
     @Override
     public String getBodyContentType()
     {
-        return entity.getContentType().getValue();
+        String contentType = httpentity.getContentType().getValue();
+        L.e(TAG,"contentTyre = " + contentType);
+        return contentType;
     }
 
     @Override
     public byte[] getBody() throws AuthFailureError
     {
         ByteArrayOutputStream bos = new ByteArrayOutputStream();
-        try
-        {
-            entity.writeTo(bos);
-        }
-        catch (IOException e)
-        {
+        try {
+            httpentity = entity.build();
+            httpentity.writeTo(bos);
+        } catch (IOException e) {
             VolleyLog.e("IOException writing to ByteArrayOutputStream");
         }
         return bos.toByteArray();

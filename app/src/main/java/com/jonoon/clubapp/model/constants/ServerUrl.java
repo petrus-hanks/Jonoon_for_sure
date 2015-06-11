@@ -24,8 +24,12 @@ public class ServerUrl {
     private final static String MEMBER = "app/member.html";
     private final static String CAMPUS_FOOTBALL = "app/schoolfootball.html";
     private final static String BBS = "app/bbslist.html";
+    private final static String RANK = "app/leaguerank.html";
 
 
+    private final static String UPLOAD = "ajaxupload.php";
+
+    public static String getUpload() {return SERVER_ADD + UPLOAD;}
 
     public static String getSERVER_ADD() {
         return SERVER_ADD;
@@ -54,6 +58,8 @@ public class ServerUrl {
     public static String getUserCenter(){return SERVER_ADD + MEMBER;}
     public static String getCampusFootball(){return SERVER_ADD + CAMPUS_FOOTBALL;}
     public static String getBBS(){return SERVER_ADD + BBS;}
+    public static String getRank(){return SERVER_ADD + RANK;}
+
 
 //    http://jonoon.ig28.com/app/fixture_data.html?id=n 赛场详情 数据统计
 //    http://jonoon.ig28.com/app/fixture_imagelist.html?id=n 赛场详情 图集

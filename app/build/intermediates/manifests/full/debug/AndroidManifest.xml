@@ -12,7 +12,12 @@
     <uses-permission
         android:name="android.permission.WRITE_EXTERNAL_STORAGE"
         android:maxSdkVersion="18" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
     <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+
+    <android:uses-permission
+        android:name="android.permission.READ_EXTERNAL_STORAGE"
+        android:maxSdkVersion="18" />
 
     <application
         android:name="com.jonoon.clubapp.MyApplication"
@@ -22,9 +27,9 @@
         android:theme="@style/AppTheme" >
         <activity
             android:name="com.jonoon.clubapp.controller.activity.MainActivity"
+            android:configChanges="orientation|keyboardHidden|screenSize|layoutDirection"
             android:label="@string/title_activity_main"
-            android:launchMode="singleTask"
-            android:screenOrientation="portrait" >
+            android:launchMode="singleTask" >
         </activity>
         <activity
             android:name="com.jonoon.clubapp.controller.activity.IntroductionActivity"
@@ -40,6 +45,15 @@
             android:name="com.jonoon.clubapp.controller.activity.WebViewActivity"
             android:label="@string/title_activity_web_view"
             android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name="com.jonoon.clubapp.controller.activity.WebViewWithLandscapeActivity"
+            android:configChanges="orientation|keyboardHidden|screenSize|layoutDirection"
+            android:label="@string/title_activity_web_view_with_landscape" >
+        </activity>
+        <activity
+            android:name="com.jonoon.clubapp.controller.BaseActivityWithJavaScriptInterface"
+            android:label="@string/title_activity_base_activity_with_java_script_interface" >
         </activity>
     </application>
 

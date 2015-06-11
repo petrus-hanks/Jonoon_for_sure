@@ -151,32 +151,33 @@ containing a value of this type.
         public static final int ic_mall=0x7f020013;
         public static final int ic_news=0x7f020014;
         public static final int ic_player_number=0x7f020015;
-        public static final int ic_setting=0x7f020016;
-        public static final int ic_team=0x7f020017;
-        public static final int ic_team1=0x7f020018;
-        public static final int ic_team2=0x7f020019;
-        public static final int ic_tickets=0x7f02001a;
-        public static final int ic_user_center=0x7f02001b;
-        public static final int ic_vs=0x7f02001c;
-        public static final int ic_we_community=0x7f02001d;
-        public static final int intro_1=0x7f02001e;
-        public static final int intro_2=0x7f02001f;
-        public static final int intro_3=0x7f020020;
-        public static final int introduction_btn_bg=0x7f020021;
-        public static final int navigation_bg=0x7f020022;
-        public static final int navigation_btn_bg=0x7f020023;
-        public static final int slidingdrawer_handler=0x7f020024;
-        public static final int slidingdrawer_tray_handle_normal=0x7f020025;
-        public static final int slidingdrawer_tray_handle_pressed=0x7f020026;
-        public static final int slidingdrawer_tray_handle_selected=0x7f020027;
-        public static final int squad_item_bottom=0x7f020028;
-        public static final int untitled_1=0x7f020029;
-        public static final int untitled_2=0x7f02002a;
-        public static final int untitled_3=0x7f02002b;
-        public static final int untitled_4=0x7f02002c;
-        public static final int untitled_5=0x7f02002d;
-        public static final int untitled_6=0x7f02002e;
-        public static final int waiting_anim=0x7f02002f;
+        public static final int ic_rank=0x7f020016;
+        public static final int ic_setting=0x7f020017;
+        public static final int ic_team=0x7f020018;
+        public static final int ic_team1=0x7f020019;
+        public static final int ic_team2=0x7f02001a;
+        public static final int ic_tickets=0x7f02001b;
+        public static final int ic_user_center=0x7f02001c;
+        public static final int ic_vs=0x7f02001d;
+        public static final int ic_we_community=0x7f02001e;
+        public static final int intro_1=0x7f02001f;
+        public static final int intro_2=0x7f020020;
+        public static final int intro_3=0x7f020021;
+        public static final int introduction_btn_bg=0x7f020022;
+        public static final int navigation_bg=0x7f020023;
+        public static final int navigation_btn_bg=0x7f020024;
+        public static final int slidingdrawer_handler=0x7f020025;
+        public static final int slidingdrawer_tray_handle_normal=0x7f020026;
+        public static final int slidingdrawer_tray_handle_pressed=0x7f020027;
+        public static final int slidingdrawer_tray_handle_selected=0x7f020028;
+        public static final int squad_item_bottom=0x7f020029;
+        public static final int untitled_1=0x7f02002a;
+        public static final int untitled_2=0x7f02002b;
+        public static final int untitled_3=0x7f02002c;
+        public static final int untitled_4=0x7f02002d;
+        public static final int untitled_5=0x7f02002e;
+        public static final int untitled_6=0x7f02002f;
+        public static final int waiting_anim=0x7f020030;
     }
     public static final class id {
         public static final int action_settings=0x7f070039;
@@ -239,38 +240,43 @@ containing a value of this type.
         public static final int week=0x7f07001b;
     }
     public static final class layout {
-        public static final int activity_intro=0x7f030000;
-        public static final int activity_introduction=0x7f030001;
-        public static final int activity_main=0x7f030002;
-        public static final int activity_web_view=0x7f030003;
-        public static final int fixture_listview_section=0x7f030004;
-        public static final int fixture_listview_section_item=0x7f030005;
-        public static final int fragment_fixture=0x7f030006;
-        public static final int fragment_main_page=0x7f030007;
-        public static final int fragment_navigation_one=0x7f030008;
-        public static final int fragment_navigation_two=0x7f030009;
-        public static final int fragment_news=0x7f03000a;
-        public static final int fragment_squad=0x7f03000b;
-        public static final int item_spinner_numbers=0x7f03000c;
-        public static final int squad_listview_group_item=0x7f03000d;
-        public static final int squad_listview_group_section=0x7f03000e;
-        public static final int squad_listview_group_section_pinned=0x7f03000f;
-        public static final int title_2_layout=0x7f030010;
-        public static final int title_layout=0x7f030011;
+        public static final int activity_base_activity_with_java_script_interface=0x7f030000;
+        public static final int activity_intro=0x7f030001;
+        public static final int activity_introduction=0x7f030002;
+        public static final int activity_main=0x7f030003;
+        public static final int activity_web_view=0x7f030004;
+        public static final int fixture_listview_section=0x7f030005;
+        public static final int fixture_listview_section_item=0x7f030006;
+        public static final int fragment_fixture=0x7f030007;
+        public static final int fragment_main_page=0x7f030008;
+        public static final int fragment_navigation_one=0x7f030009;
+        public static final int fragment_navigation_two=0x7f03000a;
+        public static final int fragment_news=0x7f03000b;
+        public static final int fragment_squad=0x7f03000c;
+        public static final int item_spinner_numbers=0x7f03000d;
+        public static final int squad_listview_group_item=0x7f03000e;
+        public static final int squad_listview_group_section=0x7f03000f;
+        public static final int squad_listview_group_section_pinned=0x7f030010;
+        public static final int title_2_layout=0x7f030011;
+        public static final int title_layout=0x7f030012;
     }
     public static final class menu {
         public static final int main=0x7f0a0000;
-        public static final int menu_web_view=0x7f0a0001;
+        public static final int menu_base_activity_with_java_script_interface=0x7f0a0001;
+        public static final int menu_web_view=0x7f0a0002;
+        public static final int menu_web_view_with_landscape=0x7f0a0003;
     }
     public static final class string {
         public static final int action_settings=0x7f080000;
         public static final int app_name=0x7f080001;
         public static final int hello_blank_fragment=0x7f080002;
         public static final int hello_world=0x7f080003;
-        public static final int title_activity_introduction=0x7f080004;
-        public static final int title_activity_main=0x7f080005;
-        public static final int title_activity_main_activity2=0x7f080006;
-        public static final int title_activity_web_view=0x7f080007;
+        public static final int title_activity_base_activity_with_java_script_interface=0x7f080004;
+        public static final int title_activity_introduction=0x7f080005;
+        public static final int title_activity_main=0x7f080006;
+        public static final int title_activity_main_activity2=0x7f080007;
+        public static final int title_activity_web_view=0x7f080008;
+        public static final int title_activity_web_view_with_landscape=0x7f080009;
     }
     public static final class style {
         /**  API 11 theme customizations can go here. 

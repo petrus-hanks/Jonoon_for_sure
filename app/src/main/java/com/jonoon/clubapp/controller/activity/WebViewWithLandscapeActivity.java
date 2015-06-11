@@ -9,11 +9,12 @@ import android.view.MenuItem;
 import android.view.Window;
 
 import com.jonoon.clubapp.R;
+import com.jonoon.clubapp.controller.BaseActivityWithJavaScriptInterface;
 import com.jonoon.clubapp.controller.MyJavaScriptCallback;
 import com.jonoon.clubapp.util.L;
 import com.jonoon.clubapp.view.custom_view.H5WebView;
 
-public class WebViewWithLandscapeActivity extends Activity {
+public class WebViewWithLandscapeActivity extends BaseActivityWithJavaScriptInterface {
 
     public static final String URL = "url_key";
     private final String TAG = this.getClass().getSimpleName();
