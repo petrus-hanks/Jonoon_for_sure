@@ -36,10 +36,6 @@ public class NavigationOneFragment extends Fragment implements View.OnClickListe
 
 
     private Button bt6;
-    private Button bt7;
-    private Button bt8;
-    private Button bt9;
-    private Button bt10;
 
     // The URL to +1.  Must be a valid URL.
     private final String PLUS_ONE_URL = "http://developer.android.com";
@@ -94,10 +90,7 @@ public class NavigationOneFragment extends Fragment implements View.OnClickListe
         bt5 = (Button) view.findViewById(R.id.bt_5);
 
         bt6 = (Button) view.findViewById(R.id.bt_6);
-        bt7 = (Button) view.findViewById(R.id.bt_7);
-        bt8 = (Button) view.findViewById(R.id.bt_8);
-        bt9 = (Button) view.findViewById(R.id.bt_9);
-        bt10 = (Button) view.findViewById(R.id.bt_10);
+
 
         bt1.setOnClickListener(this);
         bt2.setOnClickListener(this);
@@ -106,10 +99,6 @@ public class NavigationOneFragment extends Fragment implements View.OnClickListe
         bt5.setOnClickListener(this);
 
         bt6.setOnClickListener(this);
-        bt7.setOnClickListener(this);
-        bt8.setOnClickListener(this);
-        bt9.setOnClickListener(this);
-        bt10.setOnClickListener(this);
 
         return view;
     }
@@ -165,18 +154,6 @@ public class NavigationOneFragment extends Fragment implements View.OnClickListe
                 break;
             case R.id.bt_6:
                 onButtonPressed(6);
-                break;
-            case R.id.bt_7:
-                onButtonPressed(7);
-                break;
-            case R.id.bt_8:
-                onButtonPressed(8);
-                break;
-            case R.id.bt_9:
-                onButtonPressed(9);
-                break;
-            case R.id.bt_10:
-                onButtonPressed(10);
                 break;
         }
     }

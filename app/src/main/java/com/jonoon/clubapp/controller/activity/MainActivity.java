@@ -3,15 +3,12 @@ package com.jonoon.clubapp.controller.activity;
 import android.content.Intent;
 import android.content.pm.ActivityInfo;
 import android.content.res.Configuration;
-import android.support.v4.app.Fragment;
-import android.support.v4.app.FragmentActivity;
-import android.support.v4.view.ViewPager;
 import android.os.Bundle;
+import android.support.v4.app.Fragment;
+import android.support.v4.view.ViewPager;
 import android.view.KeyEvent;
-import android.view.View;
 import android.view.Window;
 import android.view.WindowManager;
-import android.widget.FrameLayout;
 import android.widget.ImageView;
 import android.widget.SlidingDrawer;
 import android.widget.Toast;
@@ -21,11 +18,9 @@ import com.jonoon.clubapp.R;
 import com.jonoon.clubapp.controller.BaseActivityWithJavaScriptInterface;
 import com.jonoon.clubapp.controller.MyJavaScriptCallback;
 import com.jonoon.clubapp.controller.adapter.ViewPager4SlidingDrawer;
-import com.jonoon.clubapp.controller.fragement.main_page.FixtureFragment;
 import com.jonoon.clubapp.controller.fragement.main_page.MainPageFragment;
 import com.jonoon.clubapp.controller.fragement.main_page.NavigationOneFragment;
 import com.jonoon.clubapp.controller.fragement.main_page.NavigationTwoFragment;
-import com.jonoon.clubapp.controller.fragement.main_page.SquadFragment;
 import com.jonoon.clubapp.model.constants.ServerUrl;
 import com.jonoon.clubapp.util.L;
 import com.jonoon.clubapp.view.slidingdrawer.WrappingSlidingDrawer;
@@ -40,7 +35,6 @@ public class MainActivity extends BaseActivityWithJavaScriptInterface
     private int cur_page;
 
     private ImageView mHandler;
-    private ImageView mArrowDown;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -65,30 +59,25 @@ public class MainActivity extends BaseActivityWithJavaScriptInterface
 
         drawer = (WrappingSlidingDrawer) findViewById(R.id.drawer);
         mHandler = (ImageView) drawer.findViewById(R.id.handle_icon);
-        mArrowDown = (ImageView) drawer.findViewById(R.id.arrow_down);
 
         drawer.setOnDrawerOpenListener(new SlidingDrawer.OnDrawerOpenListener() {
             @Override
             public void onDrawerOpened() {
                 mHandler.setImageResource(R.drawable.handler);
-                mArrowDown.setVisibility(View.VISIBLE);
             }
         });
         drawer.setOnDrawerScrollListener(new SlidingDrawer.OnDrawerScrollListener() {
             @Override
             public void onScrollStarted() {
                 mHandler.setImageResource(R.drawable.handler_close);
-                mArrowDown.setVisibility(View.INVISIBLE);
             }
 
             @Override
             public void onScrollEnded() {
                 if(drawer.isOpened()){
                     mHandler.setImageResource(R.drawable.handler);
-                    mArrowDown.setVisibility(View.VISIBLE);
                 }else {
                     mHandler.setImageResource(R.drawable.handler_close);
-                    mArrowDown.setVisibility(View.INVISIBLE);
                 }
 
             }
@@ -98,7 +87,6 @@ public class MainActivity extends BaseActivityWithJavaScriptInterface
             @Override
             public void onDrawerClosed() {
                 mHandler.setImageResource(R.drawable.handler_close);
-                mArrowDown.setVisibility(View.INVISIBLE);
             }
         });
     }
@@ -144,47 +132,49 @@ public class MainActivity extends BaseActivityWithJavaScriptInterface
                             .commit();
                     setRequestedOrientation(ActivityInfo.SCREEN_ORIENTATION_PORTRAIT);
                     break;
-                case 2://足球队
-                    getSupportFragmentManager().beginTransaction()
-                            .replace(R.id.fragment_container, new SquadFragment())
-                            .commit();
-                    setRequestedOrientation(ActivityInfo.SCREEN_ORIENTATION_PORTRAIT);
-                    break;
-                case 3://俱乐部
+                case 2://俱乐部
                     getSupportFragmentManager().beginTransaction()
                             .replace(R.id.fragment_container, MainPageFragment.newInstance(ServerUrl.getClub(), null)
                             )
                             .commit();
                     setRequestedOrientation(ActivityInfo.SCREEN_ORIENTATION_PORTRAIT);
                     break;
-                case 4://校园足球
+                case 3://新闻中心
+                    getSupportFragmentManager().beginTransaction()
+                            .replace(R.id.fragment_container, MainPageFragment.newInstance(ServerUrl.getNews(), null)
+                            )
+                            .commit();
+                    setRequestedOrientation(ActivityInfo.SCREEN_ORIENTATION_PORTRAIT);
+                    break;
+                case 4://赛事
+                    getSupportFragmentManager().beginTransaction()
+                            .replace(R.id.fragment_container, MainPageFragment.newInstance(ServerUrl.getMatch(), null)
+                            )
+                            .commit();
+                    setRequestedOrientation(ActivityInfo.SCREEN_ORIENTATION_PORTRAIT);
+                    break;
+                case 5://校园足球
                     getSupportFragmentManager().beginTransaction()
                             .replace(R.id.fragment_container, MainPageFragment.newInstance(ServerUrl.getCampusFootball(), null)
                             )
                             .commit();
                     setRequestedOrientation(ActivityInfo.SCREEN_ORIENTATION_PORTRAIT);
                     break;
-                case 5://微社区
+                case 6://足球公园
+                    getSupportFragmentManager().beginTransaction()
+                            .replace(R.id.fragment_container, MainPageFragment.newInstance(ServerUrl.getFootballPark(), null)
+                            )
+                            .commit();
+                    setRequestedOrientation(ActivityInfo.SCREEN_ORIENTATION_PORTRAIT);
+                    break;
+                case 7://微社区
                     getSupportFragmentManager().beginTransaction()
                             .replace(R.id.fragment_container, MainPageFragment.newInstance(ServerUrl.getBBS(), null)
                             )
                             .commit();
                     setRequestedOrientation(ActivityInfo.SCREEN_ORIENTATION_PORTRAIT);
                     break;
-                case 6://新闻
-                    getSupportFragmentManager().beginTransaction()
-                            .replace(R.id.fragment_container, MainPageFragment.newInstance(ServerUrl.getNewsList(), null)
-                            )
-                            .commit();
-                    setRequestedOrientation(ActivityInfo.SCREEN_ORIENTATION_PORTRAIT);
-                    break;
-                case 7://赛程
-                    getSupportFragmentManager().beginTransaction()
-                            .replace(R.id.fragment_container, new FixtureFragment())
-                            .commit();
-                    setRequestedOrientation(ActivityInfo.SCREEN_ORIENTATION_PORTRAIT);
-                    break;
-                case 8://商城
+                case 8://微商城
                     getSupportFragmentManager().beginTransaction()
                             .replace(R.id.fragment_container, MainPageFragment.newInstance(ServerUrl.getMall(), null)
                             )
@@ -192,27 +182,30 @@ public class MainActivity extends BaseActivityWithJavaScriptInterface
                     setRequestedOrientation(ActivityInfo.SCREEN_ORIENTATION_PORTRAIT);
                     break;
 
-                case 9://排行榜
+                case 9://微票务
                     getSupportFragmentManager().beginTransaction()
-                            .replace(R.id.fragment_container, MainPageFragment.newInstance(ServerUrl.getRank(), null)
+                            .replace(R.id.fragment_container, MainPageFragment.newInstance(ServerUrl.getTicket(), null)
                             )
                             .commit();
 
-                    setRequestedOrientation(ActivityInfo.SCREEN_ORIENTATION_SENSOR);
-                    break;
-
-                case 10://订票
-
-                    Intent pickPictureIntent = new Intent(Intent.ACTION_PICK);
-                    pickPictureIntent.setType("image/*");
-                    startActivityForResult(pickPictureIntent,  BaseActivityWithJavaScriptInterface.REQUEST_IMAGE_URI);
-
-                    getSupportFragmentManager().beginTransaction()
-                            .replace(R.id.fragment_container, MainPageFragment.newInstance("http://jonoon.ig28.com/uploadtest.html", null)
-                            )
-                            .commit();
                     setRequestedOrientation(ActivityInfo.SCREEN_ORIENTATION_PORTRAIT);
                     break;
+
+                case 10://品牌文化
+                    getSupportFragmentManager().beginTransaction()
+                            .replace(R.id.fragment_container, MainPageFragment.newInstance(ServerUrl.getCulture(), null)
+                            )
+                            .commit();
+
+                    setRequestedOrientation(ActivityInfo.SCREEN_ORIENTATION_PORTRAIT);
+                    break;
+                case 11://VIP
+                    getSupportFragmentManager().beginTransaction()
+                            .replace(R.id.fragment_container, MainPageFragment.newInstance(ServerUrl.getVip(), null)
+                            )
+                            .commit();
+
+                    setRequestedOrientation(ActivityInfo.SCREEN_ORIENTATION_PORTRAIT);
             }
         }
         cur_page = page_num;

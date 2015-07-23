@@ -1,18 +1,15 @@
 package com.jonoon.clubapp.controller.fragement.main_page;
 
 import android.app.Activity;
-import android.content.Intent;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.LinearLayout;
-import android.widget.TextView;
 
 import com.jonoon.clubapp.R;
-import com.jonoon.clubapp.controller.BaseActivityWithJavaScriptInterface;
-import com.jonoon.clubapp.controller.UploadImage;
+import com.jonoon.clubapp.controller.MyJavaScriptCallback;
 import com.jonoon.clubapp.util.L;
 import com.jonoon.clubapp.view.custom_view.H5WebView;
 
@@ -71,7 +68,7 @@ public class MainPageFragment extends Fragment {
         LinearLayout frame = (LinearLayout) inflater.inflate(R.layout.fragment_main_page, container, false);
 
         wv = (H5WebView) frame.findViewById(R.id.webview);
-
+        wv.addJavascriptInterface(new MyJavaScriptCallback(getActivity()), MyJavaScriptCallback.INTERFACE_NAME);
         wv.loadUrl(mUrl);
 
         return frame;

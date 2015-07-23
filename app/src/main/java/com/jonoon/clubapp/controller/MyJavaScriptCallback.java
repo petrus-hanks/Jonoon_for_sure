@@ -1,9 +1,8 @@
 package com.jonoon.clubapp.controller;
 
 
-import android.app.Activity;
-import android.content.Context;
 import android.content.Intent;
+import android.support.v4.app.FragmentActivity;
 import android.webkit.JavascriptInterface;
 
 import com.jonoon.clubapp.controller.activity.MainActivity;
@@ -22,9 +21,9 @@ public class MyJavaScriptCallback {
 
     public static final String GO_TO_MODULE = "goToModule";
 
-    private BaseActivityWithJavaScriptInterface mActivity;
+    private FragmentActivity mActivity;
 
-    public MyJavaScriptCallback(BaseActivityWithJavaScriptInterface act){
+    public MyJavaScriptCallback(FragmentActivity act){
         mActivity = act;
     }
 
@@ -36,6 +35,7 @@ public class MyJavaScriptCallback {
 
     @JavascriptInterface
     public void goToUrl(String url){
+        L.e(TAG,"goToUrl "+url);
         Intent intent = new Intent(mActivity.getApplicationContext(), WebViewActivity.class);
         intent.putExtra(WebViewActivity.URL, url);
         mActivity.startActivity(intent);
@@ -65,6 +65,8 @@ public class MyJavaScriptCallback {
             index = 8;
         }else if("rank".equals(module)){
             index = 9;
+        }else if("user".equals(module)){
+            index = 11;
         }
         Intent intent = new Intent(mActivity.getApplicationContext(), MainActivity.class);
         intent.putExtra(GO_TO_MODULE, index);

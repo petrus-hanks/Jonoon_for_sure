@@ -8,22 +8,29 @@ package com.jonoon.clubapp.model.constants;
 public class ServerUrl {
 
     private final static String SERVER_ADD = "http://jonoon.ig28.com/";
-    private final static String FIXTURE_LIST = "fixture";
-    private final static String SQUAD_LIST = "squad";
 
 
     private final static String INDEX = "app/index.html";
+    private final static String CLUB = "app/club.html";
+    private final static String MATCH = "app/match.html";
+    private final static String NEWS = "app/newslist.html";
+    private final static String CAMPUS_FOOTBALL = "app/school.html";
+    private final static String FOOTBALL_PARK = "app/park.html";
+    private final static String BBS = "app/bbs.html";
+    private final static String MALL = "app/mall.html";
+    private final static String TICKET = "app/tikect.html";
+    private final static String CULTURE = "app/brand.html";
+    private final static String VIP = "app/vip.html";
+
+
+    private final static String FIXTURE_LIST = "fixture";
+    private final static String SQUAD_LIST = "squad";
     private final static String FIXTURE_ITEM = "app/fixture.html";
     private final static String SQUAD_ITEM = "app/squad.html";
 
-    private final static String NEWS = "app/newslist.html";
-    private final static String MALL = "app/mall.html";
-    private final static String CLUB = "app/club.html";
     private final static String PRODUCT = "app/product.html";
 
     private final static String MEMBER = "app/member.html";
-    private final static String CAMPUS_FOOTBALL = "app/schoolfootball.html";
-    private final static String BBS = "app/bbslist.html";
     private final static String RANK = "app/leaguerank.html";
 
 
@@ -38,28 +45,32 @@ public class ServerUrl {
     public static String getIndex() {
         return SERVER_ADD + INDEX;
     }
+    public static String getClub(){return SERVER_ADD + CLUB;}
+    public static String getMatch(){return SERVER_ADD + MATCH;}
+    public static String getNews(){return SERVER_ADD + NEWS;}
+    public static String getCampusFootball(){return SERVER_ADD + CAMPUS_FOOTBALL;}
+    public static String getFootballPark(){return SERVER_ADD + FOOTBALL_PARK;}
+
+    public static String getBBS(){return SERVER_ADD + BBS;}
+    public static String getMall(){return SERVER_ADD + MALL;}
+    public static String getTicket(){return SERVER_ADD + TICKET;}
+    public static String getCulture(){return SERVER_ADD + CULTURE;}
+    public static String getVip(){return SERVER_ADD + VIP;}
+
+    public static String getUserCenter(){return SERVER_ADD + MEMBER;}
+
     public static String getFIXTURE_LIST() {
         return SERVER_ADD + FIXTURE_LIST;
     }
+    public static String getFixtureItem(){return SERVER_ADD + FIXTURE_ITEM;}
     public static String getSQUAD_LIST() {
         return SERVER_ADD + SQUAD_LIST;
     }
     public static String getSquadItem() {
         return SERVER_ADD + SQUAD_ITEM;
     }
-
-    public static String getNewsList(){return SERVER_ADD + NEWS;}
-
-    public static String getMall(){return SERVER_ADD + MALL;}
-    public static String getClub(){return SERVER_ADD + CLUB;}
     public static String getProductDetail(){return SERVER_ADD + PRODUCT;}
-
-    public static String getFixtureItem(){return SERVER_ADD + FIXTURE_ITEM;}
-    public static String getUserCenter(){return SERVER_ADD + MEMBER;}
-    public static String getCampusFootball(){return SERVER_ADD + CAMPUS_FOOTBALL;}
-    public static String getBBS(){return SERVER_ADD + BBS;}
     public static String getRank(){return SERVER_ADD + RANK;}
-
 
 //    http://jonoon.ig28.com/app/fixture_data.html?id=n 赛场详情 数据统计
 //    http://jonoon.ig28.com/app/fixture_imagelist.html?id=n 赛场详情 图集
