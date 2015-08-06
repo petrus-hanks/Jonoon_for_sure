@@ -2,18 +2,25 @@
 <items version="2" >
 
     <item
-        jar="F:\source\jonoon\app\src\main\libs\nineoldandroids-2.4.0.jar"
+        jar="F:\source\jonoon\app\src\main\libs\ShareSDK-SinaWeibo-2.6.1.jar"
         jumboMode="false"
         revision="22.0.1"
-        sha1="59f19e43354d32de831379c23ce03bb259a4c2b7">
-        <dex dex="F:\source\jonoon\app\build\intermediates\pre-dexed\debug\nineoldandroids-2.4.0-ef5bd30accdbc773f3119a0638511219df62eb8e.jar" />
+        sha1="b119f644319636ab1806b48fe46020adc36e6643">
+        <dex dex="F:\source\jonoon\app\build\intermediates\pre-dexed\debug\ShareSDK-SinaWeibo-2.6.1-4ca5741265a9b457b9c5b0afe5242a572154297b.jar" />
     </item>
     <item
-        jar="F:\source\jonoon\app\src\main\libs\httpcore-4.3.3.jar"
+        jar="F:\source\jonoon\app\src\main\libs\ShareSDK-QZone-2.6.1.jar"
         jumboMode="false"
         revision="22.0.1"
-        sha1="f91b7a4aadc5cf486df6e4634748d7dd7a73f06d">
-        <dex dex="F:\source\jonoon\app\build\intermediates\pre-dexed\debug\httpcore-4.3.3-960978449c9a7944f9bc97447af5f763ea75ee35.jar" />
+        sha1="1e3749d839864304229a1165f662a429d17241a3">
+        <dex dex="F:\source\jonoon\app\build\intermediates\pre-dexed\debug\ShareSDK-QZone-2.6.1-baad684f6d2c2adf20e56876613d0eb1d9ad20d7.jar" />
+    </item>
+    <item
+        jar="F:\source\jonoon\app\src\main\libs\MobLogCollector.jar"
+        jumboMode="false"
+        revision="22.0.1"
+        sha1="c804b0e7238e94bb9c89381c90336116509473d7">
+        <dex dex="F:\source\jonoon\app\build\intermediates\pre-dexed\debug\MobLogCollector-a4340619367bd103f7f735c774a65ace62c971ee.jar" />
     </item>
     <item
         jar="D:\Program Files\Android-SDK\extras\android\m2repository\com\android\support\support-annotations\22.1.0\support-annotations-22.1.0.jar"
@@ -42,6 +49,76 @@
         revision="22.0.1"
         sha1="33ad2d9e9065ee528d81cb8de94eaab220022bfc">
         <dex dex="F:\source\jonoon\app\build\intermediates\pre-dexed\debug\stickylistheaders_lib-2f8c3a92ab42b6a9cfa50de995f6b8d76afd2731.jar" />
+    </item>
+    <item
+        jar="F:\source\jonoon\app\src\main\libs\ShareSDK-TencentWeibo-2.6.1.jar"
+        jumboMode="false"
+        revision="22.0.1"
+        sha1="57522217bb34a1000881302e74b1ef2208e65cf2">
+        <dex dex="F:\source\jonoon\app\build\intermediates\pre-dexed\debug\ShareSDK-TencentWeibo-2.6.1-1b2c5d386be4f2293bac1ba8f5597cb737626ee9.jar" />
+    </item>
+    <item
+        jar="F:\source\jonoon\app\src\main\libs\ShareSDK-Wechat-Core-2.6.1.jar"
+        jumboMode="false"
+        revision="22.0.1"
+        sha1="e27ab7ede987ff7bdac4979741c9f7c2e3254de7">
+        <dex dex="F:\source\jonoon\app\build\intermediates\pre-dexed\debug\ShareSDK-Wechat-Core-2.6.1-cdf8b3ff355e17e863d389a61d1b31bed944e65e.jar" />
+    </item>
+    <item
+        jar="F:\source\jonoon\app\src\main\libs\MobTools.jar"
+        jumboMode="false"
+        revision="22.0.1"
+        sha1="c9107069ca744840137b9b0fad95d5f57d8d9491">
+        <dex dex="F:\source\jonoon\app\build\intermediates\pre-dexed\debug\MobTools-54055ee190d529bff1a5d02e3e8e037b95616af7.jar" />
+    </item>
+    <item
+        jar="F:\source\jonoon\app\src\main\libs\ShareSDK-Wechat-Favorite-2.6.1.jar"
+        jumboMode="false"
+        revision="22.0.1"
+        sha1="65737d9d3cb99ef72493b19112067066bbd211bd">
+        <dex dex="F:\source\jonoon\app\build\intermediates\pre-dexed\debug\ShareSDK-Wechat-Favorite-2.6.1-fe4d340e32647e1464e0e8354fc727a06c68dc0e.jar" />
+    </item>
+    <item
+        jar="F:\source\jonoon\app\src\main\libs\ShareSDK-Wechat-2.6.1.jar"
+        jumboMode="false"
+        revision="22.0.1"
+        sha1="cc280ae2e35362f52f69abc8c0880eaad75a6b98">
+        <dex dex="F:\source\jonoon\app\build\intermediates\pre-dexed\debug\ShareSDK-Wechat-2.6.1-c55f3dd6853c2857a9e726c316e89ddf5a692333.jar" />
+    </item>
+    <item
+        jar="F:\source\jonoon\app\src\main\libs\nineoldandroids-2.4.0.jar"
+        jumboMode="false"
+        revision="22.0.1"
+        sha1="59f19e43354d32de831379c23ce03bb259a4c2b7">
+        <dex dex="F:\source\jonoon\app\build\intermediates\pre-dexed\debug\nineoldandroids-2.4.0-ef5bd30accdbc773f3119a0638511219df62eb8e.jar" />
+    </item>
+    <item
+        jar="F:\source\jonoon\app\src\main\libs\ShareSDK-Core-2.6.1.jar"
+        jumboMode="false"
+        revision="22.0.1"
+        sha1="da6215cd1f64dd814f2f646a3d4b088c70d0587e">
+        <dex dex="F:\source\jonoon\app\build\intermediates\pre-dexed\debug\ShareSDK-Core-2.6.1-18c3fcd643a31a628c815420dd56f2e8a4cb7b55.jar" />
+    </item>
+    <item
+        jar="F:\source\jonoon\app\src\main\libs\httpcore-4.3.3.jar"
+        jumboMode="false"
+        revision="22.0.1"
+        sha1="f91b7a4aadc5cf486df6e4634748d7dd7a73f06d">
+        <dex dex="F:\source\jonoon\app\build\intermediates\pre-dexed\debug\httpcore-4.3.3-960978449c9a7944f9bc97447af5f763ea75ee35.jar" />
+    </item>
+    <item
+        jar="F:\source\jonoon\app\src\main\libs\ShareSDK-Wechat-Moments-2.6.1.jar"
+        jumboMode="false"
+        revision="22.0.1"
+        sha1="5663cf8a7e19f53eb43eb26b4c2051a9298b789d">
+        <dex dex="F:\source\jonoon\app\build\intermediates\pre-dexed\debug\ShareSDK-Wechat-Moments-2.6.1-82b2813bc6830a140261bacb61674ae87d1b6ad5.jar" />
+    </item>
+    <item
+        jar="F:\source\jonoon\app\src\main\libs\ShareSDK-QQ-2.6.1.jar"
+        jumboMode="false"
+        revision="22.0.1"
+        sha1="709cf3dfb468faf7d2b340deaf4e7f45f9de4e30">
+        <dex dex="F:\source\jonoon\app\build\intermediates\pre-dexed\debug\ShareSDK-QQ-2.6.1-4c1aa377c1ec2f0467e01d96cc54f74ef8516fe0.jar" />
     </item>
     <item
         jar="F:\source\jonoon\app\build\intermediates\exploded-aar\com.android.support\support-v4\22.1.0\classes.jar"

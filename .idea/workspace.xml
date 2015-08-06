@@ -23,6 +23,16 @@
           <theme>@style/AppTheme</theme>
         </config>
       </layout>
+      <layout url="file://$PROJECT_DIR$/app/src/main/res/layout/fragment_navigation_one.xml">
+        <config>
+          <theme>@style/AppTheme</theme>
+        </config>
+      </layout>
+      <layout url="file://$PROJECT_DIR$/app/src/main/res/layout/fragment_navigation_two.xml">
+        <config>
+          <theme>@style/AppTheme</theme>
+        </config>
+      </layout>
       <layout url="file://$PROJECT_DIR$/app/src/main/res/layout/title_layout.xml">
         <config>
           <theme>@style/AppTheme</theme>
@@ -77,257 +87,124 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="BaseActivityWithJavaScriptInterface.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/src/main/java/com/jonoon/clubapp/controller/BaseActivityWithJavaScriptInterface.java">
+      <file leaf-file-name="ShareSDK.xml" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/src/main/assets/ShareSDK.xml">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0">
-              <caret line="33" column="36" selection-start-line="33" selection-start-column="36" selection-end-line="33" selection-end-column="36" />
+              <caret line="91" column="8" selection-start-line="91" selection-start-column="8" selection-end-line="91" selection-end-column="8" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="AndroidManifest.xml" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/src/main/AndroidManifest.xml">
+      <file leaf-file-name="OnekeyShare.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/src/main/java/cn/sharesdk/onekeyshare/OnekeyShare.java">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0">
-              <caret line="15" column="0" selection-start-line="15" selection-start-column="0" selection-end-line="16" selection-end-column="0" />
+              <caret line="38" column="13" selection-start-line="38" selection-start-column="13" selection-end-line="38" selection-end-column="13" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Uri.java" pinned="false" current-in-tab="false">
-        <entry file="file://D:/Program Files/Android-SDK/sources/android-21/android/net/Uri.java">
+      <file leaf-file-name="squad_listview_group_item.xml" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/squad_listview_group_item.xml">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0">
-              <caret line="271" column="27" selection-start-line="271" selection-start-column="27" selection-end-line="271" selection-end-column="27" />
-              <folding>
-                <element signature="e#0#75179#0" expanded="false" />
-                <element signature="imports" expanded="false" />
-                <element signature="e#5864#5865#0" expanded="false" />
-                <element signature="e#5904#5905#0" expanded="false" />
-                <element signature="e#6365#6366#0" expanded="false" />
-                <element signature="e#6401#6402#0" expanded="false" />
-                <element signature="e#12046#12047#0" expanded="false" />
-                <element signature="e#12090#12091#0" expanded="false" />
-                <element signature="e#12228#12229#0" expanded="false" />
-                <element signature="e#12289#12290#0" expanded="false" />
-                <element signature="e#15029#15030#0" expanded="false" />
-                <element signature="e#15076#15077#0" expanded="false" />
-                <element signature="e#16392#16393#0" expanded="false" />
-                <element signature="e#16457#16458#0" expanded="false" />
-                <element signature="e#16498#16499#0" expanded="false" />
-                <element signature="e#16530#16531#0" expanded="false" />
-                <element signature="e#18554#18555#0" expanded="false" />
-                <element signature="e#18639#18640#0" expanded="false" />
-                <element signature="e#18695#18696#0" expanded="false" />
-                <element signature="e#18747#18748#0" expanded="false" />
-                <element signature="e#18796#18797#0" expanded="false" />
-                <element signature="e#18848#18849#0" expanded="false" />
-                <element signature="e#19593#19594#0" expanded="false" />
-                <element signature="e#19655#19656#0" expanded="false" />
-                <element signature="e#19695#19696#0" expanded="false" />
-                <element signature="e#19757#19758#0" expanded="false" />
-                <element signature="e#19999#20000#0" expanded="false" />
-                <element signature="e#20056#20057#0" expanded="false" />
-                <element signature="e#20098#20099#0" expanded="false" />
-                <element signature="e#20155#20156#0" expanded="false" />
-                <element signature="e#20204#20205#0" expanded="false" />
-                <element signature="e#20266#20267#0" expanded="false" />
-                <element signature="e#21285#21286#0" expanded="false" />
-                <element signature="e#21343#21344#0" expanded="false" />
-                <element signature="e#21989#21990#0" expanded="false" />
-                <element signature="e#22047#22048#0" expanded="false" />
-                <element signature="e#22292#22293#0" expanded="false" />
-                <element signature="e#22353#22354#0" expanded="false" />
-                <element signature="e#22566#22567#0" expanded="false" />
-                <element signature="e#22627#22628#0" expanded="false" />
-                <element signature="e#22663#22664#0" expanded="false" />
-                <element signature="e#22703#22704#0" expanded="false" />
-                <element signature="e#28038#28039#0" expanded="false" />
-                <element signature="e#28070#28071#0" expanded="false" />
-                <element signature="e#28335#28336#0" expanded="false" />
-                <element signature="e#28371#28372#0" expanded="false" />
-                <element signature="e#28410#28411#0" expanded="false" />
-                <element signature="e#28455#28456#0" expanded="false" />
-                <element signature="e#28492#28493#0" expanded="false" />
-                <element signature="e#28534#28535#0" expanded="false" />
-                <element signature="e#28590#28591#0" expanded="false" />
-                <element signature="e#28637#28638#0" expanded="false" />
-                <element signature="e#28686#28687#0" expanded="false" />
-                <element signature="e#28733#28734#0" expanded="false" />
-                <element signature="e#28773#28774#0" expanded="false" />
-                <element signature="e#28808#28809#0" expanded="false" />
-                <element signature="e#28855#28856#0" expanded="false" />
-                <element signature="e#28890#28891#0" expanded="false" />
-                <element signature="e#28925#28926#0" expanded="false" />
-                <element signature="e#28960#28961#0" expanded="false" />
-                <element signature="e#29002#29003#0" expanded="false" />
-                <element signature="e#29037#29038#0" expanded="false" />
-                <element signature="e#29073#29074#0" expanded="false" />
-                <element signature="e#29108#29109#0" expanded="false" />
-                <element signature="e#29151#29152#0" expanded="false" />
-                <element signature="e#29186#29187#0" expanded="false" />
-                <element signature="e#29225#29226#0" expanded="false" />
-                <element signature="e#29277#29278#0" expanded="false" />
-                <element signature="e#29323#29324#0" expanded="false" />
-                <element signature="e#29375#29376#0" expanded="false" />
-                <element signature="e#29424#29425#0" expanded="false" />
-                <element signature="e#29478#29479#0" expanded="false" />
-                <element signature="e#29524#29525#0" expanded="false" />
-                <element signature="e#29559#29560#0" expanded="false" />
-                <element signature="e#29598#29599#0" expanded="false" />
-                <element signature="e#29633#29634#0" expanded="false" />
-                <element signature="e#29679#29680#0" expanded="false" />
-                <element signature="e#29714#29715#0" expanded="false" />
-                <element signature="e#29749#29750#0" expanded="false" />
-                <element signature="e#29784#29785#0" expanded="false" />
-                <element signature="e#29816#29817#0" expanded="false" />
-                <element signature="e#29849#29850#0" expanded="false" />
-                <element signature="e#31301#31302#0" expanded="false" />
-                <element signature="e#31341#31342#0" expanded="false" />
-                <element signature="e#33035#33036#0" expanded="false" />
-                <element signature="e#33096#33097#0" expanded="false" />
-                <element signature="e#33442#33443#0" expanded="false" />
-                <element signature="e#33503#33504#0" expanded="false" />
-                <element signature="e#36571#36572#0" expanded="false" />
-                <element signature="e#36603#36604#0" expanded="false" />
-                <element signature="e#36943#36944#0" expanded="false" />
-                <element signature="e#36978#36979#0" expanded="false" />
-                <element signature="e#37017#37018#0" expanded="false" />
-                <element signature="e#37062#37063#0" expanded="false" />
-                <element signature="e#37099#37100#0" expanded="false" />
-                <element signature="e#37136#37137#0" expanded="false" />
-                <element signature="e#37371#37372#0" expanded="false" />
-                <element signature="e#37423#37424#0" expanded="false" />
-                <element signature="e#37472#37473#0" expanded="false" />
-                <element signature="e#37524#37525#0" expanded="false" />
-                <element signature="e#38447#38448#0" expanded="false" />
-                <element signature="e#38505#38506#0" expanded="false" />
-                <element signature="e#38552#38553#0" expanded="false" />
-                <element signature="e#38610#38611#0" expanded="false" />
-                <element signature="e#38652#38653#0" expanded="false" />
-                <element signature="e#38705#38706#0" expanded="false" />
-                <element signature="e#38740#38741#0" expanded="false" />
-                <element signature="e#38793#38794#0" expanded="false" />
-                <element signature="e#38829#38830#0" expanded="false" />
-                <element signature="e#38883#38884#0" expanded="false" />
-                <element signature="e#38926#38927#0" expanded="false" />
-                <element signature="e#38980#38981#0" expanded="false" />
-                <element signature="e#39019#39020#0" expanded="false" />
-                <element signature="e#39076#39077#0" expanded="false" />
-                <element signature="e#39122#39123#0" expanded="false" />
-                <element signature="e#39179#39180#0" expanded="false" />
-                <element signature="e#39228#39229#0" expanded="false" />
-                <element signature="e#39286#39287#0" expanded="false" />
-                <element signature="e#43380#43381#0" expanded="false" />
-                <element signature="e#43443#43444#0" expanded="false" />
-                <element signature="e#43762#43763#0" expanded="false" />
-                <element signature="e#43825#43826#0" expanded="false" />
-                <element signature="e#44571#44572#0" expanded="false" />
-                <element signature="e#44632#44633#0" expanded="false" />
-                <element signature="e#44755#44756#0" expanded="false" />
-                <element signature="e#44816#44817#0" expanded="false" />
-                <element signature="e#45050#45051#0" expanded="false" />
-                <element signature="e#45117#45118#0" expanded="false" />
-                <element signature="e#46371#46372#0" expanded="false" />
-                <element signature="e#46418#46419#0" expanded="false" />
-                <element signature="e#47860#47861#0" expanded="false" />
-                <element signature="e#47909#47910#0" expanded="false" />
-                <element signature="e#55755#55756#0" expanded="false" />
-                <element signature="e#55799#55800#0" expanded="false" />
-                <element signature="e#56664#56665#0" expanded="false" />
-                <element signature="e#56702#56703#0" expanded="false" />
-                <element signature="e#63338#63339#0" expanded="false" />
-                <element signature="e#63385#63386#0" expanded="false" />
-                <element signature="e#63414#63415#0" expanded="false" />
-                <element signature="e#63450#63451#0" expanded="false" />
-                <element signature="e#64449#64450#0" expanded="false" />
-                <element signature="e#64506#64507#0" expanded="false" />
-                <element signature="e#64681#64682#0" expanded="false" />
-                <element signature="e#64737#64738#0" expanded="false" />
-                <element signature="e#64912#64913#0" expanded="false" />
-                <element signature="e#64968#64969#0" expanded="false" />
-                <element signature="e#65789#65790#0" expanded="false" />
-                <element signature="e#65840#65841#0" expanded="false" />
-                <element signature="e#65895#65896#0" expanded="false" />
-                <element signature="e#65938#65939#0" expanded="false" />
-                <element signature="e#66440#66441#0" expanded="false" />
-                <element signature="e#66487#66488#0" expanded="false" />
-                <element signature="e#70277#70278#0" expanded="false" />
-                <element signature="e#70333#70334#0" expanded="false" />
-                <element signature="e#70512#70513#0" expanded="false" />
-                <element signature="e#70568#70569#0" expanded="false" />
-              </folding>
+              <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+              <folding />
             </state>
+          </provider>
+          <provider editor-type-id="android-designer">
+            <state />
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="MultiPartRequest.java" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/app/src/main/java/com/jonoon/clubapp/util/net/MultiPartRequest.java">
+      <file leaf-file-name="skyblue_editpage.xml" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/skyblue_editpage.xml">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.5735736">
-              <caret line="95" column="62" selection-start-line="95" selection-start-column="62" selection-end-line="95" selection-end-column="62" />
+            <state vertical-scroll-proportion="0.0">
+              <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+          <provider editor-type-id="android-designer">
+            <state />
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="skyblue_editpage_at_layout.xml" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/skyblue_editpage_at_layout.xml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0">
+              <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+          <provider editor-type-id="android-designer">
+            <state />
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="item_spinner_numbers.xml" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/item_spinner_numbers.xml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0">
+              <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+          <provider editor-type-id="android-designer">
+            <state />
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="skyblue_share_platform_list.xml" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/skyblue_share_platform_list.xml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0">
+              <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+          <provider editor-type-id="android-designer">
+            <state />
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="PlatformGridViewAdapter.java" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/app/src/main/java/cn/sharesdk/onekeyshare/theme/skyblue/PlatformGridViewAdapter.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0">
+              <caret line="70" column="79" selection-start-line="70" selection-start-column="79" selection-end-line="70" selection-end-column="79" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="UploadFile.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/src/main/java/com/jonoon/clubapp/controller/UploadFile.java">
+      <file leaf-file-name="skyblue_share_actionbar.xml" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/skyblue_share_actionbar.xml">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0">
-              <caret line="140" column="0" selection-start-line="140" selection-start-column="0" selection-end-line="147" selection-end-column="5" />
-              <folding>
-                <element signature="imports" expanded="false" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="UploadImage.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/src/main/java/com/jonoon/clubapp/controller/UploadImage.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="32" column="49" selection-start-line="32" selection-start-column="49" selection-end-line="32" selection-end-column="49" />
-              <folding>
-                <element signature="imports" expanded="false" />
-                <element signature="e#1758#1759#0" expanded="false" />
-                <element signature="e#1811#1812#0" expanded="false" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="waiting_anim.xml" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/src/main/res/drawable-xhdpi/waiting_anim.xml">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="9" column="71" selection-start-line="9" selection-start-column="71" selection-end-line="9" selection-end-column="71" />
+              <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
               <folding />
             </state>
           </provider>
+          <provider editor-type-id="android-designer">
+            <state />
+          </provider>
         </entry>
       </file>
-      <file leaf-file-name="ServerUrl.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/src/main/java/com/jonoon/clubapp/model/constants/ServerUrl.java">
+      <file leaf-file-name="skyblue_share_platform_list_item.xml" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/skyblue_share_platform_list_item.xml">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0">
-              <caret line="29" column="56" selection-start-line="29" selection-start-column="56" selection-end-line="29" selection-end-column="56" />
-              <folding>
-                <element signature="e#1184#1185#0" expanded="false" />
-                <element signature="e#1217#1218#0" expanded="false" />
-                <element signature="e#1256#1257#0" expanded="false" />
-                <element signature="e#1297#1298#0" expanded="false" />
-                <element signature="e#1342#1343#0" expanded="false" />
-                <element signature="e#1390#1391#0" expanded="false" />
-                <element signature="e#1433#1434#0" expanded="false" />
-                <element signature="e#1479#1480#0" expanded="false" />
-                <element signature="e#1521#1522#0" expanded="false" />
-                <element signature="e#1567#1568#0" expanded="false" />
-              </folding>
+              <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+              <folding />
             </state>
+          </provider>
+          <provider editor-type-id="android-designer">
+            <state />
           </provider>
         </entry>
       </file>
@@ -1287,7 +1164,7 @@
     </option>
     <option name="modificationStamps">
       <map>
-        <entry key="$PROJECT_DIR$" value="4295285410713" />
+        <entry key="$PROJECT_DIR$" value="4301938899191" />
       </map>
     </option>
     <option name="projectBuildClasspath">
@@ -1455,12 +1332,23 @@
                             <option value="$APPLICATION_HOME_DIR$/gradle/m2repository/commons-codec/commons-codec/1.4/commons-codec-1.4.jar" />
                             <option value="D:/Program Files/Android-SDK/extras/android/m2repository/com/android/support/support-v4/22.1.0/support-v4-22.1.0.aar" />
                             <option value="D:/Program Files/Android-SDK/extras/android/m2repository/com/android/support/support-annotations/22.1.0/support-annotations-22.1.0.jar" />
-                            <option value="$MODULE_DIR$/src/main/libs/volley.jar" />
                             <option value="$MODULE_DIR$/src/main/libs/gson-2.3.jar" />
-                            <option value="$MODULE_DIR$/src/main/libs/httpmime-4.3.6.jar" />
                             <option value="$MODULE_DIR$/src/main/libs/httpcore-4.3.3.jar" />
+                            <option value="$MODULE_DIR$/src/main/libs/httpmime-4.3.6.jar" />
+                            <option value="$MODULE_DIR$/src/main/libs/MobLogCollector.jar" />
+                            <option value="$MODULE_DIR$/src/main/libs/MobTools.jar" />
                             <option value="$MODULE_DIR$/src/main/libs/nineoldandroids-2.4.0.jar" />
+                            <option value="$MODULE_DIR$/src/main/libs/ShareSDK-Core-2.6.1.jar" />
+                            <option value="$MODULE_DIR$/src/main/libs/ShareSDK-QQ-2.6.1.jar" />
+                            <option value="$MODULE_DIR$/src/main/libs/ShareSDK-QZone-2.6.1.jar" />
+                            <option value="$MODULE_DIR$/src/main/libs/ShareSDK-SinaWeibo-2.6.1.jar" />
+                            <option value="$MODULE_DIR$/src/main/libs/ShareSDK-TencentWeibo-2.6.1.jar" />
+                            <option value="$MODULE_DIR$/src/main/libs/ShareSDK-Wechat-2.6.1.jar" />
+                            <option value="$MODULE_DIR$/src/main/libs/ShareSDK-Wechat-Core-2.6.1.jar" />
+                            <option value="$MODULE_DIR$/src/main/libs/ShareSDK-Wechat-Favorite-2.6.1.jar" />
+                            <option value="$MODULE_DIR$/src/main/libs/ShareSDK-Wechat-Moments-2.6.1.jar" />
                             <option value="$MODULE_DIR$/src/main/libs/stickylistheaders_lib.jar" />
+                            <option value="$MODULE_DIR$/src/main/libs/volley.jar" />
                           </list>
                         </option>
                         <option name="path" value="$PROJECT_DIR$/app" />
@@ -1584,12 +1472,41 @@
       </map>
     </option>
   </component>
+  <component name="IdeDocumentHistory">
+    <option name="CHANGED_PATHS">
+      <list>
+        <option value="$PROJECT_DIR$/app/src/main/java/com/jonoon/clubapp/controller/fragement/main_page/NavigationOneFragment.java" />
+        <option value="$PROJECT_DIR$/app/src/main/java/com/jonoon/clubapp/controller/fragement/main_page/NavigationTwoFragment.java" />
+        <option value="$PROJECT_DIR$/app/src/main/res/layout/fragment_navigation_one.xml" />
+        <option value="$PROJECT_DIR$/app/src/main/java/com/jonoon/clubapp/model/constants/ServerUrl.java" />
+        <option value="$PROJECT_DIR$/app/src/main/java/com/jonoon/clubapp/controller/adapter/ViewPager4SlidingDrawer.java" />
+        <option value="$PROJECT_DIR$/app/src/main/res/layout/fragment_navigation_two.xml" />
+        <option value="$PROJECT_DIR$/app/src/main/res/layout/activity_main.xml" />
+        <option value="$PROJECT_DIR$/app/src/main/java/com/jonoon/clubapp/controller/fragement/main_page/MainPageFragment.java" />
+        <option value="$PROJECT_DIR$/app/src/main/java/com/jonoon/clubapp/controller/MyJavaScriptCallback.java" />
+        <option value="$PROJECT_DIR$/app/src/main/java/com/jonoon/clubapp/controller/adapter/FixtureAdapter.java" />
+        <option value="$PROJECT_DIR$/app/build.gradle" />
+        <option value="$PROJECT_DIR$/app/src/main/AndroidManifest.xml" />
+        <option value="$PROJECT_DIR$/app/src/main/java/com/jonoon/clubapp/controller/activity/MainActivity.java" />
+        <option value="$PROJECT_DIR$/app/src/main/assets/ShareSDK.xml" />
+      </list>
+    </option>
+  </component>
+  <component name="MavenImportPreferences">
+    <option name="generalSettings">
+      <MavenGeneralSettings>
+        <option name="mavenHome" value="Bundled (Maven 3)" />
+      </MavenGeneralSettings>
+    </option>
+  </component>
   <component name="NamedScopeManager">
     <order />
   </component>
   <component name="ProjectFrameBounds">
-    <option name="width" value="1440" />
-    <option name="height" value="860" />
+    <option name="x" value="-8" />
+    <option name="y" value="-8" />
+    <option name="width" value="1936" />
+    <option name="height" value="1056" />
   </component>
   <component name="ProjectInspectionProfilesVisibleTreeState">
     <entry key="Project Default">
@@ -1639,9 +1556,10 @@
       <sortByType />
     </navigator>
     <panes>
-      <pane id="Scope" />
       <pane id="ProjectPane" />
       <pane id="Scratches" />
+      <pane id="PackagesPane" />
+      <pane id="Scope" />
       <pane id="AndroidView">
         <subPane>
           <PATH>
@@ -1649,10 +1567,37 @@
               <option name="myItemId" value="Jonnon" />
               <option name="myItemType" value="com.android.tools.idea.navigator.nodes.AndroidViewProjectNode" />
             </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Gradle Scripts" />
+              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.AndroidBuildScriptsGroupNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Jonnon" />
+              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.AndroidViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="app" />
+              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.AndroidModuleNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="assets" />
+              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.AndroidSourceTypeNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Jonnon" />
+              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.AndroidViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="app" />
+              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.AndroidModuleNode" />
+            </PATH_ELEMENT>
           </PATH>
         </subPane>
       </pane>
-      <pane id="PackagesPane" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -1664,11 +1609,11 @@
     <property name="MemberChooser.copyJavadoc" value="false" />
     <property name="recentsLimit" value="5" />
     <property name="ANDROID_EXTENDED_DEVICE_CHOOSER_SERIALS" value="620b469a" />
-    <property name="ANDROID_EXTENDED_DEVICE_CHOOSER_AVD" value="Nexus_5_API_21_x86" />
+    <property name="ANDROID_EXTENDED_DEVICE_CHOOSER_AVD" value="Nexus_5_API_15" />
     <property name="OverrideImplement.combined" value="false" />
     <property name="OverrideImplement.overriding.sorted" value="false" />
     <property name="FullScreen" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/app/src/main/libs/stickylistheaders_lib.jar" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/app/src/main/libs/volley.jar" />
     <property name="android.project.structure.last.selected" value="app" />
     <property name="android.project.structure.proportion" value="0.15" />
     <property name="ExportApk.ApkPath" value="F:\source\jonoon\app" />
@@ -1699,11 +1644,11 @@
       <recent name="com.jonoon.clubapp.view" />
     </key>
     <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="com.jonoon.clubapp" />
       <recent name="com.jonoon.clubapp.util.net" />
       <recent name="com.jonoon.clubapp.controller.adapter" />
       <recent name="com.jonoon.clubapp.controller.fragement.main_page" />
       <recent name="com.jonoon.clubapp.view.titlelistview" />
-      <recent name="com.jonoon.clubapp.util" />
     </key>
   </component>
   <component name="RunManager" selected="Android Application.app">
@@ -1771,6 +1716,22 @@
       <envs />
       <method />
     </configuration>
+    <configuration default="true" type="GradleRunConfiguration" factoryName="Gradle">
+      <ExternalSystemSettings>
+        <option name="executionName" />
+        <option name="externalProjectPath" />
+        <option name="externalSystemIdString" value="GRADLE" />
+        <option name="scriptParameters" />
+        <option name="taskDescriptions">
+          <list />
+        </option>
+        <option name="taskNames">
+          <list />
+        </option>
+        <option name="vmOptions" />
+      </ExternalSystemSettings>
+      <method />
+    </configuration>
     <configuration default="true" type="JUnit" factoryName="JUnit">
       <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
       <module name="" />
@@ -1790,6 +1751,11 @@
       </option>
       <envs />
       <patterns />
+      <method />
+    </configuration>
+    <configuration default="true" type="JarApplication" factoryName="JAR Application">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
+      <envs />
       <method />
     </configuration>
     <configuration default="true" type="Remote" factoryName="Remote">
@@ -1875,11 +1841,6 @@
     </configuration>
   </component>
   <component name="ShelveChangesManager" show_recycled="false" />
-  <component name="SliceManager">
-    <option name="analysisUIOptions">
-      <AnalysisUIOptions />
-    </option>
-  </component>
   <component name="SvnConfiguration">
     <configuration />
   </component>
@@ -1913,11 +1874,11 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="0" y="0" width="1440" height="860" extended-state="0" />
+    <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
     <editor active="false" />
     <layout>
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32959327" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4412636" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.44008958" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Build Variants" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Palette&#9;" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.5820477" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
@@ -1925,11 +1886,11 @@
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32819074" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
-      <window_info id="Captures" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
-      <window_info id="Android" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.45014808" sideWeight="0.5" order="12" side_tool="false" content_ui="tabs" />
+      <window_info id="Captures" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Android" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.6270997" sideWeight="0.5" order="12" side_tool="false" content_ui="tabs" />
       <window_info id="Gradle Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="13" side_tool="true" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.28197673" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.23771368" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Gradle" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="true" content_ui="tabs" />
@@ -1941,10 +1902,10 @@
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3997195" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="15" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
-      <window_info id="Preview" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.23204023" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.31688055" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Preview" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.27884614" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.31578946" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Memory Monitor" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="14" side_tool="true" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.6465638" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.643897" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
     </layout>
   </component>
   <component name="Vcs.Log.UiProperties">
@@ -1960,95 +1921,62 @@
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
-      <option name="time" value="1" />
+      <option name="time" value="2" />
     </breakpoint-manager>
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/fragment_fixture.xml">
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/jonoon/clubapp/model/constants/ServerUrl.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
-          <caret line="8" column="37" selection-start-line="8" selection-start-column="37" selection-end-line="8" selection-end-column="37" />
+          <caret line="57" column="58" selection-start-line="57" selection-start-column="58" selection-end-line="57" selection-end-column="58" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/jonoon/clubapp/util/ImageTools.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="10" column="19" selection-start-line="10" selection-start-column="19" selection-end-line="10" selection-end-column="19" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/fragment_navigation_one.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="5.0625">
+          <caret line="51" column="12" selection-start-line="51" selection-start-column="12" selection-end-line="51" selection-end-column="12" />
+          <folding />
         </state>
       </provider>
       <provider editor-type-id="android-designer">
         <state />
       </provider>
     </entry>
-    <entry file="file://D:/Program Files/Android-SDK/sources/android-21/android/webkit/WebView.java">
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/fragment_navigation_two.xml">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.6041056">
-          <caret line="223" column="16" selection-start-line="223" selection-start-column="16" selection-end-line="223" selection-end-column="16" />
+        <state vertical-scroll-proportion="-11.25">
+          <caret line="80" column="50" selection-start-line="80" selection-start-column="50" selection-end-line="80" selection-end-column="50" />
+          <folding />
         </state>
       </provider>
+      <provider editor-type-id="android-designer">
+        <state />
+      </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/jonoon/clubapp/controller/adapter/ViewPager4SlidingDrawer.java">
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/activity_main.xml">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
-          <caret line="34" column="57" selection-start-line="34" selection-start-column="57" selection-end-line="34" selection-end-column="57" />
+          <caret line="35" column="21" selection-start-line="35" selection-start-column="21" selection-end-line="35" selection-end-column="21" />
+          <folding />
         </state>
       </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/jonoon/clubapp/controller/fragement/main_page/NewsFragment.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.42375368">
-          <caret line="82" column="58" selection-start-line="82" selection-start-column="58" selection-end-line="82" selection-end-column="58" />
-        </state>
+      <provider editor-type-id="android-designer">
+        <state />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/jonoon/clubapp/controller/adapter/IntroductionAdapter.java">
+    <entry file="file://$PROJECT_DIR$/app/build/generated/source/r/debug/com/jonoon/clubapp/R.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-0.18768328">
-          <caret line="32" column="13" selection-start-line="32" selection-start-column="13" selection-end-line="32" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/jonoon/clubapp/controller/adapter/SquadAdapter.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="82" column="13" selection-start-line="82" selection-start-column="13" selection-end-line="82" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/jonoon/clubapp/controller/fragement/main_page/SquadFragment.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="61" column="52" selection-start-line="61" selection-start-column="52" selection-end-line="61" selection-end-column="52" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/res/values/ids.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="3" column="27" selection-start-line="3" selection-start-column="16" selection-end-line="3" selection-end-column="27" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/jonoon/clubapp/controller/adapter/FixtureAdapter.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-18.580645">
-          <caret line="190" column="27" selection-start-line="190" selection-start-column="27" selection-end-line="190" selection-end-column="27" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://D:/Program Files/Android-SDK/sources/android-21/android/webkit/WebSettings.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="144" column="41" selection-start-line="144" selection-start-column="28" selection-end-line="144" selection-end-column="41" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/jonoon/clubapp/controller/activity/IntroductionActivity.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="24" column="66" selection-start-line="24" selection-start-column="66" selection-end-line="24" selection-end-column="66" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/jonoon/clubapp/MyApplication.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="14" column="29" selection-start-line="14" selection-start-column="19" selection-end-line="14" selection-end-column="29" />
+        <state vertical-scroll-proportion="0.34857142">
+          <caret line="185" column="32" selection-start-line="185" selection-start-column="32" selection-end-line="185" selection-end-column="32" />
         </state>
       </provider>
     </entry>
@@ -2057,206 +1985,9 @@
         <state />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/fragment_main_page.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="7" column="45" selection-start-line="7" selection-start-column="45" selection-end-line="7" selection-end-column="45" />
-        </state>
-      </provider>
-      <provider editor-type-id="android-designer">
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/drawable-xhdpi/handler_close.png">
+      <provider selected="true" editor-type-id="images">
         <state />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/fragment_squad.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="8" column="39" selection-start-line="8" selection-start-column="39" selection-end-line="8" selection-end-column="39" />
-        </state>
-      </provider>
-      <provider editor-type-id="android-designer">
-        <state />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/res/drawable-xhdpi/bg_fixture_section.9.png">
-      <provider selected="true" editor-type-id="ninepatcheditor">
-        <state />
-      </provider>
-      <provider editor-type-id="images">
-        <state />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/res/drawable-xhdpi/bg_title.9.png">
-      <provider selected="true" editor-type-id="ninepatcheditor">
-        <state />
-      </provider>
-      <provider editor-type-id="images">
-        <state />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/title_layout.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="20" column="30" selection-start-line="20" selection-start-column="30" selection-end-line="20" selection-end-column="30" />
-        </state>
-      </provider>
-      <provider editor-type-id="android-designer">
-        <state />
-      </provider>
-    </entry>
-    <entry file="file://D:/Program Files/Android-SDK/sources/android-21/android/webkit/CookieManager.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.7316716">
-          <caret line="61" column="29" selection-start-line="61" selection-start-column="29" selection-end-line="61" selection-end-column="29" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/jonoon/clubapp/view/custom_view/H5WebView.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="54" column="2" selection-start-line="54" selection-start-column="2" selection-end-line="54" selection-end-column="2" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://D:/Program Files/Android-SDK/sources/android-21/android/content/res/Configuration.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-10.225806">
-          <caret line="571" column="15" selection-start-line="571" selection-start-column="15" selection-end-line="571" selection-end-column="15" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://D:/Program Files/Android-SDK/sources/android-21/android/view/WindowManager.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="230" column="32" selection-start-line="230" selection-start-column="32" selection-end-line="230" selection-end-column="32" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://D:/Program Files/Android-SDK/sources/android-21/android/view/View.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="17965" column="16" selection-start-line="17965" selection-start-column="16" selection-end-line="17965" selection-end-column="16" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://D:/Program Files/Android-SDK/sources/android-21/android/view/Window.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="800" column="16" selection-start-line="800" selection-start-column="16" selection-end-line="800" selection-end-column="16" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://D:/Program Files/Android-SDK/platforms/android-21/android.jar!/android/R.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.7179226">
-          <caret line="2036" column="32" selection-start-line="2036" selection-start-column="32" selection-end-line="2036" selection-end-column="32" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://D:/Program Files/Android-SDK/sources/android-21/android/content/pm/ActivityInfo.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="333" column="58" selection-start-line="333" selection-start-column="28" selection-end-line="333" selection-end-column="58" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://D:/Program Files/Android-SDK/sources/android-21/android/widget/VideoView.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="71" column="22" selection-start-line="71" selection-start-column="13" selection-end-line="71" selection-end-column="22" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/activity_main.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="23" column="35" selection-start-line="23" selection-start-column="35" selection-end-line="23" selection-end-column="35" />
-        </state>
-      </provider>
-      <provider editor-type-id="android-designer">
-        <state />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/fragment_navigation_one.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-11.533334">
-          <caret line="100" column="37" selection-start-line="100" selection-start-column="37" selection-end-line="100" selection-end-column="37" />
-        </state>
-      </provider>
-      <provider editor-type-id="android-designer">
-        <state />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/jonoon/clubapp/controller/fragement/main_page/NavigationOneFragment.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="88" column="58" selection-start-line="88" selection-start-column="58" selection-end-line="88" selection-end-column="58" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/activity_base_activity_with_java_script_interface.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-      <provider editor-type-id="android-designer">
-        <state />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/jonoon/clubapp/controller/fragement/main_page/FixtureFragment.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="33" column="13" selection-start-line="33" selection-start-column="13" selection-end-line="33" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://D:/Program Files/Android-SDK/extras/android/m2repository/com/android/support/support-v4/22.1.0/support-v4-22.1.0-sources.jar!/android/support/v4/app/FragmentActivity.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.3329939">
-          <caret line="149" column="48" selection-start-line="149" selection-start-column="48" selection-end-line="149" selection-end-column="48" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://D:/Program Files/Android-SDK/sources/android-21/android/widget/SlidingDrawer.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="770" column="16" selection-start-line="770" selection-start-column="16" selection-end-line="770" selection-end-column="16" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/jonoon/clubapp/controller/MyJavaScriptCallback.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="26" column="11" selection-start-line="26" selection-start-column="11" selection-end-line="26" selection-end-column="11" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://D:/Program Files/Android-SDK/sources/android-21/android/app/Activity.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.3329939">
-          <caret line="670" column="28" selection-start-line="670" selection-start-column="28" selection-end-line="670" selection-end-column="28" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/jonoon/clubapp/controller/fragement/main_page/MainPageFragment.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="79" column="31" selection-start-line="79" selection-start-column="31" selection-end-line="79" selection-end-column="31" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/jonoon/clubapp/controller/activity/WebViewActivity.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="27" column="52" selection-start-line="27" selection-start-column="52" selection-end-line="27" selection-end-column="52" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/jonoon/clubapp/controller/activity/MainActivity.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="212" column="38" selection-start-line="212" selection-start-column="38" selection-end-line="212" selection-end-column="38" />
-        </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/java/com/jonoon/clubapp/controller/activity/WebViewWithLandscapeActivity.java">
@@ -2266,244 +1997,74 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/jonoon/clubapp/model/constants/ServerUrl.java">
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/jonoon/clubapp/controller/activity/WebViewActivity.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
-          <caret line="29" column="56" selection-start-line="29" selection-start-column="56" selection-end-line="29" selection-end-column="56" />
-          <folding>
-            <element signature="e#1184#1185#0" expanded="false" />
-            <element signature="e#1217#1218#0" expanded="false" />
-            <element signature="e#1256#1257#0" expanded="false" />
-            <element signature="e#1297#1298#0" expanded="false" />
-            <element signature="e#1342#1343#0" expanded="false" />
-            <element signature="e#1390#1391#0" expanded="false" />
-            <element signature="e#1433#1434#0" expanded="false" />
-            <element signature="e#1479#1480#0" expanded="false" />
-            <element signature="e#1521#1522#0" expanded="false" />
-            <element signature="e#1567#1568#0" expanded="false" />
-          </folding>
+          <caret line="27" column="0" selection-start-line="27" selection-start-column="0" selection-end-line="27" selection-end-column="103" />
         </state>
       </provider>
     </entry>
-    <entry file="jar://$PROJECT_DIR$/app/src/main/libs/httpmime-4.3.6.jar!/org/apache/http/entity/mime/MultipartEntity.class">
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/jonoon/clubapp/controller/fragement/main_page/MainPageFragment.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.3462733">
-          <caret line="29" column="16" selection-start-line="29" selection-start-column="16" selection-end-line="29" selection-end-column="16" />
+        <state vertical-scroll-proportion="0.0">
+          <caret line="35" column="51" selection-start-line="35" selection-start-column="51" selection-end-line="35" selection-end-column="51" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/res/drawable-xhdpi/waiting_anim.xml">
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/jonoon/clubapp/view/custom_view/H5WebView.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
-          <caret line="9" column="71" selection-start-line="9" selection-start-column="71" selection-end-line="9" selection-end-column="71" />
+          <caret line="57" column="0" selection-start-line="57" selection-start-column="0" selection-end-line="57" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/fixture_listview_section.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding />
         </state>
       </provider>
+      <provider editor-type-id="android-designer">
+        <state />
+      </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/AndroidManifest.xml">
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/fragment_squad.xml">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
-          <caret line="15" column="0" selection-start-line="15" selection-start-column="0" selection-end-line="16" selection-end-column="0" />
+          <caret line="11" column="54" selection-start-line="11" selection-start-column="54" selection-end-line="11" selection-end-column="54" />
           <folding />
         </state>
       </provider>
+      <provider editor-type-id="android-designer">
+        <state />
+      </provider>
     </entry>
-    <entry file="file://D:/Program Files/Android-SDK/sources/android-21/android/net/Uri.java">
+    <entry file="jar://D:/Program Files/Android-SDK/extras/android/m2repository/com/android/support/support-v4/22.1.0/support-v4-22.1.0-sources.jar!/android/support/v4/view/PagerAdapter.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
-          <caret line="271" column="27" selection-start-line="271" selection-start-column="27" selection-end-line="271" selection-end-column="27" />
-          <folding>
-            <element signature="e#0#75179#0" expanded="false" />
-            <element signature="imports" expanded="false" />
-            <element signature="e#5864#5865#0" expanded="false" />
-            <element signature="e#5904#5905#0" expanded="false" />
-            <element signature="e#6365#6366#0" expanded="false" />
-            <element signature="e#6401#6402#0" expanded="false" />
-            <element signature="e#12046#12047#0" expanded="false" />
-            <element signature="e#12090#12091#0" expanded="false" />
-            <element signature="e#12228#12229#0" expanded="false" />
-            <element signature="e#12289#12290#0" expanded="false" />
-            <element signature="e#15029#15030#0" expanded="false" />
-            <element signature="e#15076#15077#0" expanded="false" />
-            <element signature="e#16392#16393#0" expanded="false" />
-            <element signature="e#16457#16458#0" expanded="false" />
-            <element signature="e#16498#16499#0" expanded="false" />
-            <element signature="e#16530#16531#0" expanded="false" />
-            <element signature="e#18554#18555#0" expanded="false" />
-            <element signature="e#18639#18640#0" expanded="false" />
-            <element signature="e#18695#18696#0" expanded="false" />
-            <element signature="e#18747#18748#0" expanded="false" />
-            <element signature="e#18796#18797#0" expanded="false" />
-            <element signature="e#18848#18849#0" expanded="false" />
-            <element signature="e#19593#19594#0" expanded="false" />
-            <element signature="e#19655#19656#0" expanded="false" />
-            <element signature="e#19695#19696#0" expanded="false" />
-            <element signature="e#19757#19758#0" expanded="false" />
-            <element signature="e#19999#20000#0" expanded="false" />
-            <element signature="e#20056#20057#0" expanded="false" />
-            <element signature="e#20098#20099#0" expanded="false" />
-            <element signature="e#20155#20156#0" expanded="false" />
-            <element signature="e#20204#20205#0" expanded="false" />
-            <element signature="e#20266#20267#0" expanded="false" />
-            <element signature="e#21285#21286#0" expanded="false" />
-            <element signature="e#21343#21344#0" expanded="false" />
-            <element signature="e#21989#21990#0" expanded="false" />
-            <element signature="e#22047#22048#0" expanded="false" />
-            <element signature="e#22292#22293#0" expanded="false" />
-            <element signature="e#22353#22354#0" expanded="false" />
-            <element signature="e#22566#22567#0" expanded="false" />
-            <element signature="e#22627#22628#0" expanded="false" />
-            <element signature="e#22663#22664#0" expanded="false" />
-            <element signature="e#22703#22704#0" expanded="false" />
-            <element signature="e#28038#28039#0" expanded="false" />
-            <element signature="e#28070#28071#0" expanded="false" />
-            <element signature="e#28335#28336#0" expanded="false" />
-            <element signature="e#28371#28372#0" expanded="false" />
-            <element signature="e#28410#28411#0" expanded="false" />
-            <element signature="e#28455#28456#0" expanded="false" />
-            <element signature="e#28492#28493#0" expanded="false" />
-            <element signature="e#28534#28535#0" expanded="false" />
-            <element signature="e#28590#28591#0" expanded="false" />
-            <element signature="e#28637#28638#0" expanded="false" />
-            <element signature="e#28686#28687#0" expanded="false" />
-            <element signature="e#28733#28734#0" expanded="false" />
-            <element signature="e#28773#28774#0" expanded="false" />
-            <element signature="e#28808#28809#0" expanded="false" />
-            <element signature="e#28855#28856#0" expanded="false" />
-            <element signature="e#28890#28891#0" expanded="false" />
-            <element signature="e#28925#28926#0" expanded="false" />
-            <element signature="e#28960#28961#0" expanded="false" />
-            <element signature="e#29002#29003#0" expanded="false" />
-            <element signature="e#29037#29038#0" expanded="false" />
-            <element signature="e#29073#29074#0" expanded="false" />
-            <element signature="e#29108#29109#0" expanded="false" />
-            <element signature="e#29151#29152#0" expanded="false" />
-            <element signature="e#29186#29187#0" expanded="false" />
-            <element signature="e#29225#29226#0" expanded="false" />
-            <element signature="e#29277#29278#0" expanded="false" />
-            <element signature="e#29323#29324#0" expanded="false" />
-            <element signature="e#29375#29376#0" expanded="false" />
-            <element signature="e#29424#29425#0" expanded="false" />
-            <element signature="e#29478#29479#0" expanded="false" />
-            <element signature="e#29524#29525#0" expanded="false" />
-            <element signature="e#29559#29560#0" expanded="false" />
-            <element signature="e#29598#29599#0" expanded="false" />
-            <element signature="e#29633#29634#0" expanded="false" />
-            <element signature="e#29679#29680#0" expanded="false" />
-            <element signature="e#29714#29715#0" expanded="false" />
-            <element signature="e#29749#29750#0" expanded="false" />
-            <element signature="e#29784#29785#0" expanded="false" />
-            <element signature="e#29816#29817#0" expanded="false" />
-            <element signature="e#29849#29850#0" expanded="false" />
-            <element signature="e#31301#31302#0" expanded="false" />
-            <element signature="e#31341#31342#0" expanded="false" />
-            <element signature="e#33035#33036#0" expanded="false" />
-            <element signature="e#33096#33097#0" expanded="false" />
-            <element signature="e#33442#33443#0" expanded="false" />
-            <element signature="e#33503#33504#0" expanded="false" />
-            <element signature="e#36571#36572#0" expanded="false" />
-            <element signature="e#36603#36604#0" expanded="false" />
-            <element signature="e#36943#36944#0" expanded="false" />
-            <element signature="e#36978#36979#0" expanded="false" />
-            <element signature="e#37017#37018#0" expanded="false" />
-            <element signature="e#37062#37063#0" expanded="false" />
-            <element signature="e#37099#37100#0" expanded="false" />
-            <element signature="e#37136#37137#0" expanded="false" />
-            <element signature="e#37371#37372#0" expanded="false" />
-            <element signature="e#37423#37424#0" expanded="false" />
-            <element signature="e#37472#37473#0" expanded="false" />
-            <element signature="e#37524#37525#0" expanded="false" />
-            <element signature="e#38447#38448#0" expanded="false" />
-            <element signature="e#38505#38506#0" expanded="false" />
-            <element signature="e#38552#38553#0" expanded="false" />
-            <element signature="e#38610#38611#0" expanded="false" />
-            <element signature="e#38652#38653#0" expanded="false" />
-            <element signature="e#38705#38706#0" expanded="false" />
-            <element signature="e#38740#38741#0" expanded="false" />
-            <element signature="e#38793#38794#0" expanded="false" />
-            <element signature="e#38829#38830#0" expanded="false" />
-            <element signature="e#38883#38884#0" expanded="false" />
-            <element signature="e#38926#38927#0" expanded="false" />
-            <element signature="e#38980#38981#0" expanded="false" />
-            <element signature="e#39019#39020#0" expanded="false" />
-            <element signature="e#39076#39077#0" expanded="false" />
-            <element signature="e#39122#39123#0" expanded="false" />
-            <element signature="e#39179#39180#0" expanded="false" />
-            <element signature="e#39228#39229#0" expanded="false" />
-            <element signature="e#39286#39287#0" expanded="false" />
-            <element signature="e#43380#43381#0" expanded="false" />
-            <element signature="e#43443#43444#0" expanded="false" />
-            <element signature="e#43762#43763#0" expanded="false" />
-            <element signature="e#43825#43826#0" expanded="false" />
-            <element signature="e#44571#44572#0" expanded="false" />
-            <element signature="e#44632#44633#0" expanded="false" />
-            <element signature="e#44755#44756#0" expanded="false" />
-            <element signature="e#44816#44817#0" expanded="false" />
-            <element signature="e#45050#45051#0" expanded="false" />
-            <element signature="e#45117#45118#0" expanded="false" />
-            <element signature="e#46371#46372#0" expanded="false" />
-            <element signature="e#46418#46419#0" expanded="false" />
-            <element signature="e#47860#47861#0" expanded="false" />
-            <element signature="e#47909#47910#0" expanded="false" />
-            <element signature="e#55755#55756#0" expanded="false" />
-            <element signature="e#55799#55800#0" expanded="false" />
-            <element signature="e#56664#56665#0" expanded="false" />
-            <element signature="e#56702#56703#0" expanded="false" />
-            <element signature="e#63338#63339#0" expanded="false" />
-            <element signature="e#63385#63386#0" expanded="false" />
-            <element signature="e#63414#63415#0" expanded="false" />
-            <element signature="e#63450#63451#0" expanded="false" />
-            <element signature="e#64449#64450#0" expanded="false" />
-            <element signature="e#64506#64507#0" expanded="false" />
-            <element signature="e#64681#64682#0" expanded="false" />
-            <element signature="e#64737#64738#0" expanded="false" />
-            <element signature="e#64912#64913#0" expanded="false" />
-            <element signature="e#64968#64969#0" expanded="false" />
-            <element signature="e#65789#65790#0" expanded="false" />
-            <element signature="e#65840#65841#0" expanded="false" />
-            <element signature="e#65895#65896#0" expanded="false" />
-            <element signature="e#65938#65939#0" expanded="false" />
-            <element signature="e#66440#66441#0" expanded="false" />
-            <element signature="e#66487#66488#0" expanded="false" />
-            <element signature="e#70277#70278#0" expanded="false" />
-            <element signature="e#70333#70334#0" expanded="false" />
-            <element signature="e#70512#70513#0" expanded="false" />
-            <element signature="e#70568#70569#0" expanded="false" />
-          </folding>
+          <caret line="26" column="50" selection-start-line="26" selection-start-column="50" selection-end-line="26" selection-end-column="50" />
         </state>
       </provider>
     </entry>
-    <entry file="jar://$PROJECT_DIR$/app/src/main/libs/httpmime-4.3.6.jar!/org/apache/http/entity/mime/content/FileBody.class">
+    <entry file="jar://D:/Program Files/Android-SDK/extras/android/m2repository/com/android/support/support-v4/22.1.0/support-v4-22.1.0-sources.jar!/android/support/v4/app/FragmentPagerAdapter.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-22.32">
-          <caret line="32" column="73" selection-start-line="32" selection-start-column="62" selection-end-line="32" selection-end-column="73" />
+        <state vertical-scroll-proportion="0.3329939">
+          <caret line="60" column="55" selection-start-line="60" selection-start-column="55" selection-end-line="60" selection-end-column="55" />
         </state>
       </provider>
     </entry>
-    <entry file="jar://$PROJECT_DIR$/app/src/main/libs/httpcore-4.3.3.jar!/org/apache/http/entity/ContentType.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.43373495">
-          <caret line="23" column="37" selection-start-line="23" selection-start-column="36" selection-end-line="23" selection-end-column="37" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/jonoon/clubapp/controller/BaseActivityWithJavaScriptInterface.java">
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/jonoon/clubapp/controller/adapter/ViewPager4SlidingDrawer.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
-          <caret line="33" column="36" selection-start-line="33" selection-start-column="36" selection-end-line="33" selection-end-column="36" />
-          <folding />
+          <caret line="15" column="60" selection-start-line="15" selection-start-column="60" selection-end-line="15" selection-end-column="60" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/jonoon/clubapp/controller/UploadImage.java">
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/jonoon/clubapp/controller/fragement/main_page/SquadFragment.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
-          <caret line="32" column="49" selection-start-line="32" selection-start-column="49" selection-end-line="32" selection-end-column="49" />
-          <folding>
-            <element signature="imports" expanded="false" />
-            <element signature="e#1758#1759#0" expanded="false" />
-            <element signature="e#1811#1812#0" expanded="false" />
-          </folding>
+          <caret line="30" column="13" selection-start-line="30" selection-start-column="13" selection-end-line="30" selection-end-column="13" />
         </state>
       </provider>
     </entry>
@@ -2511,16 +2072,269 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="140" column="0" selection-start-line="140" selection-start-column="0" selection-end-line="147" selection-end-column="5" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/jonoon/clubapp/controller/BaseActivityWithJavaScriptInterface.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="17" column="73" selection-start-line="17" selection-start-column="57" selection-end-line="17" selection-end-column="73" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/jonoon/clubapp/controller/MyJavaScriptCallback.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="27" column="5" selection-start-line="27" selection-start-column="5" selection-end-line="27" selection-end-column="5" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/jonoon/clubapp/controller/UploadImage.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="35" column="8" selection-start-line="35" selection-start-column="8" selection-end-line="35" selection-end-column="8" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/jonoon/clubapp/util/net/CustomerRetryPolicy.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="16" column="0" selection-start-line="16" selection-start-column="0" selection-end-line="16" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/jonoon/clubapp/model/constants/DefaultValues.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="11" column="0" selection-start-line="11" selection-start-column="0" selection-end-line="12" selection-end-column="72" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/jonoon/clubapp/controller/adapter/SquadAdapter.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="189" column="15" selection-start-line="189" selection-start-column="15" selection-end-line="189" selection-end-column="15" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/jonoon/clubapp/view/titlelistview/PinnedHeaderListView.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="9" column="13" selection-start-line="9" selection-start-column="13" selection-end-line="9" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/jonoon/clubapp/view/titlelistview/AnimatedExpandableListView.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="42" column="13" selection-start-line="42" selection-start-column="13" selection-end-line="42" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/values/ids.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/jonoon/clubapp/model/bean/Fixture.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="9" column="13" selection-start-line="9" selection-start-column="13" selection-end-line="9" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/jonoon/clubapp/model/bean/FixtureItem.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="170" column="15" selection-start-line="170" selection-start-column="15" selection-end-line="170" selection-end-column="77" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/jonoon/clubapp/controller/adapter/FixtureAdapter.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="231" column="15" selection-start-line="231" selection-start-column="15" selection-end-line="231" selection-end-column="15" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/jonoon/clubapp/controller/fragement/main_page/FixtureFragment.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="26" selection-start-line="0" selection-start-column="8" selection-end-line="0" selection-end-column="26" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/build.gradle">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/build.gradle">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="27" column="4" selection-start-line="27" selection-start-column="4" selection-end-line="27" selection-end-column="4" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/jonoon/clubapp/util/net/VolleyHelper.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="10" column="39" selection-start-line="10" selection-start-column="39" selection-end-line="10" selection-end-column="39" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/AndroidManifest.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="74" column="0" selection-start-line="74" selection-start-column="0" selection-end-line="74" selection-end-column="0" />
           <folding>
-            <element signature="imports" expanded="false" />
+            <element signature="e#1758#1795#0" expanded="true" />
+            <element signature="e#2179#2212#0" expanded="true" />
+            <element signature="e#2495#2543#0" expanded="true" />
+            <element signature="e#2685#2750#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/jonoon/clubapp/util/net/MultiPartRequest.java">
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/jonoon/clubapp/MyApplication.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.5735736">
-          <caret line="95" column="62" selection-start-line="95" selection-start-column="62" selection-end-line="95" selection-end-column="62" />
+        <state vertical-scroll-proportion="0.0">
+          <caret line="19" column="56" selection-start-line="19" selection-start-column="20" selection-end-line="19" selection-end-column="56" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/jonoon/clubapp/wxapi/WXEntryActivity.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="19" column="7" selection-start-line="19" selection-start-column="7" selection-end-line="19" selection-end-column="7" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/values/oks_strings.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="6" column="18" selection-start-line="6" selection-start-column="18" selection-end-line="6" selection-end-column="18" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/values/strings.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-0.72">
+          <caret line="1" column="18" selection-start-line="1" selection-start-column="18" selection-end-line="1" selection-end-column="18" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/jonoon/clubapp/controller/activity/MainActivity.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="238" column="44" selection-start-line="238" selection-start-column="44" selection-end-line="238" selection-end-column="44" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/assets/ShareSDK.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="91" column="8" selection-start-line="91" selection-start-column="8" selection-end-line="91" selection-end-column="8" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/cn/sharesdk/onekeyshare/OnekeyShare.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="38" column="13" selection-start-line="38" selection-start-column="13" selection-end-line="38" selection-end-column="13" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/squad_listview_group_item.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+      <provider editor-type-id="android-designer">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/skyblue_editpage.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+      <provider editor-type-id="android-designer">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/skyblue_editpage_at_layout.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+      <provider editor-type-id="android-designer">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/item_spinner_numbers.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+      <provider editor-type-id="android-designer">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/skyblue_share_actionbar.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+      <provider editor-type-id="android-designer">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/skyblue_share_platform_list_item.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+      <provider editor-type-id="android-designer">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/skyblue_share_platform_list.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+      <provider editor-type-id="android-designer">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/cn/sharesdk/onekeyshare/theme/skyblue/PlatformGridViewAdapter.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="70" column="79" selection-start-line="70" selection-start-column="79" selection-end-line="70" selection-end-column="79" />
           <folding />
         </state>
       </provider>
