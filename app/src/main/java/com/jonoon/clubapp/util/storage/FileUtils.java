@@ -74,50 +74,49 @@ public class FileUtils {
 		return false;
 		
 	}
-	
-	
+
+
 	/**
-     * Copies a private raw resource content to a publicly readable
-     * file such that the latter can be shared with other applications.
-     */
-    public static String copyPrivateRawResourceToPubliclyAccessibleFile(Context con, int RawResourceId) {
-    	
-        InputStream inputStream = null;
-        FileOutputStream outputStream = null;
-        String ret_value = new String();
-        String filename = RawResourceId+"icon.png";
-        try {
-            inputStream = con.getResources().openRawResource(RawResourceId);
-            outputStream = con.openFileOutput(filename, Context.MODE_PRIVATE);
-            byte[] buffer = new byte[1024];
-            int length = 0;
-            try {
-                while ((length = inputStream.read(buffer)) > 0){
-                    outputStream.write(buffer, 0, length);
-                }
-            } catch (IOException ioe) {
-            	if(DEBUG) ioe.printStackTrace();
-            }
-            
-        } catch (FileNotFoundException fnfe) {
-        	if(DEBUG) fnfe.printStackTrace();
-        } finally {
-            try {
-                inputStream.close();
-            } catch (IOException ioe) {
-            	if(DEBUG) ioe.printStackTrace();
-            }
-            try {
-                outputStream.close();
-                ret_value = con.getFileStreamPath(filename).getPath();
-            } catch (IOException ioe) {
-               if(DEBUG) ioe.printStackTrace();
-            } catch (Exception e) {
-            	if(DEBUG) e.printStackTrace();
+	 * Copies a private raw resource content to a publicly readable
+	 * file such that the latter can be shared with other applications.
+	 */
+	public static String copyPrivateRawResourceToPubliclyAccessibleFile(Context con, int RawResourceId, String filename) {
+
+		InputStream inputStream = null;
+		FileOutputStream outputStream = null;
+		String ret_value = new String();
+		try {
+			inputStream = con.getResources().openRawResource(RawResourceId);
+			outputStream = con.openFileOutput(filename, Context.MODE_PRIVATE);
+			byte[] buffer = new byte[1024];
+			int length = 0;
+			try {
+				while ((length = inputStream.read(buffer)) > 0){
+					outputStream.write(buffer, 0, length);
+				}
+			} catch (IOException ioe) {
+				if(DEBUG) ioe.printStackTrace();
 			}
-            
-        }
-        
-        return ret_value;
-    }
+
+		} catch (FileNotFoundException fnfe) {
+			if(DEBUG) fnfe.printStackTrace();
+		} finally {
+			try {
+				inputStream.close();
+			} catch (IOException ioe) {
+				if(DEBUG) ioe.printStackTrace();
+			}
+			try {
+				outputStream.close();
+				ret_value = con.getFileStreamPath(filename).getPath();
+			} catch (IOException ioe) {
+				if(DEBUG) ioe.printStackTrace();
+			} catch (Exception e) {
+				if(DEBUG) e.printStackTrace();
+			}
+
+		}
+
+		return ret_value;
+	}
 }

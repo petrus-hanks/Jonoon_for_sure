@@ -16,12 +16,6 @@ android {
         exclude 'META-INF/LICENSE'
     }
 
-    buildTypes {
-        release {
-            minifyEnabled false
-            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.txt'
-        }
-    }
 }
 
 dependencies {
@@ -43,4 +37,8 @@ dependencies {
     compile files('src/main/libs/ShareSDK-Wechat-Moments-2.6.1.jar')
     compile files('src/main/libs/stickylistheaders_lib.jar')
     compile files('src/main/libs/volley.jar')
+    compile files('src/main/libs/Xg_sdk_v2.38_20150616_1057.jar')
+    compile files('src/main/libs/jg_filter_sdk_1.1.jar')
+    compile files('src/main/libs/mid-sdk-2.20.jar')
+    compile files('src/main/libs/wup-1.0.0-SNAPSHOT.jar')
 }

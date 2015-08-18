@@ -1,5 +1,6 @@
 package com.jonoon.clubapp.controller.activity;
 
+import android.content.Context;
 import android.content.Intent;
 import android.content.pm.ActivityInfo;
 import android.content.res.Configuration;
@@ -23,7 +24,10 @@ import com.jonoon.clubapp.controller.fragement.main_page.NavigationOneFragment;
 import com.jonoon.clubapp.controller.fragement.main_page.NavigationTwoFragment;
 import com.jonoon.clubapp.model.constants.ServerUrl;
 import com.jonoon.clubapp.util.L;
+import com.jonoon.clubapp.util.storage.FileUtils;
 import com.jonoon.clubapp.view.slidingdrawer.WrappingSlidingDrawer;
+import com.tencent.android.tpush.XGPushConfig;
+import com.tencent.android.tpush.XGPushManager;
 
 import cn.sharesdk.framework.ShareSDK;
 import cn.sharesdk.onekeyshare.OnekeyShare;
@@ -45,7 +49,7 @@ public class MainActivity extends BaseActivityWithJavaScriptInterface
         requestWindowFeature(Window.FEATURE_NO_TITLE);
         setContentView(R.layout.activity_main);
         initView();
-
+        initXGPush();
         ((MyApplication)getApplication()).goToIntroduction = false;
         setRequestedOrientation(ActivityInfo.SCREEN_ORIENTATION_PORTRAIT);
     }
@@ -209,17 +213,40 @@ public class MainActivity extends BaseActivityWithJavaScriptInterface
 //                            .commit();
 //
 //                    setRequestedOrientation(ActivityInfo.SCREEN_ORIENTATION_PORTRAIT);
-                    showShare();
+//                    showShare();
+
+//                    Platform qZone= ShareSDK.getPlatform(this, QZone.NAME);
+//                    MyJavaScriptCallback.login(qZone);
             }
         }
         cur_page = page_num;
+    }
+
+
+    private void initXGPush(){
+        // 开启logcat输出，方便debug，发布时请关闭
+        // XGPushConfig.enableDebug(this, true);
+        // 如果需要知道注册是否成功，请使用registerPush(getApplicationContext(), XGIOperateCallback)带callback版本
+        // 如果需要绑定账号，请使用registerPush(getApplicationContext(),account)版本
+        // 具体可参考详细的开发指南
+        // 传递的参数为ApplicationContext
+        Context context = getApplicationContext();
+        XGPushManager.registerPush(context);
+
+        L.e(TAG, "init XG push "+ XGPushConfig.getToken(context));
+        // 其它常用的API：
+        // 绑定账号（别名）注册：registerPush(context,account)或registerPush(context,account, XGIOperateCallback)，其中account为APP账号，可以为任意字符串（qq、openid或任意第三方），业务方一定要注意终端与后台保持一致。
+        // 取消绑定账号（别名）：registerPush(context,"*")，即account="*"为取消绑定，解绑后，该针对该账号的推送将失效
+        // 反注册（不再接收消息）：unregisterPush(context)
+        // 设置标签：setTag(context, tagName)
+        // 删除标签：deleteTag(context, tagName)
     }
 
     private void showShare() {
         ShareSDK.initSDK(this);
         OnekeyShare oks = new OnekeyShare();
         //关闭sso授权
-        oks.disableSSOWhenAuthorize();
+//        oks.disableSSOWhenAuthorize();
 
 // 分享时Notification的图标和文字  2.5.9以后的版本不调用此方法
         //oks.setNotification(R.drawable.ic_launcher, getString(R.string.app_name));
@@ -230,7 +257,7 @@ public class MainActivity extends BaseActivityWithJavaScriptInterface
         // text是分享文本，所有平台都需要这个字段
         oks.setText("我是分享文本");
         // imagePath是图片的本地路径，Linked-In以外的平台都支持此参数
-//        oks.setImagePath("/sdcard/test.jpg");//确保SDcard下面存在此张图片
+        oks.setImagePath(FileUtils.copyPrivateRawResourceToPubliclyAccessibleFile(this, R.raw.logo, "share_icon"));
         // url仅在微信（包括好友和朋友圈）中使用
         oks.setUrl("http://sharesdk.cn");
         // comment是我对这条分享的评论，仅在人人网和QQ空间使用

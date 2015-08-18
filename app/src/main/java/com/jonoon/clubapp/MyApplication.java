@@ -2,6 +2,8 @@ package com.jonoon.clubapp;
 
 import android.app.Application;
 
+import cn.sharesdk.framework.ShareSDK;
+
 /**
  * @Description:
  * @Author: runzhang.han
@@ -18,6 +20,8 @@ public class MyApplication extends Application {
     public void onCreate() {
         super.onCreate();
         mCacheDir = this.getCacheDir().getAbsolutePath();
+
+        ShareSDK.initSDK(this);
     }
 
     public static String getmCacheDir() {

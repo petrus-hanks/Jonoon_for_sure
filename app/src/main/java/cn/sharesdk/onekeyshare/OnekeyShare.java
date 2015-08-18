@@ -8,28 +8,31 @@
 
 package cn.sharesdk.onekeyshare;
 
-import static com.mob.tools.utils.BitmapHelper.captureView;
-import static com.mob.tools.utils.R.getStringRes;
-
-import java.io.File;
-import java.util.ArrayList;
-import java.util.HashMap;
-import java.util.Map.Entry;
-
 import android.app.NotificationManager;
 import android.content.Context;
 import android.graphics.Bitmap;
 import android.os.Handler.Callback;
 import android.os.Message;
 import android.text.TextUtils;
+import android.util.Log;
 import android.view.View;
 import android.view.View.OnClickListener;
 import android.widget.Toast;
+
+import com.mob.tools.utils.UIHandler;
+
+import java.io.File;
+import java.util.ArrayList;
+import java.util.HashMap;
+import java.util.Map.Entry;
+
 import cn.sharesdk.framework.CustomPlatform;
 import cn.sharesdk.framework.Platform;
 import cn.sharesdk.framework.PlatformActionListener;
 import cn.sharesdk.framework.ShareSDK;
-import com.mob.tools.utils.UIHandler;
+
+import static com.mob.tools.utils.BitmapHelper.captureView;
+import static com.mob.tools.utils.R.getStringRes;
 
 /**
  * 快捷分享的入口
@@ -500,6 +503,7 @@ public class OnekeyShare implements PlatformActionListener, Callback {
 	}
 
 	public boolean handleMessage(Message msg) {
+		Log.e("", msg.toString());
 		switch(msg.what) {
 			case MSG_TOAST: {
 				String text = String.valueOf(msg.obj);
