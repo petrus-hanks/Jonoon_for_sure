@@ -4,6 +4,7 @@ package com.jonoon.clubapp.controller;
 import android.content.Intent;
 import android.support.v4.app.FragmentActivity;
 import android.webkit.JavascriptInterface;
+import android.webkit.WebView;
 
 import com.jonoon.clubapp.R;
 import com.jonoon.clubapp.controller.activity.MainActivity;
@@ -34,9 +35,11 @@ public class MyJavaScriptCallback {
     public static final String GO_TO_MODULE = "goToModule";
 
     private FragmentActivity mActivity;
+    private WebView mWebView;
 
-    public MyJavaScriptCallback(FragmentActivity act){
+    public MyJavaScriptCallback(FragmentActivity act,WebView webView){
         mActivity = act;
+        mWebView = webView;
     }
 
     @JavascriptInterface
@@ -157,7 +160,8 @@ public class MyJavaScriptCallback {
             if (userId != null) {
 //                UIHandler.sendEmptyMessage(MSG_USERID_FOUND, this);
 //                login(plat.getName(), userId, null);
-                L.e("","DB userid="+userId );
+                L.e("", "DB userid=" + userId);
+                shareSucceed(userId);
                 return;
             }
         }
@@ -165,21 +169,29 @@ public class MyJavaScriptCallback {
             @Override
             public void onComplete(Platform platform, int i, HashMap<String, Object> hashMap) {
                 L.e("","onComplete");
+//                L.e("", hashMap.toString());
+                shareSucceed(platform.getDb().getUserId());
             }
 
             @Override
             public void onError(Platform platform, int i, Throwable throwable) {
                 L.e("","onError");
+                L.toast(mActivity,"登陆错误");
             }
 
             @Override
             public void onCancel(Platform platform, int i) {
                 L.e("","onCancel");
+                L.toast(mActivity, "登陆已取消");
             }
         });
         // true不使用SSO授权，false使用SSO授权
         platform.SSOSetting(false);
         //获取用户资料
         platform.showUser(null);
+    }
+
+    public void shareSucceed(String userId){
+        mWebView.loadUrl("javascript:getLoginData('" + userId + "')");
     }
 }

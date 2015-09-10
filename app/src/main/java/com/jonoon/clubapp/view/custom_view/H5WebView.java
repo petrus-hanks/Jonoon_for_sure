@@ -1,6 +1,5 @@
 package com.jonoon.clubapp.view.custom_view;
 
-import android.app.Activity;
 import android.content.Context;
 import android.graphics.Bitmap;
 import android.util.AttributeSet;
@@ -9,7 +8,6 @@ import android.webkit.WebSettings;
 import android.webkit.WebView;
 import android.webkit.WebViewClient;
 
-import com.jonoon.clubapp.controller.MyJavaScriptCallback;
 
 /**
  * @Description:

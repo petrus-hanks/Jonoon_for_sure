@@ -1,6 +1,5 @@
 package com.jonoon.clubapp.controller.activity;
 
-import android.app.Activity;
 import android.os.Bundle;
 import android.view.KeyEvent;
 import android.view.Window;
@@ -25,7 +24,7 @@ public class WebViewActivity extends BaseActivityWithJavaScriptInterface {
         setContentView(R.layout.activity_web_view);
         wv = (H5WebView) findViewById(R.id.webview);
 
-        wv.addJavascriptInterface(new MyJavaScriptCallback(this), MyJavaScriptCallback.INTERFACE_NAME);
+        wv.addJavascriptInterface(new MyJavaScriptCallback(this, wv), MyJavaScriptCallback.INTERFACE_NAME);
 
         String mUrl = getIntent().getStringExtra(URL);
         L.e(TAG,"url = "+mUrl);

@@ -1,11 +1,8 @@
 package com.jonoon.clubapp.controller.activity;
 
-import android.app.Activity;
 import android.content.res.Configuration;
 import android.os.Bundle;
 import android.view.KeyEvent;
-import android.view.Menu;
-import android.view.MenuItem;
 import android.view.Window;
 
 import com.jonoon.clubapp.R;
@@ -28,7 +25,7 @@ public class WebViewWithLandscapeActivity extends BaseActivityWithJavaScriptInte
         setContentView(R.layout.activity_web_view);
         wv = (H5WebView) findViewById(R.id.webview);
 
-        wv.addJavascriptInterface(new MyJavaScriptCallback(this), MyJavaScriptCallback.INTERFACE_NAME);
+        wv.addJavascriptInterface(new MyJavaScriptCallback(this,wv), MyJavaScriptCallback.INTERFACE_NAME);
 
         String mUrl = getIntent().getStringExtra(URL);
         L.e(TAG, "url = " + mUrl);

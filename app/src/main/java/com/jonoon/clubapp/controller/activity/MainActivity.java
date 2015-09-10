@@ -207,16 +207,12 @@ public class MainActivity extends BaseActivityWithJavaScriptInterface
                     setRequestedOrientation(ActivityInfo.SCREEN_ORIENTATION_PORTRAIT);
                     break;
                 case 11://VIP
-//                    getSupportFragmentManager().beginTransaction()
-//                            .replace(R.id.fragment_container, MainPageFragment.newInstance(ServerUrl.getVip(), null)
-//                            )
-//                            .commit();
-//
-//                    setRequestedOrientation(ActivityInfo.SCREEN_ORIENTATION_PORTRAIT);
-//                    showShare();
+                    getSupportFragmentManager().beginTransaction()
+                            .replace(R.id.fragment_container, MainPageFragment.newInstance(ServerUrl.getVip(), null)
+                            )
+                            .commit();
 
-//                    Platform qZone= ShareSDK.getPlatform(this, QZone.NAME);
-//                    MyJavaScriptCallback.login(qZone);
+                    setRequestedOrientation(ActivityInfo.SCREEN_ORIENTATION_PORTRAIT);
             }
         }
         cur_page = page_num;
